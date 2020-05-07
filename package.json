@@ -1,0 +1,24 @@
+{
+  "name": "osf_academy",
+  "version": "1.0.0",
+  "description": "OSF Academy Final Project",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LiubaLozynska/OSF_Academy.git"
+  },
+  "author": "Liuba Lozynska",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LiubaLozynska/OSF_Academy/issues"
+  },
+  "homepage": "https://github.com/LiubaLozynska/OSF_Academy#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0",
+    "node-sass": "^4.14.1"
+  }
+}

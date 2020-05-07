@@ -1,0 +1,200 @@
+/* Google Fonts import ---------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/*Variables --------------*/
+
+$primary-font-family: 'Lato', Arial, 'sans serif';
+$secondary-font-family: "PT sans", Arial, 'sans serif';
+
+$big-devices-width: 1280px;
+
+$custom-font-size: 16px;
+
+$main-color: #84bc22;
+$secondary-color: #011847;
+$additional-color: #262a32;
+$link-color: #45413e;
+
+/*Mixins --------------*/
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* General Element Selectors --------*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: $primary-font-family;
+  width: $big-devices-width;
+  font-size: $custom-font-size;
+}
+
+p {
+  font-family: $primary-font-family;
+}
+
+a:link {
+  text-decoration: none;
+  color: $link-color;
+}
+
+nav {
+  @include flex-row;
+}
+
+li {
+  list-style-type: none;
+}
+
+
+/* Header and nav styles --------*/
+
+.main-header {
+  @include flex-row;
+  align-items: center;
+  padding: 10px;
+  color: $link-color;
+  border-bottom: 1px solid rgba($color: #45413e, $alpha: 0.5);
+  nav {
+    width:60%
+  }
+  .language-and-currency{
+    width: 5%
+  }
+}
+.logo {
+  @include flex-row;
+  &-text {
+    @include flex-column;
+    height: 65px;
+    padding-left: 7px;
+    &__big {
+        color: $secondary-color;
+        font-size: 2em; /* 32px */
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0.2em; /* 6.33px */        
+    }
+    &__small {
+      color: $main-color;
+      font-size: 1.125em; /* 18px */
+    }
+  }
+}
+
+.main-nav, 
+.language-and-currency,
+.utilites{
+  @include flex-row;
+  align-items: center;
+}
+
+ul.languages,
+ul.currency {
+  li {
+      display: none;
+  }
+  li.active{
+    display: inline-block;
+  }
+}
+
+.main-nav{
+  .main-nav__item {
+    display: inline-block;
+    color: $link-color;
+    font-size: 0.875em; /*14px*/
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 22px 10px 30px;
+    border-bottom: 2px solid transparent;
+    &:hover,
+    &.active {
+      background-color: $additional-color;
+      color: #ffffff;
+      border-bottom: 2px solid $main-color;
+    }
+    &:hover .dropdown-megamenu{
+      visibility: visible;
+    }
+  }
+}
+
+.language-and-currency{
+  text-transform: uppercase;
+  opacity: .5;
+  font-size: 0.875em; /*14px*/;
+  ul li:hover{
+    opacity: 0.3;
+  }
+}
+
+.utilites{
+  div {
+    padding: 15px;
+    img:hover{
+      transform: scale(1.2);
+    }
+  }
+}
+
+.dropdown-megamenu {
+  visibility: hidden;
+  @include flex-row;
+  align-items: stretch;
+  position: absolute;
+  background-color: $additional-color;
+  color: #ffffff;
+  top: 80px;
+  left: 0px;
+  width: 100%;
+  padding: 80px 60px 25px;
+  height: 400px;
+  &.active{
+    visibility: visible;
+  }
+  .categories{
+    margin-right: 400px;
+  }
+  .d-menu-title{
+    font-size: 0.875em; /*14px*/;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+  .categories__list,
+  .sale__list{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 90%;
+    padding-top: 15px;
+    li {
+      padding: 7px 130px 5px 0px;
+      font-size: 1em;
+      text-transform: capitalize;
+      a {
+        color: white;
+        font-size: 1em;
+      }
+      
+    }
+  }
+}
