@@ -19,19 +19,6 @@ $link-color: #45413e;
 
 /*Mixins --------------*/
 
-@mixin flex-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-@mixin flex-column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
 @mixin button {
   font-size: 0.875em; /*14px*/
   text-transform: uppercase;
@@ -68,10 +55,6 @@ a:link {
   color: $link-color;
 }
 
-nav {
-  @include flex-row;
-}
-
 li {
   list-style-type: none;
 }
@@ -80,79 +63,190 @@ li {
   background-color: $additional-color;
 }
 
-
-
 .main-header {
   position: fixed;
   top:0;
   z-index:101;
   background-color: white;
   color: $link-color;
-
   border-bottom: 1px solid rgba($color: #45413e, $alpha: 0.1);
-  nav {
-    width:60%
-  }
-  .language-and-currency{
-    width: 5%
+  .mobile-nav {
+    position: relative;
+    left: -40%;
   }
 }
-.logo {
-  @include flex-row;
-  &-text {
-    @include flex-column;
-    height: 65px;
-    padding-left: 7px;
-    line-height: 1;
-    &__big {
-        color: $secondary-color;
-        font-size: 2em; /* 32px */
-        font-weight: 900;
-        text-transform: uppercase;
-        letter-spacing: 0.2em; /* 6.33px */        
+
+
+/*Homepage slider and sales section --------------*/
+
+.slider-sale-wrap {
+  padding-top: 100px;
+}
+
+.carousel-inner{
+  background: black !important;
+  border-radius: 5px;
+  font-family: $secondary-font-family;
+  .carousel-item {
+    h5 {    
+      font-size: 1.75em; /*28px*/
+      font-weight: 700;
     }
-    &__small {
-      color: $main-color;
-      font-size: 1.125em; /* 18px */
+    p {
+      font-size: 0.875em; /*14px*/;
+    }
+    button {
+      @include button {
+        color: white;
+      }
     }
   }
 }
 
-.main-nav, 
-.language-and-currency,
-.utilites{
-  @include flex-row;
-  align-items: center;
+.carousel-indicators li{
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  background-color: white;
+  &.active {
+    background-color: transparent;
+    border: 2px solid white;
+  }
 }
 
-ul.languages,
-ul.currency {
+
+/*Popular Items section -----------------------------*/
+
+.popular-items__title {
+  font-size: 1.125em; /*18px*/
+}
+
+.product {
+  border: transparent;
+  border-radius: 5px;
+  &__img{
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__description {
+    font-size: 1em;
+  }
+}
+
+/*Banner Items section -----------------------------*/
+
+.banner {
+  background: url('../img/banner.png') no-repeat center;
+  background-size: cover;
+  height: 185px;
+  &__title {
+    font-size: 1.875em; /* 30px */
+    font-weight: 900;
+  }
+  &__decription {
+    font-family: $secondary-font-family;
+    font-size: 0.875em; /*14px*/
+    width: 90%;
+  }
+}
+
+
+/*Services section -----------------------------*/
+
+.services {
+  background-color: $link-color;
+  &__text h5 {
+    text-transform: uppercase;
+    font-size: 1.125em; /* 18px */
+  }
+  &__text p {
+    font-family: $secondary-font-family;
+    font-size: 0.875em; /*14px*/
+    color: #868380 !important;
+  }
+}
+
+.main-footer {
+  p,address,a {
+    font-size: 0.8125em; /*13px*/
+  }
+  ul li {
+    opacity: 0.7;
+    font-size: 0.8125em; /*13px*/
+  }
+  h6 {
+    font-size: 0.8125em; /*13px*/
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+}
+
+
+
+
+/*  Media queries  ------------------------*/
+
+/* Styles for screens larger than 768px ---------------------*/
+
+@media only screen and (min-width: 768px) {
+  .main-header {
+    nav {
+      width: 60%;
+    }
+    .language-and-currency{
+      width: 5%
+    }
+  }
+
+  .logo {
+    &-text {
+      height: 65px;
+      padding-left: 7px;
+      line-height: 1;
+      &__big {
+          color: $secondary-color;
+          font-size: 2em; /* 32px */
+          font-weight: 900;
+          text-transform: uppercase;
+          letter-spacing: 0.2em; /* 6.33px */        
+      }
+      &__small {
+        color: $main-color;
+        font-size: 1.125em; /* 18px */
+      }
+    }
+  }
+
+  .main-nav{
+    .main-nav__item {
+      display: inline-block;
+      color: $link-color;
+      font-size: 0.875em; /*14px*/
+      text-transform: uppercase;
+      font-weight: 700;
+      padding: 22px 10px 30px;
+      border-bottom: 2px solid transparent;
+      &:hover,
+      &.active {
+        background-color: $additional-color;
+        color: #ffffff;
+        border-bottom: 2px solid $main-color;
+      }
+      &:hover .dropdown-megamenu{
+        visibility: visible;
+      }
+    }
+  }
+
+  ul.languages,
+  ul.currency {
   li {
       display: none;
   }
   li.active{
     display: inline-block;
-  }
-}
-
-.main-nav{
-  .main-nav__item {
-    display: inline-block;
-    color: $link-color;
-    font-size: 0.875em; /*14px*/
-    text-transform: uppercase;
-    font-weight: 700;
-    padding: 22px 10px 30px;
-    border-bottom: 2px solid transparent;
-    &:hover,
-    &.active {
-      background-color: $additional-color;
-      color: #ffffff;
-      border-bottom: 2px solid $main-color;
-    }
-    &:hover .dropdown-megamenu{
-      visibility: visible;
-    }
   }
 }
 
@@ -178,7 +272,6 @@ ul.currency {
   position: absolute;
   z-index: 100;
   visibility: hidden;
-  @include flex-row;
   align-items: stretch;
   background-color: $additional-color;
   color: #ffffff;
@@ -219,11 +312,14 @@ ul.currency {
 }
 
 
-/*Homepage slider and sales section --------------*/
+/*Home Page ---------------------------*/
+
+/*Carousel styles------------------------------------------*/
+
 .carousel-inner{
-  background: black !important;
-  border-radius: 5px;
-  font-family: $secondary-font-family;
+  img {
+    max-width: 100%;
+  }
   .carousel-item {
     h5 {    
       font-size: 3em; /*48px*/
@@ -231,29 +327,13 @@ ul.currency {
     }
     p {
       font-size: 0.875em; /*14px*/;
-    }
-    button {
-      @include button {
-        color: white;
-      }
+      width: 50% !important;
     }
   }
 }
 
-.carousel-indicators li{
-  border-radius: 50%;
-  width: 6px;
-  height: 6px;
-  background-color: white;
-  &.active {
-    background-color: transparent;
-    border: 2px solid white;
-  }
- 
 
-}
-
-// big screen
+/*Sale section, next to the carousel ----------------------*/
 
 .sale {
   .sale-img {
@@ -292,9 +372,8 @@ ul.currency {
   }
 }
 
-.slider-sale-wrap {
-  padding-top: 100px;
-}
+
+/*Popular Items section -----------------------------*/
 
 .line {
   background: url('../img/-.png') no-repeat center;
@@ -304,41 +383,27 @@ ul.currency {
   font-size: 1.5em; /*24px*/
 }
 
-.product {
-  border: transparent;
-  border-radius: 5px;
-  max-width: 260px;
-  
-  &__img{
-    img {
-      max-width: 100%;
-    }
-  }
-  &__description {
-    font-size: 1em;
-  }
-}
-
 .load-more-button {
   @include button {
     color: white;
   }
 }
 
+/*Banner Items section -----------------------------*/
+
 .banner {
-  background: url('../img/banner.png') no-repeat center;
-  background-size: cover;
   height: 450px;
   &__title {
     font-size: 3em; /* 48px */
-    font-weight: 900;
   }
   &__decription {
-    font-family: $secondary-font-family;
-    font-size: 0.875em; /*14px*/
     width: 25%;
   }
 }
+
+
+/*Featured Products section -----------------------------*/
+
 
 .featured-products {
   &__title {
@@ -350,30 +415,4 @@ ul.currency {
   }
 }
 
-.services {
-  background-color: $link-color;
-  &__text h5 {
-    text-transform: uppercase;
-    font-size: 1.125em; /* 18px */
-  }
-  &__text p {
-    font-family: $secondary-font-family;
-    font-size: 0.875em; /*14px*/
-    color: #868380 !important;
-  }
-}
-
-.main-footer {
-  p,address,a {
-    font-size: 0.8125em; /*13px*/
-  }
-  ul li {
-    opacity: 0.7;
-    font-size: 0.8125em; /*13px*/
-  }
-  h6 {
-    font-size: 0.8125em; /*13px*/
-    text-transform: uppercase;
-    font-weight: 700;
-  }
 }
