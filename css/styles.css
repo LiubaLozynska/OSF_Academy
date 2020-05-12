@@ -129,11 +129,31 @@ li {
   font-size: 0.8125em;
   /*13px*/ }
 
-.main-footer h6 {
+.main-footer .footer-title {
+  display: flex;
+  justify-content: space-between;
   font-size: 0.8125em;
   /*13px*/
   text-transform: uppercase;
   font-weight: 700; }
+
+.main-footer .opener:after {
+  content: url("../img/opener-down.png"); }
+
+.main-footer .opener.active:after {
+  content: url("../img/opener-up.png"); }
+
+.main-footer .opener + .dropdown {
+  display: none; }
+
+.main-footer .opener.active + .dropdown {
+  display: flex; }
+
+.main-footer .social-links a img {
+  opacity: 0.3; }
+
+.main-footer .social-links a:hover img {
+  opacity: 0.7; }
 
 /*  Media queries  ------------------------*/
 /* Styles for screens larger than 768px ---------------------*/
@@ -309,4 +329,9 @@ li {
     font-weight: 700; }
   .featured-products__description {
     font-size: 1.125em;
-    /* 18px */ } }
+    /* 18px */ }
+  /*Main Footer section -----------------------------*/
+  .main-footer .opener:after {
+    content: none; }
+  .main-footer .opener + .dropdown {
+    display: flex; } }
