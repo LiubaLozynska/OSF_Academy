@@ -40,7 +40,58 @@ li {
   border-bottom: 1px solid rgba(69, 65, 62, 0.1); }
   .main-header .mobile-nav {
     position: relative;
-    left: -40%; }
+    left: -45%; }
+
+/*Main navigation styles -----------------*/
+.opener.hamburger .nonactive {
+  display: inline; }
+
+.opener.hamburger .active {
+  display: none; }
+
+.opener.hamburger.active .nonactive {
+  display: none; }
+
+.opener.hamburger.active .active {
+  display: inline; }
+
+.main-header .main-nav-mobile {
+  position: absolute;
+  display: none;
+  top: 55px;
+  width: 100vw; }
+  .main-header .main-nav-mobile a {
+    color: #fff; }
+  .main-header .main-nav-mobile ul.level3 {
+    max-height: 150px;
+    overflow: scroll; }
+  .main-header .main-nav-mobile li.level1 > a {
+    text-transform: uppercase;
+    font-size: 0.875em;
+    /* 14px */
+    font-weight: 400; }
+  .main-header .main-nav-mobile li.level2 {
+    padding-left: 0.5em; }
+  .main-header .main-nav-mobile li.level3 {
+    padding-left: 1em; }
+  .main-header .main-nav-mobile li.level2 > a,
+  .main-header .main-nav-mobile li.level3 > a {
+    text-transform: capitalize;
+    font-size: 1em;
+    /* 16px */
+    font-weight: 400; }
+
+.main-nav-mobile.active {
+  display: flex;
+  flex-direction: column; }
+  .main-nav-mobile.active li.level1.expandable ul.level2 {
+    display: none; }
+  .main-nav-mobile.active li.level1.expandable.active ul.level2 {
+    display: block; }
+  .main-nav-mobile.active li.level2 ul.level3 {
+    display: none; }
+  .main-nav-mobile.active li.level2.active ul.level3 {
+    display: block; }
 
 /*Homepage slider and sales section --------------*/
 .slider-sale-wrap {
@@ -179,23 +230,24 @@ li {
       font-size: 1.125em;
       /* 18px */ }
   .main-nav {
+    right: 0px;
     margin-bottom: 0em; }
-    .main-nav .main-nav__item {
+    .main-nav .main-nav__item > a {
       display: inline-block;
       color: #45413e;
       font-size: 0.875em;
       /*14px*/
       text-transform: uppercase;
       font-weight: 700;
-      padding: 10px 15px 20px;
+      padding: 15px 15px 25px;
       border-bottom: 2px solid transparent;
       margin-top: 5px; }
-      .main-nav .main-nav__item:hover, .main-nav .main-nav__item.active {
-        background-color: #262a32;
-        color: #ffffff;
-        border-bottom: 2px solid #84bc22; }
-      .main-nav .main-nav__item:hover .dropdown-megamenu {
-        visibility: visible; }
+    .main-nav .main-nav__item:hover > a, .main-nav .main-nav__item.active > a {
+      background-color: #262a32;
+      color: #ffffff;
+      border-bottom: 2px solid #84bc22; }
+    .main-nav .main-nav__item:hover .dropdown-megamenu {
+      visibility: visible; }
   ul.languages li,
   ul.currency li {
     display: none; }
@@ -217,39 +269,29 @@ li {
     position: absolute;
     z-index: 100;
     visibility: hidden;
-    align-items: stretch;
-    background-color: #262a32;
     color: #ffffff;
-    top: 80px;
+    top: 68px;
     left: 0px;
-    width: 100%;
-    padding: 80px 60px 25px;
-    height: 400px; }
+    height: 400px;
+    padding-top: 5em; }
     .dropdown-megamenu.active {
       visibility: visible; }
-    .dropdown-megamenu .categories {
-      margin-right: 400px; }
     .dropdown-megamenu .d-menu-title {
       font-size: 0.875em;
       /*14px*/
       font-weight: 900;
-      text-transform: uppercase; }
-    .dropdown-megamenu .categories__list,
-    .dropdown-megamenu .sale__list {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      max-height: 90%;
-      padding-top: 15px; }
-      .dropdown-megamenu .categories__list li,
-      .dropdown-megamenu .sale__list li {
-        padding: 7px 130px 5px 0px;
-        font-size: 1em;
-        text-transform: capitalize; }
-        .dropdown-megamenu .categories__list li a,
-        .dropdown-megamenu .sale__list li a {
-          color: white;
-          font-size: 1em; }
+      text-transform: uppercase;
+      margin-bottom: 2em; }
+    .dropdown-megamenu .categories__list li a,
+    .dropdown-megamenu .sale__list li a {
+      color: white;
+      font-size: 1em;
+      /*16px*/
+      font-weight: 400;
+      opacity: 0.9;
+      text-transform: capitalize;
+      line-height: 2em;
+      /*32px*/ }
   /*Home Page ---------------------------*/
   /*Carousel styles------------------------------------------*/
   .carousel-inner img {

@@ -65,6 +65,8 @@ li {
   background-color: $additional-color;
 }
 
+
+
 /* Header styles -------------------------*/
 
 .main-header {
@@ -76,10 +78,77 @@ li {
   border-bottom: 1px solid rgba($color: #45413e, $alpha: 0.1);
   .mobile-nav {
     position: relative;
-    left: -40%;
+    left: -45%;
   }
 }
 
+/*Main navigation styles -----------------*/
+
+.opener.hamburger {
+  .nonactive {
+    display: inline;
+  }
+  .active {
+    display: none;
+  }
+  &.active {
+    .nonactive {
+      display: none;
+    }
+    .active {
+      display: inline;
+    }
+  }
+}
+
+.main-header .main-nav-mobile {
+  position: absolute;
+  display: none;
+  top: 55px;
+  width: 100vw;
+  a {
+    color: #fff;
+  }
+  ul.level3 {
+    max-height: 150px;
+    overflow: scroll;
+  }
+  li.level1 > a {
+    text-transform: uppercase;
+    font-size: 0.875em; /* 14px */
+    font-weight: 400;
+  }
+  li.level2 {
+    padding-left: 0.5em;
+  }
+  li.level3 {
+    padding-left: 1em;
+  }
+  li.level2 > a,
+  li.level3 > a
+   {
+    text-transform: capitalize;
+    font-size: 1em; /* 16px */
+    font-weight: 400;
+  }
+}
+
+.main-nav-mobile.active {
+  display: flex;
+  flex-direction: column;
+  li.level1.expandable ul.level2{
+    display: none;
+  }
+  li.level1.expandable.active ul.level2{
+    display: block;
+  }
+  li.level2 ul.level3{
+    display: none;
+  }
+  li.level2.active ul.level3{
+    display: block;
+  }
+}
 
 /*Homepage slider and sales section --------------*/
 
@@ -248,23 +317,29 @@ li {
       }
     }
   }
-
+  
   .main-nav{
+    right: 0px;
     margin-bottom: 0em;
-    .main-nav__item {
-      display: inline-block;
-      color: $link-color;
-      font-size: 0.875em; /*14px*/
-      text-transform: uppercase;
-      font-weight: 700;
-      padding: 10px 15px 20px;
-      border-bottom: 2px solid transparent;
-      margin-top: 5px;
+    .main-nav__item{
+      & > a {
+        display: inline-block;
+        color: $link-color;
+        font-size: 0.875em; /*14px*/
+        text-transform: uppercase;
+        font-weight: 700;
+        padding: 15px 15px 25px;
+        border-bottom: 2px solid transparent;
+        margin-top: 5px;
+      }
       &:hover,
       &.active {
-        background-color: $additional-color;
-        color: #ffffff;
-        border-bottom: 2px solid $main-color;
+        & > a {
+          background-color: $additional-color;
+          color: #ffffff;
+          border-bottom: 2px solid $main-color;
+        }
+  
       }
       &:hover .dropdown-megamenu{
         visibility: visible;
@@ -304,41 +379,31 @@ li {
     position: absolute;
     z-index: 100;
     visibility: hidden;
-    align-items: stretch;
-    background-color: $additional-color;
     color: #ffffff;
-    top: 80px;
+    top: 68px;
     left: 0px;
-    width: 100%;
-    padding: 80px 60px 25px;
     height: 400px;
+    padding-top: 5em;
     &.active{
       visibility: visible;
-    }
-    .categories{
-      margin-right: 400px;
     }
     .d-menu-title{
       font-size: 0.875em; /*14px*/;
       font-weight: 900;
       text-transform: uppercase;
+      margin-bottom: 2em;
     }
     .categories__list,
     .sale__list{
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      max-height: 90%;
-      padding-top: 15px;
       li {
-        padding: 7px 130px 5px 0px;
-        font-size: 1em;
-        text-transform: capitalize;
         a {
           color: white;
-          font-size: 1em;
+          font-size: 1em; /*16px*/
+          font-weight: 400;
+          opacity: 0.9;
+          text-transform: capitalize;
+          line-height: 2em; /*32px*/
         }
-        
       }
     }
   }
@@ -457,5 +522,5 @@ li {
       display: flex;
     }
   }
-  
+
 }
