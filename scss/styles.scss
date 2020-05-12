@@ -30,6 +30,8 @@ $link-color: #45413e;
   @content;
 } /* pass in color of the button*/
 
+
+
 /* General Layout Styles --------*/
 
 *{
@@ -62,6 +64,8 @@ li {
 .bg-dark {
   background-color: $additional-color;
 }
+
+/* Header styles -------------------------*/
 
 .main-header {
   position: fixed;
@@ -168,6 +172,8 @@ li {
   }
 }
 
+/*Main Footer section -----------------------------*/
+
 .main-footer {
   p,address,a {
     font-size: 0.8125em; /*13px*/
@@ -220,14 +226,16 @@ li {
   }
 
   .main-nav{
+    margin-bottom: 0em;
     .main-nav__item {
       display: inline-block;
       color: $link-color;
       font-size: 0.875em; /*14px*/
       text-transform: uppercase;
       font-weight: 700;
-      padding: 22px 10px 30px;
+      padding: 10px 15px 20px;
       border-bottom: 2px solid transparent;
+      margin-top: 5px;
       &:hover,
       &.active {
         background-color: $additional-color;
