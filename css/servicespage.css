@@ -1,0 +1,31 @@
+/* Google Fonts import ---------*/
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+/*Variables --------------*/
+/*Mixins --------------*/
+/* pass in color of the button*/
+/* General Layout Styles --------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Lato", Arial, "sans serif";
+  font-size: 16px;
+  margin: 0 auto;
+  color: #45413e; }
+
+p {
+  font-family: "Lato", Arial, "sans serif";
+  margin-bottom: 0px; }
+
+a:link {
+  text-decoration: none;
+  color: #45413e; }
+
+li {
+  list-style-type: none; }
+
+.bg-darkgrey {
+  background-color: #262a32; }

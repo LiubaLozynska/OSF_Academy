@@ -13,14 +13,14 @@ var sass = require('gulp-sass');
 sass.compiler = require('node-sass');
  
 gulp.task('sass', function () {
-  return gulp.src('scss/styles.scss')
+  return gulp.src('scss/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('css'));
 });
  
 gulp.task('watch', function(){
-   gulp.watch('scss/**.scss', function () {
-    return gulp.src('scss/styles.scss')
+   gulp.watch('scss/*.scss', function () {
+    return gulp.src('scss/*.scss')
       .pipe(sass().on('error', sass.logError))
       .pipe(gulp.dest('css'));
   }); 

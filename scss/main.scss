@@ -1,0 +1,68 @@
+/* Google Fonts import ---------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/*Variables --------------*/
+
+$primary-font-family: 'Lato', Arial, 'sans serif';
+$secondary-font-family: "PT sans", Arial, 'sans serif';
+
+$big-devices-width: 1280px;
+
+$custom-font-size: 16px;
+
+$main-color: #84bc22;
+$secondary-color: #011847;
+$additional-color: #262a32;
+$link-color: #45413e;
+$services-bg-color:#f2edea;
+
+/*Mixins --------------*/
+
+@mixin button {
+  font-size: 0.875em; /*14px*/
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 2px solid;
+  border-radius: 25px;
+  padding: 8px 39px;
+  width: 100%;
+  max-width: 170px;
+  @content;
+} /* pass in color of the button*/
+
+
+
+/* General Layout Styles --------*/
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $primary-font-family;
+  font-size: $custom-font-size;
+  margin: 0 auto;
+  color: $link-color;
+}
+
+p {
+  font-family: $primary-font-family;
+  margin-bottom: 0px;
+}
+
+a:link {
+  text-decoration: none;
+  color: $link-color;
+}
+
+li {
+  list-style-type: none;
+}
+
+.bg-darkgrey {
+  background-color: $additional-color;
+}

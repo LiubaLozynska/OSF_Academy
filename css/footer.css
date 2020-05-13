@@ -1,0 +1,68 @@
+/* Google Fonts import ---------*/
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+/*Variables --------------*/
+/*Mixins --------------*/
+/* pass in color of the button*/
+/* General Layout Styles --------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Lato", Arial, "sans serif";
+  font-size: 16px;
+  margin: 0 auto;
+  color: #45413e; }
+
+p {
+  font-family: "Lato", Arial, "sans serif";
+  margin-bottom: 0px; }
+
+a:link {
+  text-decoration: none;
+  color: #45413e; }
+
+li {
+  list-style-type: none; }
+
+.bg-darkgrey {
+  background-color: #262a32; }
+
+/*Main Footer section -----------------------------*/
+.main-footer {
+  margin-bottom: 50px; }
+  .main-footer p, .main-footer address, .main-footer a {
+    font-size: 0.8125em;
+    /*13px*/
+    color: #45413e; }
+  .main-footer ul li {
+    opacity: 0.7;
+    font-size: 0.8125em;
+    /*13px*/ }
+  .main-footer .footer-title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8125em;
+    /*13px*/
+    text-transform: uppercase;
+    font-weight: 700; }
+  .main-footer .opener:after {
+    content: url("../img/opener-down.png"); }
+  .main-footer .opener.active:after {
+    content: url("../img/opener-up.png"); }
+  .main-footer .opener + .dropdown {
+    display: none; }
+  .main-footer .opener.active + .dropdown {
+    display: flex; }
+  .main-footer .social-links a img {
+    opacity: 0.3; }
+  .main-footer .social-links a:hover img {
+    opacity: 0.7; }
+
+.sticky-mobile-footer {
+  position: fixed;
+  z-index: 99;
+  bottom: 0%;
+  border-top: 1px solid #fff; }

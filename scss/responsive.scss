@@ -1,0 +1,282 @@
+@import 'main';
+
+/*  Media queries  ------------------------*/
+
+/* Styles for screens larger than 768px ---------------------*/
+
+@media only screen and (min-width: 768px) {
+  
+    .logo {
+      &-text {
+        height: 65px;
+        padding-left: 7px;
+        line-height: 1;
+        &__big {
+            color: $secondary-color;
+            font-size: 2em; /* 32px */
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.2em; /* 6.33px */        
+        }
+        &__small {
+          color: $main-color;
+          font-size: 1.125em; /* 18px */
+        }
+      }
+    }
+  
+      /*Carousel styles------------------------------------------*/
+  
+      .carousel-inner{
+        img {
+          max-width: 100%;
+        }
+        .carousel-item {
+          h5 {    
+            font-size: 1.2em; /*48px*/
+            font-weight: 700;
+          }
+          p {
+            font-size: 0.875em; /*14px*/;
+           
+          }
+        }
+      }
+  
+      /*Sale section, next to the carousel ----------------------*/
+  
+    .sale {
+      .sale-img {
+        background: url('../img/sale-banner-homepage.png') no-repeat center;
+        background-size: cover;
+        height: 60%;
+        border-radius: 5px;
+      }
+      &-percentages {
+        font-size: 3em;
+        font-weight: bold;
+      }
+      &-name {
+        font-size: 0.8em;
+        text-transform: uppercase;
+        color: $link-color;
+      }
+    } 
+  
+    .FB-CTA {
+      line-height: 1;;
+      h5 {
+        font-size: 1em; /* 18px */
+      }
+      p {
+        font-family: $secondary-font-family;
+        font-size: 0.7em;
+      }
+      .Follow-us-FB{
+        @include button {
+          color: #3a5b96;
+        }
+        a {
+          color: inherit;
+        }
+      }
+    }
+  
+      /*Popular Items section -----------------------------*/
+  
+      .line {
+        background: url('../img/-.png') no-repeat center;
+      }
+    
+      .popular-items__title {
+        font-size: 1.5em; /*24px*/
+      }
+  
+      .load-more-button {
+        @include button {
+          color: white;
+        }
+      }
+  
+      /*Banner Items section -----------------------------*/
+  
+    .banner {
+      height: 350px;
+      &__title {
+        font-size: 3em; /* 48px */
+      }
+      &__decription {
+        width: 40%;
+      }
+    }
+  
+  
+  
+  
+    
+     /*Main Footer section -----------------------------*/
+  
+     .main-footer {
+      .opener:after {
+        content: none;
+      }
+      .opener + .dropdown {
+        display: flex;
+      }
+    }
+  
+  }
+  
+  
+  /* Styles for screens larger than 1200px ---------------------*/
+  
+  @media only screen and (min-width: 1200px) {
+  
+    .main-header {
+      nav {
+        width: 60%;
+      }
+      .language-and-currency{
+        width: 5%
+      }
+    }
+    
+    .main-nav{
+      right: 0px;
+      margin-bottom: 0em;
+      .main-nav__item{
+        & > a {
+          display: inline-block;
+          color: $link-color;
+          font-size: 0.875em; /*14px*/
+          text-transform: uppercase;
+          font-weight: 700;
+          padding: 15px 15px 25px;
+          border-bottom: 2px solid transparent;
+          margin-top: 5px;
+        }
+        &:hover,
+        &.active {
+          & > a {
+            background-color: $additional-color;
+            color: #ffffff;
+            border-bottom: 2px solid $main-color;
+          }
+    
+        }
+        &:hover .dropdown-megamenu{
+          visibility: visible;
+        }
+      }
+    }
+  
+    .dropdown-megamenu {
+      position: absolute;
+      z-index: 100;
+      visibility: hidden;
+      color: #ffffff;
+      top: 68px;
+      left: 0px;
+      height: 400px;
+      &.active{
+        visibility: visible;
+      }
+      .d-menu-title{
+        margin-bottom: 1.5rem;
+        a {
+          font-size: 0.875rem !important; /*14px*/;
+          font-weight: 900;
+          text-transform: uppercase;
+          color: white;
+        }
+      } 
+      .categories__list,
+      .sale__list{
+        li {
+          a {
+            color: white;
+            font-size: 1em; /* 16px */
+            font-weight: 400;
+            opacity: 0.9;
+            text-transform: capitalize;
+            line-height: 2em; /* 32px */
+          }
+        }
+      }
+    }
+  
+    ul.languages,
+      ul.currency {
+      li {
+          display: none;
+      }
+      li.active{
+        display: inline-block;
+      }
+    }
+  
+    .language-and-currency{
+      text-transform: uppercase;
+      opacity: .5;
+      font-size: 0.875em; /*14px*/;
+      ul li:hover{
+        opacity: 0.3;
+      }
+    }
+  
+    .utilites{
+      div {
+        padding: 15px;
+        img:hover{
+          transform: scale(1.2);
+        }
+      }
+    }
+   
+    /*Home Page ---------------------------*/
+  
+        /*Carousel styles------------------------------------------*/
+  
+        .carousel-inner{
+          img {
+            max-width: 100%;
+          }
+          .carousel-item {
+            h5 {    
+              font-size: 3em; /*48px*/
+              font-weight: 700;
+            }
+            p {
+              font-size: 0.875em; /*14px*/;
+              width: 50% !important;
+            }
+          }
+        }
+  
+  
+    /*Sale section, next to the carousel ----------------------*/
+  
+    .sale {
+  
+      &-percentages {
+        font-size: 6.25em; /*100px*/
+      }
+      &-name {
+        font-size: 1.5em; /*25px*/
+      }
+    } 
+  
+    .FB-CTA {
+      h5 {
+        font-size: 1.125em; /* 18px */
+      }
+      p {
+        font-size: 0.8125em; /*13px*/
+      }
+    }
+
+    .main-footer {
+      margin-bottom: 0px;
+    }
+  
+  }

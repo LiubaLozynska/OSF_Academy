@@ -1,0 +1,112 @@
+@import 'main';
+@import 'header';
+@import 'footer';
+@import 'responsive';
+
+/*Homepage slider and sales section --------------*/
+
+.slider-sale-wrap {
+    padding-top: 100px;
+  }
+  
+  .carousel-inner{
+    background: black !important;
+    border-radius: 5px;
+    font-family: $secondary-font-family;
+    .carousel-item {
+      h5 {    
+        font-size: 1.75em; /*28px*/
+        font-weight: 700;
+      }
+      p {
+        font-size: 0.875em; /*14px*/;
+      }
+      button {
+        @include button {
+          color: white;
+        }
+      }
+    }
+  }
+  
+  .carousel-indicators li{
+    border-radius: 50%;
+    width: 6px;
+    height: 6px;
+    background-color: white;
+    &.active {
+      background-color: transparent;
+      border: 2px solid white;
+    }
+  }
+  
+  
+  /*Popular Items section -----------------------------*/
+  
+  .popular-items__title {
+    font-size: 1.125em; /*18px*/
+  }
+  
+  .product {
+    border: transparent;
+    border-radius: 5px;
+    &__img{
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    &__description {
+      font-size: 1em;
+      color: $link-color;
+    }
+    &__price {
+      color: $link-color;
+    }
+  }
+  
+  /*Banner Items section -----------------------------*/
+  
+  .banner {
+    background: url('../img/banner.png') no-repeat center;
+    background-size: cover;
+    height: 185px;
+    &__title {
+      font-size: 1.875em; /* 30px */
+      font-weight: 900;
+    }
+    &__decription {
+      font-family: $secondary-font-family;
+      font-size: 0.875em; /*14px*/
+      width: 90%;
+    }
+  }
+  
+    /*Featured Products section -----------------------------*/
+  
+  
+    .featured-products {
+      &__title {
+        font-size: 2.25em; /*36px*/
+        font-weight: 700;
+      }
+      &__description {
+        font-size: 1.125em; /* 18px */
+      }
+    }
+  
+  /*Services section -----------------------------*/
+  
+  .services {
+    background-color: $link-color;
+    &__text h5 {
+      text-transform: uppercase;
+      font-size: 1.125em; /* 18px */
+    }
+    &__text p {
+      font-family: $secondary-font-family;
+      font-size: 0.875em; /*14px*/
+      color: #868380 !important;
+    }
+  }
+  

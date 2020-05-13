@@ -1,0 +1,85 @@
+@import 'main';
+
+/* Header styles -------------------------*/
+
+.main-header {
+    position: fixed;
+    top:0;
+    z-index:101;
+    background-color: white;
+    color: $link-color;
+    border-bottom: 1px solid rgba($color: #45413e, $alpha: 0.1);
+    .mobile-nav {
+      position: absolute;
+      left:0%;
+      top: 30%;
+    }
+  }
+  
+  /*Main navigation styles -----------------*/
+  
+  .opener.hamburger {
+    .nonactive {
+      display: inline;
+    }
+    .active {
+      display: none;
+    }
+    &.active {
+      .nonactive {
+        display: none;
+      }
+      .active {
+        display: inline;
+      }
+    }
+  }
+  
+  .main-header .main-nav-mobile {
+    position: absolute;
+    display: none;
+    top: 55px;
+    width: 100vw;
+    a {
+      color: #fff;
+    }
+    ul.level3 {
+      max-height: 150px;
+      overflow: scroll;
+    }
+    li.level1 > a {
+      text-transform: uppercase;
+      font-size: 0.875em; /* 14px */
+      font-weight: 400;
+    }
+    li.level2 {
+      padding-left: 0.5em;
+    }
+    li.level3 {
+      padding-left: 1em;
+    }
+    li.level2 > a,
+    li.level3 > a
+     {
+      text-transform: capitalize;
+      font-size: 1em; /* 16px */
+      font-weight: 400;
+    }
+  }
+  
+  .main-nav-mobile.active {
+    display: flex;
+    flex-direction: column;
+    li.level1.expandable ul.level2{
+      display: none;
+    }
+    li.level1.expandable.active ul.level2{
+      display: block;
+    }
+    li.level2 ul.level3{
+      display: none;
+    }
+    li.level2.active ul.level3{
+      display: block;
+    }
+  }
