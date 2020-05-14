@@ -30,6 +30,9 @@ li {
 .bg-darkgrey {
   background-color: #262a32; }
 
+.text-lightgreen {
+  color: #84bc22 !important; }
+
 /*  Media queries  ------------------------*/
 /* Styles for screens larger than 768px ---------------------*/
 @media only screen and (min-width: 768px) {
@@ -199,11 +202,11 @@ li {
   .carousel-inner img {
     max-width: 100%; }
   .carousel-inner .carousel-item h5 {
-    font-size: 3em;
+    font-size: 3rem !important;
     /*48px*/
     font-weight: 700; }
   .carousel-inner .carousel-item p {
-    font-size: 0.875em;
+    font-size: 0.875rem;
     /*14px*/
     width: 50% !important; }
   /*Sale section, next to the carousel ----------------------*/

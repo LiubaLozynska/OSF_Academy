@@ -162,7 +162,6 @@
             color: #ffffff;
             border-bottom: 2px solid $main-color;
           }
-    
         }
         &:hover .dropdown-megamenu{
           visibility: visible;
@@ -243,11 +242,11 @@
           }
           .carousel-item {
             h5 {    
-              font-size: 3em; /*48px*/
+              font-size: 3rem !important; /*48px*/
               font-weight: 700;
             }
             p {
-              font-size: 0.875em; /*14px*/;
+              font-size: 0.875rem; /*14px*/;
               width: 50% !important;
             }
           }

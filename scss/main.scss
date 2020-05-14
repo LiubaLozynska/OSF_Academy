@@ -16,7 +16,7 @@ $main-color: #84bc22;
 $secondary-color: #011847;
 $additional-color: #262a32;
 $link-color: #45413e;
-$services-bg-color:#f2edea;
+$background-color:#f2edea;
 
 /*Mixins --------------*/
 
@@ -65,4 +65,8 @@ li {
 
 .bg-darkgrey {
   background-color: $additional-color;
+}
+
+.text-lightgreen {
+  color: $main-color !important;
 }

@@ -30,6 +30,9 @@ li {
 .bg-darkgrey {
   background-color: #262a32; }
 
+.text-lightgreen {
+  color: #84bc22 !important; }
+
 /* Header styles -------------------------*/
 .main-header {
   position: fixed;
