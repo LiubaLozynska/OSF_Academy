@@ -222,5 +222,14 @@ li {
   .FB-CTA p {
     font-size: 0.8125em;
     /*13px*/ }
+  /*Banner Items section -----------------------------*/
+  .banner {
+    height: 450px !important; }
   .main-footer {
-    margin-bottom: 0px; } }
+    margin-bottom: 0px; }
+  /*Services Page ----------------------*/
+  /* Page title  --------------*/
+  .services-page .page-title h1 {
+    font-size: 3rem;
+    /* 48px*/
+    font-weight: 900 !important; } }

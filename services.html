@@ -18,9 +18,7 @@
 
     <header class="main-header container-fluid py-2 py-xl-0">
         <div class="container d-flex justify-content-center justify-content-xl-between align-items-baseline ">
-
             <nav class="mobile-nav d-flex d-xl-none">
-
                 <div class="opener hamburger ml-3 ml-md-5" id="mobile-nav-opener">
                     <img class="nonactive" src="img/hamburger.png" alt="Open Mobile Menu">
                     <img class="active" src="img/close-mobile-menu.png" alt="Hide Mobile Menu">
@@ -197,54 +195,215 @@
         </div> <!-- End of container-->
 </header> <!-- End of Main header-->
 
-
-
 <!-- Main content container-->
-<main class="main-content-wrap pt-5">
+<main class="main-content-wrap services-page pt-5">
     <div class="container-fluid bg-services py-5">
         <div class="container">
             <!-- Breadcrumb ----------------->
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb d-flex justify-content-center">
-                <li class="breadcrumb-item"><a class="text-lightgreen" href="index.html">Home</a></li>
+                <li class="breadcrumb-item clickable"><a class="text-lightgreen" href="index.html">Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Categry Landing Services</li>
                 </ol>
             </nav> <!-- End of Breadcrumb ----------------->
 
             <div class="page-title text-center">
                 <div class="row mx-auto">
-                    <div class="line-white d-none d-md-block col-md-4 col-xl-5  mt-5 mx-auto"></div>
-                    <h1 class="col-12 col-md-4 col-xl-2 text-center mt-5 mx-auto">
+                    <div class="line-white d-none d-md-block col-md-4  mt-5 mx-auto"></div>
+                    <h1 class="col-12 col-md-4 text-center mt-5 mx-auto">
                         Services
                     </h1>
-                    <div class="line-white d-none d-md-block col-md-4 col-xl-5 mt-5 mx-auto"></div>
+                    <div class="line-white d-none d-md-block col-md-4 mt-5 mx-auto"></div>
                 </div>
             </div>
 
             <!-- Services filers ------------------------->
-            <div class="filters text-center">
-                <button class="hide-filters">Hide Filter</button>
-                <div class="filters-wrap container bg-white py-3 mt-5 ">
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                          <label class="input-group-text" for="inputGroupSelect01">Options</label>
+            <div class="filters text-center mt-4">
+                <button class="hide-filters d-lg-none">Hide Filter</button>
+                <div class="filters-wrap container bg-white py-3 mt-3 ">
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="filter price mb-3 d-flex mx-lg-5">
+                                <div class="mr-4">
+                                  <label for="inputGroupSelect01">Price</label>
+                                </div>
+                                <select class="flex-grow-1 px-3 py-1" id="inputGroupSelect01">
+                                  <option> $0.00 - $100.00 </option>
+                                  <option>One</option>
+                                  <option>Two</option>
+                                  <option>Three</option>
+                                </select>
+                            </div>
+                            <div class="filter color mb-3 d-flex mx-lg-5">
+                                <div class="mr-4">
+                                  <label for="inputGroupSelect01">Color</label>
+                                </div>
+                                <ul class="d-flex color-picker flex-grow-1 justify-content-between align-items-center id="inputGroupSelect01">
+                                  <li id="white" data-color="#fff" class="active"></li>
+                                  <li id="skyblue" data-color="#43c0cf"></li>
+                                  <li id="grey" data-color="#3d402f"></li>
+                                  <li id="green" data-color="#4aaf00"></li>
+                                  <li id="blue" data-color="#315bbd"></li>
+                                  <li id="orange" data-color="#ec6115"></li>
+                                  <li id="red" data-color="#dc041d"></li>
+                                  <li id="lightgrey" data-color="#efead7"></li>
+                                  </il>
+                            </div>
                         </div>
-                        <select class="custom-select" id="inputGroupSelect01">
-                          <option selected>Choose...</option>
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
-                        </select>
-                      </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="filter brands mb-3 d-flex mx-lg-5">
+                                <div class="mr-4">
+                                  <label for="inputGroupSelect01">Brands</label>
+                                </div>
+                                <select class="flex-grow-1 px-3 py-1" id="inputGroupSelect01">
+                                  <option selected> Ukraine sport </option>
+                                  <option value="1">Other Brand</option>
+                                  <option value="2">H&M</option>
+                                  <option value="3">Zara</option>
+                                </select>
+                            </div>
+                            <div class="filter mb-3 d-flex mx-lg-5">
+                                <div class="mr-4">
+                                  <label for="inputGroupSelect01">Sort by</label>
+                                </div>
+                                <select class="flex-grow-1 px-3 py-1" id="inputGroupSelect01">
+                                  <option selected> Price </option>
+                                  <option value="1">Brand</option>
+                                  <option value="2">Size</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-12 col-lg-4 ">
+                            <div class="row mx-lg-4">
+                                <div class="filter col-12 col-md-6 col-lg-12 mb-3 d-flex">
+                                    <div class="mr-4">
+                                      <label for="inputGroupSelect01">Size</label>
+                                    </div>
+                                    <select class="flex-grow-1 px-3 py-1" id="inputGroupSelect01">
+                                      <option selected> Small </option>
+                                      <option value="1">Medium</option>
+                                      <option value="2">Large</option>
+                                      <option value="3">Extra Large</option>
+                                    </select>
+                                </div>
+                                <div class="filter col-12 col-md-6 col-lg-12 mb-3 d-flex">
+                                    <div class="mr-4">
+                                      <label for="inputGroupSelect01">Show</label>
+                                    </div>
+                                    <select class="flex-grow-1 px-3 py-1" id="inputGroupSelect01">
+                                      <option selected> 16 per page </option>
+                                      <option value="1">20 per page</option>
+                                      <option value="2">24 per page</option>
+                                      <option value="3">28 per page</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- End of Services filers ------------------------->
 
-   
+            <!-- Product Tile ----------------------------------->
+            <div class="product-tile d-flex flex-column align-items-center">
+                <p class="products-count text-center mt-3 mb-2">results in apparel</p>
+                <div class="products">
+                    <div class="row">
+                        <div class="products__item-wrap col-12 col-sm-6 col-md-4 col-xl-3 mx-auto">
+                            <div class="product d-flex flex-column justify-content-between bg-white my-3 mx-auto">
+                                <div class="product__img">
+                                    <img src="img/product.png" alt="product-item">
+                                </div>
+                                <p class="product__description p-3 text-center">Kristina Dam Oak Table With White Marble Top
+                                </p>
+                                <p class="product__price pb-3 text-center">$ 799.55</p>
+                            </div>
+                        </div>
+    
+                        <div class="products__item-wrap col-12 col-sm-6 col-md-4 col-xl-3 mx-auto">
+                            <div class="product d-flex flex-column justify-content-between bg-white my-3 mx-auto">
+                                <div class="product__img">
+                                    <img src="img/product.png" alt="product-item">
+                                </div>
+                                <p class="product__description p-3 text-center">Kristina Dam Oak Table With White Marble Top
+                                </p>
+                                <p class="product__price pb-3 text-center">$ 799.55</p>
+                            </div>
+                        </div>
+    
+                        <div class="products__item-wrap col-12 col-sm-6 col-md-4 col-xl-3 mx-auto">
+                            <div class="product d-flex flex-column justify-content-between bg-white my-3 mx-auto">
+                                <div class="product__img">
+                                    <img src="img/product.png" alt="product-item">
+                                </div>
+                                <p class="product__description p-3 text-center">Kristina Dam Oak Table With White Marble Top
+                                </p>
+                                <p class="product__price pb-3 text-center">$ 799.55</p>
+                            </div>
+                        </div>
+    
+                        <div class="products__item-wrap col-12 col-sm-6 col-md-4 col-xl-3 mx-auto">
+                            <div class="product d-flex flex-column justify-content-between bg-white my-3 mx-auto">
+                                <div class="product__img">
+                                    <img src="img/product.png" alt="product-item">
+                                </div>
+                                <p class="product__description p-3 text-center">Kristina Dam Oak Table With White Marble Top
+                                </p>
+                                <p class="product__price pb-3 text-center">$ 799.55</p>
+                            </div>
+                        </div>
+    
+                        <div class="products__item-wrap col-12 col-sm-6 col-md-4 col-xl-3 mx-auto">
+                            <div class="product d-flex flex-column justify-content-between bg-white my-3 mx-auto">
+                                <div class="product__img">
+                                    <img src="img/product.png" alt="product-item">
+                                </div>
+                                <p class="product__description p-3 text-center">Kristina Dam Oak Table With White Marble Top
+                                </p>
+                                <p class="product__price pb-3 text-center">$ 799.55</p>
+                            </div>
+                        </div>
+    
+                        <div class="products__item-wrap col-12 col-sm-6 col-md-4 col-xl-3 mx-auto">
+                            <div class="product d-flex flex-column justify-content-between bg-white my-3 mx-auto">
+                                <div class="product__img">
+                                    <img src="img/product.png" alt="product-item">
+                                </div>
+                                <p class="product__description p-3 text-center">Kristina Dam Oak Table With White Marble Top
+                                </p>
+                                <p class="product__price pb-3 text-center">$ 799.55</p>
+                            </div>
+                        </div>
+    
+                        <div class="products__item-wrap col-12 col-sm-6 col-md-4 col-xl-3 mx-auto">
+                            <div class="product d-flex flex-column justify-content-between bg-white my-3 mx-auto">
+                                <div class="product__img">
+                                    <img src="img/product.png" alt="product-item">
+                                </div>
+                                <p class="product__description p-3 text-center">Kristina Dam Oak Table With White Marble Top
+                                </p>
+                                <p class="product__price pb-3 text-center">$ 799.55</p>
+                            </div>
+                        </div>
+    
+                        <div class="products__item-wrap col-12 col-sm-6 col-md-4 col-xl-3 mx-auto">
+                            <div class="product d-flex flex-column justify-content-between bg-white my-3 mx-auto">
+                                <div class="product__img">
+                                    <img src="img/product.png" alt="product-item">
+                                </div>
+                                <p class="product__description p-3 text-center">Kristina Dam Oak Table With White Marble Top
+                                </p>
+                                <p class="product__price pb-3 text-center">$ 799.55</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="product-tile__load-more mt-5">Load More</button>
+            </div>
+            <!-- End of Product Tile ----------------------------------->
         </div>
     </div>
 </main> <!-- End of main content container-->
-
 
 
 <!-- Main Footer -->
@@ -329,7 +488,6 @@
             </div>
         </div>
     </div>
-
     
     <div class="sticky-footer-wrap">
         <!-- Sticky Footer for mobile devices ----------->

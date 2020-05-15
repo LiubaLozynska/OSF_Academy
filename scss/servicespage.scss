@@ -1,7 +1,8 @@
 @import 'main';
-@import 'responsive';
 @import 'header';
 @import 'footer';
+@import 'responsive';
+@import 'homepage';
 
 /*General styles --------------*/
 
@@ -15,6 +16,9 @@
 .breadcrumb {
     background-color: inherit !important;
     font-size: 0.8125rem;
+    .clickable:hover {
+        opacity: 0.5;
+    }
 }
 
 /* Page title  --------------*/
@@ -35,3 +39,82 @@ button.hide-filters {
     color: $main-color;
     text-transform: capitalize;
 }
+
+.filters-wrap {
+    font-size: 0.875rem; /*14px*/
+    border-radius: 5px;
+    .filter {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: inherit;
+        margin: 0px !important;
+        font-weight: 600;
+    }
+    select {
+        outline: none;
+        border: 1.5px solid rgba($color: $link-color, $alpha: 0.7);
+        border-radius: 25px;
+        color: rgba($color: $link-color, $alpha: 0.7);
+        font-size: inherit;
+    }
+    ul.color-picker {
+        margin: 0px !important;
+        li {
+            display: inline-block !important;
+            width: 15px;
+            height: 15px;
+            border-radius: 100%;
+            border: 2px solid transparent;
+        }
+        li.active {
+            border: 2px solid $link-color !important;
+        }
+        li#white {
+            background-color: #fff;
+            border: 1px solid rgba($color: $link-color, $alpha: .3);
+        }
+        li#skyblue {
+            background-color: #43c0cf;
+        }
+        li#grey {
+            background-color: #3d402f;
+        }
+        li#green {
+            background-color: #4aaf00;
+        }
+        li#blue {
+            background-color: #315bbd;
+        }
+        li#orange {
+            background-color: #ec6115;
+        }
+        li#red {
+            background-color: #dc041d;
+        }
+        li#lightgrey {
+            background-color: #efead7;
+        }
+
+    }
+}
+
+
+/*Product Tile Styles ----------------*/
+
+.product-tile {
+    p {
+        font-size: 0.875rem; /*14px*/
+    }
+    &__load-more {
+        @include button {
+            color: white;
+            border: 2px solid #d9d9d9;
+            background-color: $main-color;
+        }
+    }
+} 
