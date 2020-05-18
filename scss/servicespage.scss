@@ -7,28 +7,7 @@
 /*General styles --------------*/
 
 .bg-services {
-    background-color: $background-color;
-}
-
-
-/* Breadcrumb styles --------------*/
-
-.breadcrumb {
-    background-color: inherit !important;
-    font-size: 0.8125rem;
-    .clickable:hover {
-        opacity: 0.5;
-    }
-}
-
-/* Page title  --------------*/
-.page-title h1{
-    font-size: 1.9375em; /* 31px*/
-    font-weight: 900 !important;
-}
-
-.line-white {
-    background: url('../img/white-line.png') repeat-x center;
+    background-color: $services-bg-color;
 }
 
 /* Filters area  --------------*/

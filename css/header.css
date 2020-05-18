@@ -33,6 +33,31 @@ li {
 .text-lightgreen {
   color: #84bc22 !important; }
 
+/* Breadcrumb styles --------------*/
+.breadcrumb {
+  background-color: inherit !important;
+  font-size: 0.8125rem;
+  font-weight: 600; }
+  .breadcrumb .clickable:hover {
+    opacity: 0.5; }
+
+/* Page title  --------------*/
+.services-page .page-title h1 p,
+.product-page .page-title h1 p {
+  font-size: 1.9375rem;
+  /* 31px*/
+  font-weight: 900 !important;
+  text-transform: capitalize;
+  white-space: nowrap; }
+
+.services-page .page-title .line-white,
+.product-page .page-title .line-white {
+  background: url("../img/white-line.png") repeat-x center; }
+
+.services-page .page-title .line-brown,
+.product-page .page-title .line-brown {
+  background: url("../img/line-brown.png") repeat-x center; }
+
 /* Header styles -------------------------*/
 .main-header {
   position: fixed;

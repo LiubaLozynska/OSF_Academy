@@ -39,6 +39,31 @@ li {
 .text-lightgreen {
   color: #84bc22 !important; }
 
+/* Breadcrumb styles --------------*/
+.breadcrumb {
+  background-color: inherit !important;
+  font-size: 0.8125rem;
+  font-weight: 600; }
+  .breadcrumb .clickable:hover {
+    opacity: 0.5; }
+
+/* Page title  --------------*/
+.services-page .page-title h1 p,
+.product-page .page-title h1 p {
+  font-size: 1.9375rem;
+  /* 31px*/
+  font-weight: 900 !important;
+  text-transform: capitalize;
+  white-space: nowrap; }
+
+.services-page .page-title .line-white,
+.product-page .page-title .line-white {
+  background: url("../img/white-line.png") repeat-x center; }
+
+.services-page .page-title .line-brown,
+.product-page .page-title .line-brown {
+  background: url("../img/line-brown.png") repeat-x center; }
+
 /* Google Fonts import ---------*/
 /*Variables --------------*/
 /*Mixins --------------*/
@@ -71,6 +96,31 @@ li {
 
 .text-lightgreen {
   color: #84bc22 !important; }
+
+/* Breadcrumb styles --------------*/
+.breadcrumb {
+  background-color: inherit !important;
+  font-size: 0.8125rem;
+  font-weight: 600; }
+  .breadcrumb .clickable:hover {
+    opacity: 0.5; }
+
+/* Page title  --------------*/
+.services-page .page-title h1 p,
+.product-page .page-title h1 p {
+  font-size: 1.9375rem;
+  /* 31px*/
+  font-weight: 900 !important;
+  text-transform: capitalize;
+  white-space: nowrap; }
+
+.services-page .page-title .line-white,
+.product-page .page-title .line-white {
+  background: url("../img/white-line.png") repeat-x center; }
+
+.services-page .page-title .line-brown,
+.product-page .page-title .line-brown {
+  background: url("../img/line-brown.png") repeat-x center; }
 
 /* Header styles -------------------------*/
 .main-header {
@@ -169,6 +219,31 @@ li {
 .text-lightgreen {
   color: #84bc22 !important; }
 
+/* Breadcrumb styles --------------*/
+.breadcrumb {
+  background-color: inherit !important;
+  font-size: 0.8125rem;
+  font-weight: 600; }
+  .breadcrumb .clickable:hover {
+    opacity: 0.5; }
+
+/* Page title  --------------*/
+.services-page .page-title h1 p,
+.product-page .page-title h1 p {
+  font-size: 1.9375rem;
+  /* 31px*/
+  font-weight: 900 !important;
+  text-transform: capitalize;
+  white-space: nowrap; }
+
+.services-page .page-title .line-white,
+.product-page .page-title .line-white {
+  background: url("../img/white-line.png") repeat-x center; }
+
+.services-page .page-title .line-brown,
+.product-page .page-title .line-brown {
+  background: url("../img/line-brown.png") repeat-x center; }
+
 /*Main Footer section -----------------------------*/
 .main-footer {
   margin-bottom: 50px; }
@@ -239,6 +314,31 @@ li {
 .text-lightgreen {
   color: #84bc22 !important; }
 
+/* Breadcrumb styles --------------*/
+.breadcrumb {
+  background-color: inherit !important;
+  font-size: 0.8125rem;
+  font-weight: 600; }
+  .breadcrumb .clickable:hover {
+    opacity: 0.5; }
+
+/* Page title  --------------*/
+.services-page .page-title h1 p,
+.product-page .page-title h1 p {
+  font-size: 1.9375rem;
+  /* 31px*/
+  font-weight: 900 !important;
+  text-transform: capitalize;
+  white-space: nowrap; }
+
+.services-page .page-title .line-white,
+.product-page .page-title .line-white {
+  background: url("../img/white-line.png") repeat-x center; }
+
+.services-page .page-title .line-brown,
+.product-page .page-title .line-brown {
+  background: url("../img/line-brown.png") repeat-x center; }
+
 /*  Media queries  ------------------------*/
 /* Styles for screens larger than 768px ---------------------*/
 @media only screen and (min-width: 768px) {
@@ -290,7 +390,7 @@ li {
       font-family: "PT sans", Arial, "sans serif";
       font-size: 0.7em; }
     .FB-CTA .Follow-us-FB {
-      font-size: 0.875em;
+      font-size: 0.875rem;
       /*14px*/
       text-transform: uppercase;
       background-color: transparent;
@@ -309,7 +409,7 @@ li {
     font-size: 1.5em;
     /*24px*/ }
   .load-more-button {
-    font-size: 0.875em;
+    font-size: 0.875rem;
     /*14px*/
     text-transform: uppercase;
     background-color: transparent;
@@ -456,7 +556,7 @@ li {
     font-size: 0.875em;
     /*14px*/ }
   .carousel-inner .carousel-item button {
-    font-size: 0.875em;
+    font-size: 0.875rem;
     /*14px*/
     text-transform: uppercase;
     background-color: transparent;

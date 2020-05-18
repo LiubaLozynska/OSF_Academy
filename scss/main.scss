@@ -16,12 +16,13 @@ $main-color: #84bc22;
 $secondary-color: #011847;
 $additional-color: #262a32;
 $link-color: #45413e;
-$background-color:#f2edea;
+$services-bg-color:#f2edea;
+$productpage-bg-color: #f1edea;
 
 /*Mixins --------------*/
 
 @mixin button {
-  font-size: 0.875em; /*14px*/
+  font-size: 0.875rem; /*14px*/
   text-transform: uppercase;
   background-color: transparent;
   border: 2px solid;
@@ -69,4 +70,36 @@ li {
 
 .text-lightgreen {
   color: $main-color !important;
+}
+
+
+/* Breadcrumb styles --------------*/
+
+.breadcrumb {
+  background-color: inherit !important;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  .clickable:hover {
+      opacity: 0.5;
+  }
+}
+
+/* Page title  --------------*/
+.services-page,
+.product-page {           
+  .page-title h1 p{
+    font-size: 1.9375rem; /* 31px*/
+    font-weight: 900 !important;
+    text-transform: capitalize;
+    white-space: nowrap;
+  }
+  .page-title{
+    .line-white {
+      background: url('../img/white-line.png') repeat-x center;
+    }
+    .line-brown {
+      background: url('../img/line-brown.png') repeat-x center;
+    }
+  }  
+
 }

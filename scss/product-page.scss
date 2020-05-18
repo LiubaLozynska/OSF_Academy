@@ -1,0 +1,94 @@
+@import 'main';
+@import 'header';
+@import 'footer';
+@import 'responsive';
+@import 'homepage';
+
+
+/*General styles --------------*/
+
+.bg-product-page {
+  background-color: $productpage-bg-color;
+}
+
+/* Product Section Styles ------------*/
+
+.product-wrap {
+  width: 100%;
+  .product-img-wrap { 
+    max-width: 100%;
+  }
+  .price-container {
+    .product-price {
+      font-size: 31px;
+      font-weight: 900;
+    }
+  }
+}
+
+.owl-carousel {
+  .owl-nav {
+    display: none;
+  }
+  .owl-dots {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .owl-dot.active span{
+      border: 3px solid #262a32;
+      width: 15px;
+      height: 15px;
+      background-color: transparent;
+    }
+  }
+}
+
+
+/* Select Buttons Styles ------------*/
+
+.product-left {
+  .chose-color {
+    position: relative;
+    select {
+      outline: none;
+      font-size: 0.875rem; /*14px*/
+      border: 2px solid #e8e2d6;
+      border-radius: 25px;
+    }
+    .color {
+      position: absolute;
+      top: 25%;
+      left: 10px;
+      background-color: darkslategray;
+      width: 20px;
+      height: 20px;
+      border-radius: 100%;
+    } 
+  }
+  .chose-quantity-wrap {
+    padding: 0px;
+    .chose-quantity {
+      font-size: 0.875rem; /*14px*/
+      border: 2px solid #e8e2d6;
+      border-radius: 25px;
+      width: 100px;
+    }
+  }
+
+  
+}
+
+/*Add to cart button ------------*/
+
+.add-to-cart-wrap {
+  padding: 0px;
+  button {
+    @include button {
+      color: white;
+      border: 2px solid #d9d9d9;
+      background-color: $main-color;
+      white-space: nowrap;
+    }
+  }
+}
