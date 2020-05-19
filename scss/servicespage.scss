@@ -29,10 +29,11 @@ button.hide-filters {
     label {
         display: flex;
         align-items: center;
-        justify-content: center;
         font-size: inherit;
         margin: 0px !important;
         font-weight: 600;
+        display:inline-block;
+        min-width: 50px;
     }
     select {
         outline: none;

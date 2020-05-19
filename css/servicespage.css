@@ -1194,10 +1194,11 @@ button.hide-filters {
   .filters-wrap label {
     display: flex;
     align-items: center;
-    justify-content: center;
     font-size: inherit;
     margin: 0px !important;
-    font-weight: 600; }
+    font-weight: 600;
+    display: inline-block;
+    min-width: 50px; }
   .filters-wrap select {
     outline: none;
     border: 1.5px solid rgba(69, 65, 62, 0.7);
