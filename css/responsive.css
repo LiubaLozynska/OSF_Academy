@@ -33,6 +33,32 @@ li {
 .text-lightgreen {
   color: #84bc22 !important; }
 
+button {
+  outline: none !important; }
+
+.button-green {
+  font-size: 0.875rem;
+  /*14px*/
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 2px solid;
+  border-radius: 25px;
+  padding: 8px 39px;
+  width: 100%;
+  max-width: 180px;
+  color: white;
+  border: 2px solid #d9d9d9;
+  background-color: #84bc22;
+  white-space: nowrap; }
+  .button-green a {
+    color: inherit; }
+
+.line-white {
+  background: url("../img/white-line.png") repeat-x center; }
+
+.line-brown {
+  background: url("../img/line-brown.png") repeat-x center; }
+
 /* Breadcrumb styles --------------*/
 .breadcrumb {
   background-color: inherit !important;
@@ -46,17 +72,8 @@ li {
 .product-page .page-title h1 p {
   font-size: 1.9375rem;
   /* 31px*/
-  font-weight: 900 !important;
-  text-transform: capitalize;
-  white-space: nowrap; }
-
-.services-page .page-title .line-white,
-.product-page .page-title .line-white {
-  background: url("../img/white-line.png") repeat-x center; }
-
-.services-page .page-title .line-brown,
-.product-page .page-title .line-brown {
-  background: url("../img/line-brown.png") repeat-x center; }
+  font-weight: 700 !important;
+  text-transform: capitalize; }
 
 /*  Media queries  ------------------------*/
 /* Styles for screens larger than 768px ---------------------*/
@@ -117,7 +134,7 @@ li {
       border-radius: 25px;
       padding: 8px 39px;
       width: 100%;
-      max-width: 170px;
+      max-width: 180px;
       color: #3a5b96; }
       .FB-CTA .Follow-us-FB a {
         color: inherit; }
@@ -136,7 +153,7 @@ li {
     border-radius: 25px;
     padding: 8px 39px;
     width: 100%;
-    max-width: 170px;
+    max-width: 180px;
     color: white; }
   /*Banner Items section -----------------------------*/
   .banner {
@@ -150,7 +167,10 @@ li {
   .main-footer .opener:after {
     content: none; }
   .main-footer .opener + .dropdown {
-    display: flex; } }
+    display: flex; }
+  /*Product Page ---------------------*/
+  .product-page .product-wrap__left .product-preview-desktop .item {
+    margin: 5px; } }
 
 /* Styles for screens larger than 1200px ---------------------*/
 @media only screen and (min-width: 1200px) {
@@ -257,4 +277,8 @@ li {
   .services-page .page-title h1 {
     font-size: 3rem;
     /* 48px*/
-    font-weight: 900 !important; } }
+    font-weight: 900 !important; }
+  /*Product Page Styles -----------------*/
+  .product-page .product-tabs-wrap .tabs__item {
+    font-size: 1.5rem !important;
+    /*24px*/ } }

@@ -29,7 +29,7 @@ $productpage-bg-color: #f1edea;
   border-radius: 25px;
   padding: 8px 39px;
   width: 100%;
-  max-width: 170px;
+  max-width: 180px;
   @content;
 } /* pass in color of the button*/
 
@@ -72,6 +72,28 @@ li {
   color: $main-color !important;
 }
 
+button {
+  outline: none !important;
+}
+.button-green {
+  @include button {
+    color: white;
+    border: 2px solid #d9d9d9;
+    background-color: $main-color;
+    white-space: nowrap;
+  }
+  a {
+    color: inherit;
+  }
+}
+
+.line-white {
+  background: url('../img/white-line.png') repeat-x center;
+}
+.line-brown {
+  background: url('../img/line-brown.png') repeat-x center;
+}
+
 
 /* Breadcrumb styles --------------*/
 
@@ -89,17 +111,7 @@ li {
 .product-page {           
   .page-title h1 p{
     font-size: 1.9375rem; /* 31px*/
-    font-weight: 900 !important;
+    font-weight: 700 !important;
     text-transform: capitalize;
-    white-space: nowrap;
   }
-  .page-title{
-    .line-white {
-      background: url('../img/white-line.png') repeat-x center;
-    }
-    .line-brown {
-      background: url('../img/line-brown.png') repeat-x center;
-    }
-  }  
-
 }
