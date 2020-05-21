@@ -21,15 +21,26 @@ const products = {
   
     productsToRender.forEach( product => {
       $('#product-tile').append(
-        `<div class="col-12 col-sm-6 col-md-4 col-lg-3 py-4 mx-auto d-flex justify-content-center">
-          <div class="card product-tile__item" style="width: 15rem;">
+        `
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 py-4 d-flex justify-content-center card-container">
+        <div class="card-outer">
+          <div class="card product-tile__item">
             <img src="${product.images[0].imageURL}" class="card-img-top" alt="Product">
             <div class="card-body">
               <h5 class="card-title product-tile__item__title text-center">${product.name}</h5>
               <p class="card-text product-tile__item__price text-center">$${product.price}</p>
             </div>
           </div>
+          <div class="card-on-hover card">
+            <div class="card-body">
+              <div class="card-body__inner">
+                <button class="add-to-cart"><i class="fas fa-plus"></i></i></button>
+                <button class="add-to-wishlist"><i class="fas fa-heart"></i></button>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
         `
       )
     });
@@ -40,14 +51,27 @@ const products = {
       $('#featured-products-carousel').append(
         `
         <div class="item">
-        <div class="card product-tile__item">
+        <div>
+        <div class="card-outer">
+        <div class="card product-tile__item" style="width: 100%;">
           <img src="${product.images[0].imageURL}" class="card-img-top" alt="Product">
           <div class="card-body">
             <h5 class="card-title product-tile__item__title text-center">${product.name}</h5>
-            <p class="card-text product-tile__item__category text-center">${product.attributes.category}</p>
+            <p class="card-text product-tile__item__price text-center">$${product.price}</p>
           </div>
         </div>
+        <div class="card-on-hover card">
+          <div class="card-body">
+             <div class="card-body__inner">
+                <button class="add-to-cart"><i class="fas fa-plus"></i></i></button>
+                <button class="add-to-wishlist"><i class="fas fa-heart"></i></button>
+              </div>
+          </div>
+        </div>
+        </div>
       </div>
+
+        </div>
         `
       )
     });
@@ -104,16 +128,27 @@ const products = {
   //Rendering additional products
   productsToRender.forEach( product => {
     $('#product-tile').append(
-      `<div class="col-12 col-sm-6 col-md-4 col-lg-3 py-4 mx-auto d-flex justify-content-center">
-        <div class="card product-tile__item" style="width: 15rem;">
-          <img src="${product.images[0].imageURL}" class="card-img-top" alt="Product">
-          <div class="card-body">
-            <h5 class="card-title product-tile__item__title text-center">${product.name}</h5>
-            <p class="card-text product-tile__item__price text-center">$${product.price}</p>
+      `
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 py-4 d-flex justify-content-center card-container">
+        <div class="card-outer">
+          <div class="card product-tile__item">
+            <img src="${product.images[0].imageURL}" class="card-img-top" alt="Product">
+            <div class="card-body">
+              <h5 class="card-title product-tile__item__title text-center">${product.name}</h5>
+              <p class="card-text product-tile__item__price text-center">$${product.price}</p>
+            </div>
+          </div>
+          <div class="card-on-hover card">
+            <div class="card-body">
+              <div class="card-body__inner">
+                <button class="add-to-cart"><i class="fas fa-plus"></i></i></button>
+                <button class="add-to-wishlist"><i class="fas fa-heart"></i></button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      `
+        `
     )
   });
 

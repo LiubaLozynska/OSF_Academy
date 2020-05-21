@@ -21,6 +21,9 @@
         @include button {
           color: white;
         }
+        a {
+          color: inherit;
+        }
       }
     }
   }
@@ -70,20 +73,6 @@
       }
       &__description {
         font-size: 1.125em; /* 18px */
-      }
-      &__slider {
-        .item {
-          padding: 0px 10px;
-          img {
-            max-height: 200px;
-            width: auto;
-          }
-          .product-tile__item__title {
-            height: 2ch;
-            max-height: 2ch;
-            overflow: hidden;
-          }
-        }
       }
     }
   
