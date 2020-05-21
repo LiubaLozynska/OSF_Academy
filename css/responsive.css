@@ -45,7 +45,7 @@ button {
   border-radius: 25px;
   padding: 8px 39px;
   width: 100%;
-  max-width: 180px;
+  max-width: 200px;
   color: white;
   border: 2px solid #d9d9d9;
   background-color: #84bc22;
@@ -74,6 +74,20 @@ button {
   /* 31px*/
   font-weight: 700 !important;
   text-transform: capitalize; }
+
+/* Page Tile  --------------*/
+.product-tile__item {
+  border: none; }
+  .product-tile__item__title {
+    font-size: 1rem;
+    color: #2c3e50; }
+  .product-tile__item__price {
+    font-size: 0.875rem;
+    /*14px*/
+    color: #011847; }
+  .product-tile__item__category {
+    color: #84bc22;
+    font-weight: 700; }
 
 /*  Media queries  ------------------------*/
 /* Styles for screens larger than 768px ---------------------*/
@@ -134,7 +148,7 @@ button {
       border-radius: 25px;
       padding: 8px 39px;
       width: 100%;
-      max-width: 180px;
+      max-width: 200px;
       color: #3a5b96; }
       .FB-CTA .Follow-us-FB a {
         color: inherit; }
@@ -153,7 +167,7 @@ button {
     border-radius: 25px;
     padding: 8px 39px;
     width: 100%;
-    max-width: 180px;
+    max-width: 200px;
     color: white; }
   /*Banner Items section -----------------------------*/
   .banner {
@@ -170,17 +184,26 @@ button {
     display: flex; }
   /*Product Page ---------------------*/
   .product-page .product-wrap__left .product-preview-desktop .item {
-    margin: 5px; } }
+    margin: 5px; }
+  /*Not Found Page Styles---------------*/
+  .not-found-page .not-found__title h1 {
+    font-size: 8.1875rem;
+    /*131px*/ } }
 
 /* Styles for screens larger than 1200px ---------------------*/
 @media only screen and (min-width: 1200px) {
   .main-header nav {
     width: 60%; }
   .main-header .language-and-currency {
-    width: 5%; }
+    width: 10%; }
   .main-nav {
     right: 0px;
     margin-bottom: 0em; }
+    .main-nav li.expandable > a:after {
+      content: '\25BC';
+      font-size: 10px;
+      margin-left: 20px;
+      opacity: .5; }
     .main-nav .main-nav__item > a {
       display: inline-block;
       color: #45413e;
@@ -230,7 +253,14 @@ button {
     display: none; }
   ul.languages li.active,
   ul.currency li.active {
-    display: inline-block; }
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50px; }
+    ul.languages li.active::after,
+    ul.currency li.active::after {
+      content: '\25BC';
+      font-size: 10px; }
   .language-and-currency {
     text-transform: uppercase;
     opacity: .5;

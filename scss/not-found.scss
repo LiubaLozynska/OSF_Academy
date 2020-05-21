@@ -1,0 +1,46 @@
+@import 'main';
+@import 'header';
+@import 'footer';
+@import 'responsive';
+@import 'homepage';
+
+/*General styles --------------*/
+
+.not-found-bg {
+  background-color: $not-found-bg-color;
+}
+
+.not-found {
+  background: url('../img/Exclamation_Mark_Inside_An_Octahedron._Attribute_as_Elegant_Themes_from_Flaticon.com.png') no-repeat -5% center;
+  &__title h1{
+    font-size: 5rem;
+    color: $main-color;
+    font-weight: 900;
+  }
+  h2 {
+    font-size: 1.5rem; /*24px*/
+    font-weight: 900;
+  }
+  &__read-more a{
+      color: $main-color;
+  }
+}
+
+.search-website {
+  position: relative;
+  input {
+    outline: none;
+    font-size: 0.875rem; /*14px*/
+    border: 2px solid #e8e2d6;
+    border-radius: 25px;
+    padding: 5px 15px; 
+  }
+  input:after{
+    content: url('../img/Search_Information._Attribute_as_Designmodo_from_Flaticon.com.png');
+  }
+  &__icon {
+    position: absolute;
+    top:10%;
+    right:2%;
+  }
+}

@@ -134,7 +134,16 @@
         }
       }
     }
-  
+
+    /*Not Found Page Styles---------------*/
+    .not-found-page {
+      .not-found {
+        &__title h1{
+          font-size: 8.1875rem; /*131px*/
+        }
+      }
+    }
+    
   }
   
   
@@ -147,13 +156,19 @@
         width: 60%;
       }
       .language-and-currency{
-        width: 5%
+        width: 10%
       }
     }
     
     .main-nav{
       right: 0px;
       margin-bottom: 0em;
+      li.expandable > a:after {
+        content: '\25BC';
+        font-size: 10px;
+        margin-left: 20px;
+        opacity: .5;
+      }
       .main-nav__item{
         & > a {
           display: inline-block;
@@ -219,8 +234,15 @@
       li {
           display: none;
       }
-      li.active{
-        display: inline-block;
+      li.active {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 50px;
+        &::after{
+          content: '\25BC';
+          font-size: 10px;
+        }
       }
     }
   

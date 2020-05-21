@@ -4,10 +4,6 @@
 @import 'responsive';
 
 /*Homepage slider and sales section --------------*/
-
-.slider-sale-wrap {
-    padding-top: 100px;
-  }
   
   .carousel-inner{
     background: black !important;
@@ -46,25 +42,7 @@
   .popular-items__title {
     font-size: 1.125em; /*18px*/
   }
-  
-  .product {
-    border: transparent;
-    border-radius: 5px;
-    &__img{
-      img {
-        width: 100%;
-        height: auto;
-      }
-    }
-    &__description {
-      font-size: 1em;
-      color: $link-color;
-    }
-    &__price {
-      color: $link-color;
-    }
-  }
-  
+
   /*Banner Items section -----------------------------*/
   
   .banner {
@@ -92,6 +70,20 @@
       }
       &__description {
         font-size: 1.125em; /* 18px */
+      }
+      &__slider {
+        .item {
+          padding: 0px 10px;
+          img {
+            max-height: 200px;
+            width: auto;
+          }
+          .product-tile__item__title {
+            height: 2ch;
+            max-height: 2ch;
+            overflow: hidden;
+          }
+        }
       }
     }
   

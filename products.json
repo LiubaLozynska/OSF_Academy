@@ -1,0 +1,262 @@
+[
+    { "name": "Ruffle Front V-Neck Cardigan", 
+      "quantity": "10",
+      "price": 299.99,
+      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia",
+      "additionalInfo": "Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis . Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,",
+      "attributes" : {
+        "color": [
+          "red",
+          "grey",
+          "yellow"
+        ],
+        "size": [
+          "XS",
+          "S",
+          "M",
+          "L"
+        ],
+        "category": "Cloth"
+      },
+      "images": [
+        {
+          "imageURL": "img/pdp-images/PG.10216885.JJ8UTXX.BZ.jpg",
+          "imageThumbnail": "img/pdp-images/PG.10216885.JJ8UTXX.BZ-small.jpg"
+        },
+        {
+          "imageURL": "img/pdp-images/PG.10216885.JJ8UTXX.PZ.jpg",
+          "imageThumbnail": "img/pdp-images/PG.10216885.JJ8UTXX.PZ-small.jpg"
+        },
+        {
+          "imageURL": "img/pdp-images/PG.10216885.JJ8UTXX.PZ.jpg",
+          "imageThumbnail": "img/pdp-images/PG.10216885.JJ169XX.BZ-small.jpg"
+        },
+        {
+          "imageURL": "img/pdp-images/PG.10216885.JJ8UTXX.PZ.jpg",
+          "imageThumbnail": "img/pdp-images/PG.10216885.JJ169XX.PZ-small.jpg"
+        }
+      ],
+      "reviews": [
+        {
+          "customerName" : "Ivan Ivanov",
+          "reviewText": "Very good quality. Recommend",
+          "rate": "5"
+        },
+        {
+          "customerName" : "Liucy",
+          "reviewText": "Satisfied",
+          "rate": "4"
+        },
+        {
+          "customerName" : "James",
+          "reviewText": "Great!",
+          "rate": "4"
+        }
+      ]
+    },
+
+    { "name": "Kristina Dam Oak Table With White Marble Top", 
+      "price": 799.55,
+      "attributes" : {
+        "category": "Cloth"
+      },
+      "images": [
+        {
+          "imageURL": "img/products/1.png"
+        }
+      ]
+    },
+
+    { "name": "Hay - About A Lounge Chair AAL 93", 
+      "price": 659.55,
+      "attributes" : {
+        "category": "Awesome"
+      },
+      "images": [
+        {
+          "imageURL": "img/products/2.png"
+        }
+      ]
+    },
+
+    { "name": "Kristina Dam Oak Table With White Marble Top", 
+      "price": 799.55,
+      "attributes" : {
+        "category": "Marketing"
+      },
+      "images": [
+        {
+          "imageURL": "img/products/3.png"
+        }
+      ]
+    },
+
+    { "name": "Cocktail Table Walnut | YES", 
+      "price": 29999,
+      "attributes" : {
+        "category": "Awesome"
+      },
+      "images": [
+        {
+          "imageURL": "img/products/4.png"
+        }
+      ]
+    },
+
+    { "name": "TORY DESK CALENDAR", 
+      "price": 410.99,
+      "attributes" : {
+        "category": "Marketing"
+      },
+      "images": [
+        {
+          "imageURL": "img/products/5.png"
+        }
+      ]
+    },
+
+    { "name": "CH445 Wing Chair on SUITE NY", 
+      "price": 330.55,
+      "attributes" : {
+        "category": "Marketing"
+      },
+      "images": [
+        {
+          "imageURL": "img/products/6.png"
+        }
+      ]
+    },
+
+    { "name": "Hezy Theme", 
+      "price": 799.55,
+      "attributes" : {
+        "category": "AWesome"
+      },
+      "images": [
+        {
+          "imageURL": "img/products/1.png"
+        }
+      ]
+    },
+
+    { "name": "Kristina Dam Oak Table With White Marble Top", 
+      "price": 799.55,
+      "attributes" : {
+        "category": "Furniture"
+      },
+      "images": [
+        {
+          "imageURL": "img/products/2.png"
+        }
+      ]
+    },
+
+    { "name": "Kristina Dam Oak Table With White Marble Top", 
+      "price": 799.55,
+      "attributes" : {
+        "category": "Cloth"
+      },
+      "images": [
+        {
+          "imageURL": "img/products/3.png"
+        }
+      ]
+    },
+
+    { "name": "Kristina Dam Oak Table With White Marble Top", 
+      "price": 799.55,
+      "attributes" : {
+        "category": "AWesome"
+      },
+      "images": [
+        {
+          "imageURL": "img/products/4.png"
+        }
+      ]
+    },
+
+    { "name": "Kristina Dam Oak Table With White Marble Top", 
+      "price": 799.55,
+      "attributes" : {
+        "category": "AWesome"
+      },
+      "images": [
+        {
+          "imageURL": "img/products/4.png"
+        }
+      ]
+    },
+
+    { "name": "Kristina Dam Oak Table With White Marble Top", 
+      "price": 799.55,
+      "attributes" : {
+        "category": "AWesome"
+      },
+      "images": [
+        {
+          "imageURL": "img/products/4.png"
+        }
+      ]
+    },
+
+    { "name": "Kristina Dam Oak Table With White Marble Top", 
+      "price": 799.55,
+      "attributes" : {
+        "category": "AWesome"
+      },
+      "images": [
+        {
+          "imageURL": "img/products/4.png"
+        }
+      ]
+    },
+
+    { "name": "Kristina Dam Oak Table With White Marble Top", 
+      "price": 799.55,
+      "attributes" : {
+        "category": "AWesome"
+      },
+      "images": [
+        {
+          "imageURL": "img/products/4.png"
+        }
+      ]
+    },
+
+    { "name": "Kristina Dam Oak Table With White Marble Top", 
+      "price": 799.55,
+      "attributes" : {
+        "category": "AWesome"
+      },
+      "images": [
+        {
+          "imageURL": "img/products/4.png"
+        }
+      ]
+    },
+
+    { "name": "Kristina Dam Oak Table With White Marble Top", 
+      "price": 799.55,
+      "attributes" : {
+        "category": "AWesome"
+      },
+      "images": [
+        {
+          "imageURL": "img/products/4.png"
+        }
+      ]
+    },
+
+    { "name": "Kristina Dam Oak Table With White Marble Top", 
+      "price": 799.55,
+      "attributes" : {
+        "category": "AWesome"
+      },
+      "images": [
+        {
+          "imageURL": "img/products/4.png"
+        }
+      ]
+    }
+
+  ]

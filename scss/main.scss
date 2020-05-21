@@ -18,6 +18,8 @@ $additional-color: #262a32;
 $link-color: #45413e;
 $services-bg-color:#f2edea;
 $productpage-bg-color: #f1edea;
+$not-found-bg-color: #f0ecea; 
+$product-name-color: #2c3e50;
 
 /*Mixins --------------*/
 
@@ -29,7 +31,7 @@ $productpage-bg-color: #f1edea;
   border-radius: 25px;
   padding: 8px 39px;
   width: 100%;
-  max-width: 180px;
+  max-width: 200px;
   @content;
 } /* pass in color of the button*/
 
@@ -113,5 +115,25 @@ button {
     font-size: 1.9375rem; /* 31px*/
     font-weight: 700 !important;
     text-transform: capitalize;
+  }
+}
+
+/* Page Tile  --------------*/
+
+.product-tile {
+  &__item {
+    border: none;
+    &__title {
+      font-size: 1rem;
+      color: $product-name-color;
+    }
+    &__price {
+      font-size: 0.875rem; /*14px*/
+      color: $secondary-color;
+    }
+    &__category {
+      color: $main-color;
+      font-weight: 700;
+    }
   }
 }
