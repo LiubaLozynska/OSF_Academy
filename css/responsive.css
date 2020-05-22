@@ -108,7 +108,7 @@ button {
       .card-outer .card-on-hover .card-body__inner {
         display: flex;
         flex-grow: 2;
-        justify-content: space-around; }
+        justify-content: space-evenly; }
         .card-outer .card-on-hover .card-body__inner .add-to-wishlist,
         .card-outer .card-on-hover .card-body__inner .add-to-cart {
           display: flex;
@@ -148,7 +148,7 @@ button {
       /* 18px */ }
   /*Carousel styles------------------------------------------*/
   .carousel-inner img {
-    max-width: 100%; }
+    max-width: 120%; }
   .carousel-inner .carousel-item h5 {
     font-size: 1.2em;
     /*48px*/
@@ -291,6 +291,7 @@ button {
     display: none; }
   ul.languages li.active,
   ul.currency li.active {
+    cursor: pointer;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -306,10 +307,15 @@ button {
     /*14px*/ }
     .language-and-currency ul li:hover {
       opacity: 0.3; }
-  .utilites div {
+  .utilites__icon {
     padding: 15px; }
-    .utilites div img:hover {
-      transform: scale(1.2); }
+    .utilites__icon button {
+      border: none;
+      outline: none;
+      background-color: transparent; }
+    .utilites__icon img:hover {
+      cursor: pointer;
+      opacity: 0.7; }
   /*Home Page ---------------------------*/
   /*Carousel styles------------------------------------------*/
   .carousel-inner img {

@@ -108,7 +108,7 @@ button {
       .card-outer .card-on-hover .card-body__inner {
         display: flex;
         flex-grow: 2;
-        justify-content: space-around; }
+        justify-content: space-evenly; }
         .card-outer .card-on-hover .card-body__inner .add-to-wishlist,
         .card-outer .card-on-hover .card-body__inner .add-to-cart {
           display: flex;
@@ -163,3 +163,10 @@ button {
   z-index: 99;
   bottom: 0%;
   border-top: 1px solid #fff; }
+  .sticky-mobile-footer .utilites__icon button {
+    background-color: transparent;
+    border: none; }
+  .sticky-mobile-footer .utilites__icon .count {
+    right: -35%;
+    top: -35%;
+    background-color: #262a32; }

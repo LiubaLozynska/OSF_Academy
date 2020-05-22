@@ -1,0 +1,71 @@
+@import 'main';
+
+
+  .modal-dialog {
+    a {
+      color: $main-color;
+      font-size: 0.75rem; /*12px*/
+      &.modal-forgot-password {
+        position: absolute;
+        right: 0px;
+      }
+    }
+    .modal-header {
+      border-bottom: none;
+      .modal-title {
+        font-size: 1.875rem; /*30px*/
+        font-weight: 900;
+      }
+    }
+    .modal-body {
+      .form-group {
+        position: relative;
+        label {
+          font-size: 0.875rem; /*14px*/
+        }
+        input {
+          border-radius: 25px;
+          border: 2px solid #d7d7d7;
+        }
+        .invalid-feedback {
+          position: absolute;
+          font-size: 10px;
+        }
+        .password-wrap {
+          position: relative;
+          .fa-eye-slash,
+          .fa-eye {
+            color: #d7d7d7;
+            position: absolute;
+            top: 30%;
+            right: 5%;
+          }
+          .hide-password {
+            display: none;
+        }
+        }
+      }
+      .login-button-container button{
+        border: none;
+      }
+    }
+    .modal-footer {
+      border-top: none;
+    }
+  }
+
+  .modal-content {
+    padding: 40px 30px;
+  }
+
+  .form-control.is-invalid, .was-validated .form-control:invalid + .show-hide-password{
+    .far {
+      right: 10%;
+    }
+  }
+
+  .form-control.is-invalid, .was-validated .form-control:valid + .show-hide-password{
+    .far {
+      right: 10%;
+    }
+  }

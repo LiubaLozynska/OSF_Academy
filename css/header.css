@@ -108,7 +108,7 @@ button {
       .card-outer .card-on-hover .card-body__inner {
         display: flex;
         flex-grow: 2;
-        justify-content: space-around; }
+        justify-content: space-evenly; }
         .card-outer .card-on-hover .card-body__inner .add-to-wishlist,
         .card-outer .card-on-hover .card-body__inner .add-to-cart {
           display: flex;
@@ -131,6 +131,7 @@ button {
 .main-header {
   position: fixed;
   top: 0;
+  left: 0;
   z-index: 101;
   background-color: white;
   color: #45413e;
@@ -195,3 +196,20 @@ span.nav-opener {
     display: none; }
   .main-nav-mobile.active li.level2.active ul.level3 {
     display: block; }
+
+.main-header .utilites__icon,
+.sticky-mobile-footer .utilites__icon {
+  position: relative; }
+  .main-header .utilites__icon .count,
+  .sticky-mobile-footer .utilites__icon .count {
+    position: absolute;
+    display: none;
+    right: 10%;
+    top: 10%;
+    color: #84bc22;
+    background-color: #fff;
+    border: 2px solid;
+    border-radius: 100%;
+    padding: 1px 5px;
+    font-size: 10px;
+    font-weight: 900; }

@@ -2,6 +2,7 @@
 @import 'header';
 @import 'footer';
 @import 'responsive';
+@import 'modal-login';
 
 /*Homepage slider and sales section --------------*/
   
@@ -91,4 +92,11 @@
     }
   }
 
+  .utilities {
+    .icon {
+      .count {
+        border: 1px solid red;
+      }
+    }
+}
   

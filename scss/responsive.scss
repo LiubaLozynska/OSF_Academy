@@ -29,7 +29,7 @@
   
       .carousel-inner{
         img {
-          max-width: 100%;
+          max-width: 120%;
         }
         .carousel-item {
           h5 {    
@@ -235,6 +235,7 @@
           display: none;
       }
       li.active {
+        cursor: pointer;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -256,10 +257,16 @@
     }
   
     .utilites{
-      div {
+      &__icon {
         padding: 15px;
+        button {
+          border: none;
+          outline: none;
+          background-color: transparent;
+        }
         img:hover{
-          transform: scale(1.2);
+          cursor: pointer;
+          opacity: 0.7;
         }
       }
     }

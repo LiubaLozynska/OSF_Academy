@@ -158,7 +158,7 @@ button {
      &__inner {
       display: flex;
       flex-grow: 2;
-      justify-content: space-around;
+      justify-content: space-evenly;
       .add-to-wishlist,
       .add-to-cart {
         display: flex;

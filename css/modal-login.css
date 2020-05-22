@@ -126,3 +126,55 @@ button {
           color: #23c46e; }
   .card-outer:hover .card-on-hover {
     opacity: 0.9; }
+
+.modal-dialog a {
+  color: #84bc22;
+  font-size: 0.75rem;
+  /*12px*/ }
+  .modal-dialog a.modal-forgot-password {
+    position: absolute;
+    right: 0px; }
+
+.modal-dialog .modal-header {
+  border-bottom: none; }
+  .modal-dialog .modal-header .modal-title {
+    font-size: 1.875rem;
+    /*30px*/
+    font-weight: 900; }
+
+.modal-dialog .modal-body .form-group {
+  position: relative; }
+  .modal-dialog .modal-body .form-group label {
+    font-size: 0.875rem;
+    /*14px*/ }
+  .modal-dialog .modal-body .form-group input {
+    border-radius: 25px;
+    border: 2px solid #d7d7d7; }
+  .modal-dialog .modal-body .form-group .invalid-feedback {
+    position: absolute;
+    font-size: 10px; }
+  .modal-dialog .modal-body .form-group .password-wrap {
+    position: relative; }
+    .modal-dialog .modal-body .form-group .password-wrap .fa-eye-slash,
+    .modal-dialog .modal-body .form-group .password-wrap .fa-eye {
+      color: #d7d7d7;
+      position: absolute;
+      top: 30%;
+      right: 5%; }
+    .modal-dialog .modal-body .form-group .password-wrap .hide-password {
+      display: none; }
+
+.modal-dialog .modal-body .login-button-container button {
+  border: none; }
+
+.modal-dialog .modal-footer {
+  border-top: none; }
+
+.modal-content {
+  padding: 40px 30px; }
+
+.form-control.is-invalid .far, .was-validated .form-control:invalid + .show-hide-password .far {
+  right: 10%; }
+
+.form-control.is-invalid .far, .was-validated .form-control:valid + .show-hide-password .far {
+  right: 10%; }

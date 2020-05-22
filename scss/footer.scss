@@ -48,4 +48,17 @@
     z-index:99;
     bottom: 0%;
     border-top: 1px solid #fff;
+    .utilites {
+      &__icon {
+        button {
+          background-color: transparent;
+          border: none;
+        }
+        .count {
+          right: -35%;
+          top: -35%;
+          background-color: $additional-color;
+        }
+       }
+     }
   }
