@@ -37,6 +37,9 @@ function triggerOwlPopularProducts() {
 
 $(document).ready(() => {
 
+  //Showing Cookies modal once page loaded
+  OSFcookies.showCookiesModal();
+
   //Rendering products in wishlist quantity in header and footer
   products.renderWishListQuantity();
 

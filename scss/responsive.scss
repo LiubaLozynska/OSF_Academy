@@ -1,4 +1,4 @@
-@import 'main';
+@import 'general';
 
 /*  Media queries  ------------------------*/
 
@@ -137,7 +137,20 @@
         }
       }
     }
-    
+
+    /*Cookies Policy Modal Styles -------*/
+
+    .cookies-policy-modal {
+      .modal-dialog {
+       width: 80%;
+      }
+      &__title {
+        &__close-modal {
+          right: 1%;
+          top: 5%;
+        }
+      }
+    }
   }
   
   

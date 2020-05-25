@@ -190,8 +190,8 @@
           </button><!-- Button trigger modal -->
         </div>
         <div class="wishlist-icon utilites__icon d-flex" id="wishlist-icon">
-            <img src="img/Heart_Outline_Rounded_Shape._Attribute_as_Freepik_from_Flaticon.com.png" alt="Wishlist Icon">
-            <div class="count"></div>
+          <img src="img/Heart_Outline_Rounded_Shape._Attribute_as_Freepik_from_Flaticon.com.png" alt="Wishlist Icon">
+          <div class="count"></div>
         </div>
         <div class="cart-icon utilites__icon">
           <img src="img/Bag_For_Shopping._Attribute_as_SimpleIcon_from_Flaticon.com.png" alt="Shopping Cart Icon">
@@ -201,51 +201,82 @@
     </div> <!-- End of container-->
   </header> <!-- End of header-->
 
-<!-- Login Modal Popup -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header d-flex justify-content-center">
-        <h5 class="modal-title" id="exampleModalLongTitle">Sign In</h5>
-      </div>
-      <div class="modal-body">
-        <form class="needs-validation" novalidate>
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
-            <div class="invalid-feedback">
-              Please make sure you inserted correct email
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <a href="not-found.html" class="modal-forgot-password">Forgot password</a>
-            <div class="password-wrap">
-              <input type="password" class="form-control" id="exampleInputPassword1" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{6,}" required>
-              <div class="show-hide-password">
-                <i class="far fa-eye show-password" id="show-password"></i>
-                <i class="far fa-eye-slash hide-password" id="hide-password"></i>
-              </div>
+  <!-- Modal Popups-->
+
+  <!-- Login Modal Popup -->
+  <div class="modal fade login-modal-popup" id="exampleModalCenter" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header d-flex justify-content-center">
+          <h5 class="modal-title" id="exampleModalLongTitle">Sign In</h5>
+        </div>
+        <div class="modal-body">
+          <form class="needs-validation" novalidate>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
               <div class="invalid-feedback">
-                Password should be: <br>
-                - at least 6 characters length <br>
-                - should contain 1 numeric, 1 uppercase letter, 1 special character.
+                Please make sure you inserted correct email
               </div>
             </div>
-           
-          </div>
-          <div class="login-button-container d-flex justify-content-center mt-5">
-            <button type="submit" class="button-green">Login</button>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer d-flex justify-content-center">
-        <a href="not-found.html" >I don't have an account</a>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <a href="not-found.html" class="modal-forgot-password">Forgot password</a>
+              <div class="password-wrap">
+                <input type="password" class="form-control" id="exampleInputPassword1"
+                  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{6,}" required>
+                <div class="show-hide-password">
+                  <i class="far fa-eye show-password" id="show-password"></i>
+                  <i class="far fa-eye-slash hide-password" id="hide-password"></i>
+                </div>
+                <div class="invalid-feedback">
+                  Password should be: <br>
+                  - at least 6 characters length <br>
+                  - should contain 1 numeric, 1 uppercase letter, 1 special character.
+                </div>
+              </div>
+
+            </div>
+            <div class="login-button-container d-flex justify-content-center mt-5">
+              <button type="submit" class="button-green">Login</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer d-flex justify-content-center">
+          <a href="not-found.html">I don't have an account</a>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-  <!-- End of Login Modal Popup -->
+  </div> <!-- End of Login Modal Popup -->
+
+  <!-- Cookies Policy Popup -------->
+  <div class="modal fade bd-example-modal-lg cookies-policy-modal" tabindex="-1" role="dialog"
+    aria-labelledby="myLargeModalLabel" aria-hidden="true" id="cookies-modal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="cookies-policy-modal__title">
+          <h3>This website uses cookies</h3>
+          <div class="cookies-policy-modal__title__close-modal" id="cookies-modal-close">
+            <img src="img/close-mobile-menu.png" alt="Close Modal">
+          </div>
+        </div>
+        <div class="cookies-policy-modal__body d-flex flex-column flex-md-row">
+          <p>OSF uses its own and third-party cookies for statistical purposes, to know your preferences, for website
+            performance
+            and interaction with social media offering publicity tailored to your interests. If you continue browsing,
+            we consider that you accept its use.
+            You can expand this information consulting our <a class="cookies-link" href="not-found.html">Cookies Policy
+              Page</a></p>
+          <div class="cookies-policy-modal__body__button d-flex justify-content-end align-items-end flex-grow-1">
+            <button class="button-green" id="cookies-modal-accept">ACCEPT</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- End of Cookies Policy Popup -------->
+  <!-- End of Modal Popups-->
 
   <main class="main-content-wrap pt-5 mt-5">
     <!-- Slider and Sales sectoion ------------------- -->
@@ -346,9 +377,11 @@
         <!--Popular Items Title  -->
         <div class="row mx-auto">
           <div class="line d-none d-md-block col-md-4 col-xl-5  mt-5 mx-auto"></div>
-          <h3 class="col-12 col-md-4 col-xl-2 popular-items__title text-white text-center mt-5 mx-auto">Popular Items</h3>
+          <h3 class="col-12 col-md-4 col-xl-2 popular-items__title text-white text-center mt-5 mx-auto">Popular Items
+          </h3>
           <div class="line d-none d-md-block col-md-4 col-xl-5 mt-5 mx-auto"></div>
-        </div> <!--End of Popular Items Title  -->
+        </div>
+        <!--End of Popular Items Title  -->
 
         <!--Popular Items - Product Tile  -->
         <div class="product-tile">
@@ -379,30 +412,30 @@
         <p class="featured-products__decription">Unde omnis iste natus error sit voluptatem</p>
 
         <!-- Featured products navigation-->
-        <div class="navigtion w-50 mx-auto my-3"> 
-            <div class="row">
-                <div class="col-1">
-                    <div class="left-arrow">
-                        <button class="am-prev"><img src="img/left-arrow.png" alt="Left Arrow"></button> 
-                    </div>
-                </div>
-                <div class="col-10">
-                    <div class="decoration-line">
-                        <div class="row">
-                            <div class="col-5 line"></div>
-                            <div class="col-2">
-                                <img src="img/icon (1).png" alt="lines icon">
-                            </div>
-                            <div class="col-5 line"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-1">
-                    <div class="right-arrow">
-                      <button class="am-next"><img src="img/right-arrow.png" alt="Right Arrow"></button> 
-                    </div>
-                </div>
+        <div class="navigtion w-50 mx-auto my-3">
+          <div class="row">
+            <div class="col-1">
+              <div class="left-arrow">
+                <button class="am-prev"><img src="img/left-arrow.png" alt="Left Arrow"></button>
+              </div>
             </div>
+            <div class="col-10">
+              <div class="decoration-line">
+                <div class="row">
+                  <div class="col-5 line"></div>
+                  <div class="col-2">
+                    <img src="img/icon (1).png" alt="lines icon">
+                  </div>
+                  <div class="col-5 line"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-1">
+              <div class="right-arrow">
+                <button class="am-next"><img src="img/right-arrow.png" alt="Right Arrow"></button>
+              </div>
+            </div>
+          </div>
         </div> <!-- End of Featured products navigation -->
 
         <!-- Featured Products Slider -->
@@ -585,6 +618,7 @@
   <script src="js/wish-list.js"></script>
   <script src="js/home-page.js"></script>
   <script src="js/modal-login.js"></script>
+  <script src="js/cookies.js"></script>
 
 </body>
 

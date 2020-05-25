@@ -185,3 +185,117 @@ button {
    opacity: 0.9;
  }
 }
+
+// Login Modal Popup Styles
+
+
+.modal-dialog {
+  a {
+    color: $main-color;
+    font-size: 0.75rem; /*12px*/
+    &.modal-forgot-password {
+      position: absolute;
+      right: 0px;
+    }
+  }
+  .modal-header {
+    border-bottom: none;
+    .modal-title {
+      font-size: 1.875rem; /*30px*/
+      font-weight: 900;
+    }
+  }
+  .modal-body {
+    .form-group {
+      position: relative;
+      label {
+        font-size: 0.875rem; /*14px*/
+      }
+      input {
+        border-radius: 25px;
+        border: 2px solid #d7d7d7;
+      }
+      .invalid-feedback {
+        position: absolute;
+        font-size: 10px;
+      }
+      .password-wrap {
+        position: relative;
+        .fa-eye-slash,
+        .fa-eye {
+          color: #d7d7d7;
+          position: absolute;
+          top: 30%;
+          right: 5%;
+        }
+        .hide-password {
+          display: none;
+      }
+      }
+    }
+    .login-button-container button{
+      border: none;
+    }
+  }
+  .modal-footer {
+    border-top: none;
+  }
+}
+
+.modal-content {
+  padding: 40px 30px;
+}
+
+.form-control.is-invalid, .was-validated .form-control:invalid + .show-hide-password{
+  .far {
+    right: 10%;
+  }
+}
+
+.form-control.is-invalid, .was-validated .form-control:valid + .show-hide-password{
+  .far {
+    right: 10%;
+  }
+}
+
+
+/*Cookies Policy Modal Styles -------*/
+
+.cookies-policy-modal {
+  .modal-dialog {
+    position: relative;
+    max-width: 1150px;
+    .modal-content {
+      padding: 20px 30px;
+    }
+  }
+  &__title {
+    h3 {
+      color: $main-color;
+      font-weight: 800;
+      font-size: 1rem;
+    }
+    &__close-modal {
+      cursor: pointer;
+      position: absolute;
+      right: 5%;
+      top: 5%;
+    }
+  }
+  &__body {
+    p {
+      font-weight: 300;
+      font-size: 0.875rem;
+      flex-basis: 75%;
+      a {
+        font-size: 0.875rem;
+      }
+    }
+    &__button button{
+      border:none;
+      align-self: flex-end;
+      max-width: 150px;
+    }
+  }
+  
+}
