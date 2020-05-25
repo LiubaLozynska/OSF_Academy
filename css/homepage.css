@@ -48,7 +48,7 @@ button {
   text-transform: uppercase;
   background-color: transparent;
   border: 2px solid;
-  border-radius: 25px;
+  border-radius: 20px;
   padding: 8px 39px;
   width: 100%;
   max-width: 200px;
@@ -59,10 +59,10 @@ button {
   .button-green a {
     color: inherit; }
 
-.line-white {
+.line-brown {
   background: url("../img/white-line.png") repeat-x center; }
 
-.line-brown {
+.line-white {
   background: url("../img/line-brown.png") repeat-x center; }
 
 /* Breadcrumb styles --------------*/
@@ -98,7 +98,8 @@ button {
     font-weight: 700; }
 
 .card-outer {
-  position: relative; }
+  position: relative;
+  width: 100%; }
   .card-outer .card-on-hover {
     position: absolute;
     background: linear-gradient(0deg, #1bc167 0%, #2dd3a1 100%);
@@ -257,7 +258,7 @@ button {
   text-transform: uppercase;
   background-color: transparent;
   border: 2px solid;
-  border-radius: 25px;
+  border-radius: 20px;
   padding: 8px 39px;
   width: 100%;
   max-width: 200px;
@@ -268,10 +269,10 @@ button {
   .button-green a {
     color: inherit; }
 
-.line-white {
+.line-brown {
   background: url("../img/white-line.png") repeat-x center; }
 
-.line-brown {
+.line-white {
   background: url("../img/line-brown.png") repeat-x center; }
 
 /* Breadcrumb styles --------------*/
@@ -307,7 +308,8 @@ button {
     font-weight: 700; }
 
 .card-outer {
-  position: relative; }
+  position: relative;
+  width: 100%; }
   .card-outer .card-on-hover {
     position: absolute;
     background: linear-gradient(0deg, #1bc167 0%, #2dd3a1 100%);
@@ -553,7 +555,7 @@ button {
   text-transform: uppercase;
   background-color: transparent;
   border: 2px solid;
-  border-radius: 25px;
+  border-radius: 20px;
   padding: 8px 39px;
   width: 100%;
   max-width: 200px;
@@ -564,10 +566,10 @@ button {
   .button-green a {
     color: inherit; }
 
-.line-white {
+.line-brown {
   background: url("../img/white-line.png") repeat-x center; }
 
-.line-brown {
+.line-white {
   background: url("../img/line-brown.png") repeat-x center; }
 
 /* Breadcrumb styles --------------*/
@@ -603,7 +605,8 @@ button {
     font-weight: 700; }
 
 .card-outer {
-  position: relative; }
+  position: relative;
+  width: 100%; }
   .card-outer .card-on-hover {
     position: absolute;
     background: linear-gradient(0deg, #1bc167 0%, #2dd3a1 100%);
@@ -764,6 +767,123 @@ button {
     top: -35%;
     background-color: #262a32; }
 
+/*Homepage slider and sales section --------------*/
+.carousel-inner {
+  background: black !important;
+  border-radius: 5px;
+  font-family: "PT sans", Arial, "sans serif"; }
+  .carousel-inner .carousel-item h5 {
+    font-size: 1.75em;
+    /*28px*/
+    font-weight: 700; }
+  .carousel-inner .carousel-item p {
+    font-size: 0.875em;
+    /*14px*/
+    opacity: .9; }
+  .carousel-inner .carousel-item button {
+    font-size: 0.875rem;
+    /*14px*/
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 2px solid;
+    border-radius: 20px;
+    padding: 8px 39px;
+    width: 100%;
+    max-width: 200px;
+    color: white;
+    max-width: 170px;
+    opacity: .7; }
+    .carousel-inner .carousel-item button a {
+      color: inherit; }
+
+.carousel-indicators {
+  margin-left: 30%;
+  margin-right: 30%; }
+  .carousel-indicators li {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: white; }
+    .carousel-indicators li.active {
+      background-color: transparent;
+      border: 2px solid white; }
+
+/*Popular Items section -----------------------------*/
+.popular-items__title h2 {
+  font-size: 1.125em;
+  /*18px*/
+  font-weight: 800;
+  white-space: nowrap;
+  margin-bottom: 0px; }
+
+.popular-items .product-tile .owl-carousel .owl-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .popular-items .product-tile .owl-carousel .owl-dots .owl-dot span {
+    opacity: .7;
+    border: 2px solid transparent;
+    width: 9px !important;
+    height: 9px !important; }
+  .popular-items .product-tile .owl-carousel .owl-dots .owl-dot.active span {
+    width: 15px !important;
+    height: 15px !important;
+    border: 2px solid white;
+    background-color: transparent; }
+
+.load-more-button {
+  font-size: 0.875rem;
+  /*14px*/
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 2px solid;
+  border-radius: 20px;
+  padding: 8px 39px;
+  width: 100%;
+  max-width: 200px;
+  color: white; }
+
+/*Banner Items section -----------------------------*/
+.banner {
+  background: url("../img/banner.png") no-repeat center;
+  background-size: cover;
+  height: 185px; }
+  .banner__title {
+    font-size: 1.875em;
+    /* 30px */
+    font-weight: 900; }
+  .banner__decription {
+    font-family: "PT sans", Arial, "sans serif";
+    font-size: 0.875em;
+    /*14px*/
+    width: 90%; }
+
+/*Featured Products section -----------------------------*/
+.featured-products__title {
+  font-size: 2.25em;
+  /*36px*/
+  font-weight: 700; }
+
+.featured-products__description {
+  font-size: 1.125em;
+  /* 18px */ }
+
+/*Services section -----------------------------*/
+.services {
+  background-color: #45413e; }
+  .services__text h5 {
+    text-transform: uppercase;
+    font-size: 1.125em;
+    /* 18px */ }
+  .services__text p {
+    font-family: "PT sans", Arial, "sans serif";
+    font-size: 0.875em;
+    /*14px*/
+    color: #868380 !important; }
+
+.utilities .icon .count {
+  border: 1px solid red; }
+
 /* Google Fonts import ---------*/
 /*Variables --------------*/
 /*Mixins --------------*/
@@ -806,7 +926,7 @@ button {
   text-transform: uppercase;
   background-color: transparent;
   border: 2px solid;
-  border-radius: 25px;
+  border-radius: 20px;
   padding: 8px 39px;
   width: 100%;
   max-width: 200px;
@@ -817,10 +937,10 @@ button {
   .button-green a {
     color: inherit; }
 
-.line-white {
+.line-brown {
   background: url("../img/white-line.png") repeat-x center; }
 
-.line-brown {
+.line-white {
   background: url("../img/line-brown.png") repeat-x center; }
 
 /* Breadcrumb styles --------------*/
@@ -856,7 +976,8 @@ button {
     font-weight: 700; }
 
 .card-outer {
-  position: relative; }
+  position: relative;
+  width: 100%; }
   .card-outer .card-on-hover {
     position: absolute;
     background: linear-gradient(0deg, #1bc167 0%, #2dd3a1 100%);
@@ -1002,6 +1123,12 @@ button {
   .carousel-inner .carousel-item p {
     font-size: 0.875em;
     /*14px*/ }
+  .carousel-indicators {
+    margin-left: 42%;
+    margin-right: 42%; }
+    .carousel-indicators__item {
+      width: 7px !important;
+      height: 7px !important; }
   /*Sale section, next to the carousel ----------------------*/
   .sale .sale-img {
     background: url("../img/sale-banner-homepage.png") no-repeat center;
@@ -1029,7 +1156,7 @@ button {
       text-transform: uppercase;
       background-color: transparent;
       border: 2px solid;
-      border-radius: 25px;
+      border-radius: 20px;
       padding: 8px 39px;
       width: 100%;
       max-width: 200px;
@@ -1197,96 +1324,3 @@ button {
   .product-page .product-tabs-wrap .tabs__item {
     font-size: 1.5rem !important;
     /*24px*/ } }
-
-/*Homepage slider and sales section --------------*/
-.carousel-inner {
-  background: black !important;
-  border-radius: 5px;
-  font-family: "PT sans", Arial, "sans serif"; }
-  .carousel-inner .carousel-item h5 {
-    font-size: 1.75em;
-    /*28px*/
-    font-weight: 700; }
-  .carousel-inner .carousel-item p {
-    font-size: 0.875em;
-    /*14px*/ }
-  .carousel-inner .carousel-item button {
-    font-size: 0.875rem;
-    /*14px*/
-    text-transform: uppercase;
-    background-color: transparent;
-    border: 2px solid;
-    border-radius: 25px;
-    padding: 8px 39px;
-    width: 100%;
-    max-width: 200px;
-    color: white; }
-    .carousel-inner .carousel-item button a {
-      color: inherit; }
-
-.carousel-indicators li {
-  border-radius: 50%;
-  width: 6px;
-  height: 6px;
-  background-color: white; }
-  .carousel-indicators li.active {
-    background-color: transparent;
-    border: 2px solid white; }
-
-/*Popular Items section -----------------------------*/
-.popular-items__title {
-  font-size: 1.125em;
-  /*18px*/ }
-
-.load-more-button {
-  font-size: 0.875rem;
-  /*14px*/
-  text-transform: uppercase;
-  background-color: transparent;
-  border: 2px solid;
-  border-radius: 25px;
-  padding: 8px 39px;
-  width: 100%;
-  max-width: 200px;
-  color: white; }
-
-/*Banner Items section -----------------------------*/
-.banner {
-  background: url("../img/banner.png") no-repeat center;
-  background-size: cover;
-  height: 185px; }
-  .banner__title {
-    font-size: 1.875em;
-    /* 30px */
-    font-weight: 900; }
-  .banner__decription {
-    font-family: "PT sans", Arial, "sans serif";
-    font-size: 0.875em;
-    /*14px*/
-    width: 90%; }
-
-/*Featured Products section -----------------------------*/
-.featured-products__title {
-  font-size: 2.25em;
-  /*36px*/
-  font-weight: 700; }
-
-.featured-products__description {
-  font-size: 1.125em;
-  /* 18px */ }
-
-/*Services section -----------------------------*/
-.services {
-  background-color: #45413e; }
-  .services__text h5 {
-    text-transform: uppercase;
-    font-size: 1.125em;
-    /* 18px */ }
-  .services__text p {
-    font-family: "PT sans", Arial, "sans serif";
-    font-size: 0.875em;
-    /*14px*/
-    color: #868380 !important; }
-
-.utilities .icon .count {
-  border: 1px solid red; }

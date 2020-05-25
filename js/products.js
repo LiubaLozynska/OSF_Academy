@@ -118,6 +118,9 @@ const products = {
   let productsToRenderQuantity = 0;
 
   switch(breakpoints.initialBreakPoint) {
+    case breakpoints.VerySmall:
+      productsToRenderQuantity = 4;
+      break;
     case breakpoints.Small:
       productsToRenderQuantity = 2;
       break;
@@ -288,32 +291,6 @@ const products = {
 
   }
 };
-
-//Creating an object to store info about breakpoints
-
-const breakpoints = {
-
-  'VerySmall' : 'VerySmall',
-  'Small' : 'Small',
-  'Medium' : "Medium",
-  'Large' : 'Large',
-  'initialBreakPoint': 0,
-
-   getBreakPoint: function( windowWidth ) {
-   
-    if (windowWidth <= 576) {
-      return this.VerySmall;
-    } else if (windowWidth <= 768) {
-      return this.Small;
-    } else if (windowWidth > 768 && windowWidth <= 980) {
-      return this.Medium;
-    } else {
-      return this.Large;
-    }
-   }
-} 
-
-// Loading products details from JSON file - products.json and rendering them based on current breakpoint
 
 breakpoints.initialBreakPoint = breakpoints.getBreakPoint(($( window ).width()));
 

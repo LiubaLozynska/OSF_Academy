@@ -1,16 +1,9 @@
-$(document).ready(() => {
-
     //desktop version
     $('#menu-services').on('click', () => {
-
         $("#dropdown-megamenu").toggleClass("active");
         $("#menu-services").toggleClass("active");
-
-    
-
         
     });
-
 
     //mobile version
     
@@ -34,4 +27,3 @@ $(document).ready(() => {
             }
         })
     });
-})

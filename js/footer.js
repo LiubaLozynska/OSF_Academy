@@ -1,4 +1,3 @@
-$(document).ready(() => {
     let footerOpeners = $('h6.opener');
     let length = footerOpeners.length;
    
@@ -13,5 +12,8 @@ $(document).ready(() => {
         })
      
     }
-   
-});
+  
+    let thisDate = new Date();
+    let thisYear = thisDate.getFullYear();
+
+    $( '#current-year' ).html(thisYear);

@@ -42,7 +42,7 @@ button {
   text-transform: uppercase;
   background-color: transparent;
   border: 2px solid;
-  border-radius: 25px;
+  border-radius: 20px;
   padding: 8px 39px;
   width: 100%;
   max-width: 200px;
@@ -53,10 +53,10 @@ button {
   .button-green a {
     color: inherit; }
 
-.line-white {
+.line-brown {
   background: url("../img/white-line.png") repeat-x center; }
 
-.line-brown {
+.line-white {
   background: url("../img/line-brown.png") repeat-x center; }
 
 /* Breadcrumb styles --------------*/
@@ -92,7 +92,8 @@ button {
     font-weight: 700; }
 
 .card-outer {
-  position: relative; }
+  position: relative;
+  width: 100%; }
   .card-outer .card-on-hover {
     position: absolute;
     background: linear-gradient(0deg, #1bc167 0%, #2dd3a1 100%);
@@ -238,6 +239,12 @@ button {
   .carousel-inner .carousel-item p {
     font-size: 0.875em;
     /*14px*/ }
+  .carousel-indicators {
+    margin-left: 42%;
+    margin-right: 42%; }
+    .carousel-indicators__item {
+      width: 7px !important;
+      height: 7px !important; }
   /*Sale section, next to the carousel ----------------------*/
   .sale .sale-img {
     background: url("../img/sale-banner-homepage.png") no-repeat center;
@@ -265,7 +272,7 @@ button {
       text-transform: uppercase;
       background-color: transparent;
       border: 2px solid;
-      border-radius: 25px;
+      border-radius: 20px;
       padding: 8px 39px;
       width: 100%;
       max-width: 200px;

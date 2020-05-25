@@ -42,7 +42,15 @@
           }
         }
       }
-  
+      
+      .carousel-indicators {
+        margin-left: 42%;
+        margin-right: 42%;
+        &__item {
+          width: 7px !important;
+          height: 7px !important;
+        }
+      }
       /*Sale section, next to the carousel ----------------------*/
   
     .sale {

@@ -1,4 +1,4 @@
-function triggerOwlPopularProducts() {
+function toggleOwlPopularProducts() {
   
   let currentWindowWidth = $( window ).width();
   currentBreakPoint = breakpoints.getBreakPoint(currentWindowWidth);
@@ -37,42 +37,15 @@ function triggerOwlPopularProducts() {
 
 $(document).ready(() => {
 
-  //Showing Cookies modal once page loaded
-  OSFcookies.showCookiesModal();
-
-  //Rendering products in wishlist quantity in header and footer
-  products.renderWishListQuantity();
-
-  //Rendering products in cart quantity in header and footer
-  products.renderCartQuantity(); 
-
   //adding or disabling owl carousel for popular products based on screen width
-  triggerOwlPopularProducts();
+  toggleOwlPopularProducts();
   
   // Rerendering products based on window width
 
   $( window ).resize( () => {
     
-    let currentWindowWidth = $( window ).width();
-    currentBreakPoint = breakpoints.getBreakPoint(currentWindowWidth);
-
-    if ( currentBreakPoint !== breakpoints.initialBreakPoint ) {
-
-      breakpoints.initialBreakPoint = currentBreakPoint;
-      $('#product-tile').empty(); 
-      products.renderProducts(products);
-
-       //adding or disabling owl carousel for popular products based on screen width
-      triggerOwlPopularProducts();
-
-    }
-    
-  })
-
-  // Rendering more products based on window width after the LOAD MORE button is pressed
-
-  $( '#load-product-tile' ).on('click', () => {
-      products.loadMore();
+    //Rerendering product tile on window resize and adding owl carousel on very small screen
+    breakpoints.onWindowResize(toggleOwlPopularProducts);
   })
 
 })

@@ -28,7 +28,7 @@ $product-name-color: #2c3e50;
   text-transform: uppercase;
   background-color: transparent;
   border: 2px solid;
-  border-radius: 25px;
+  border-radius: 20px;
   padding: 8px 39px;
   width: 100%;
   max-width: 200px;
@@ -89,10 +89,10 @@ button {
   }
 }
 
-.line-white {
+.line-brown {
   background: url('../img/white-line.png') repeat-x center;
 }
-.line-brown {
+.line-white {
   background: url('../img/line-brown.png') repeat-x center;
 }
 
@@ -143,6 +143,7 @@ button {
 
 .card-outer {
   position: relative;
+  width: 100%;
  .card-on-hover {
    position: absolute;
    background: linear-gradient(0deg, #1bc167 0%, #2dd3a1 100%);
