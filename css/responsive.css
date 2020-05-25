@@ -196,17 +196,6 @@ button {
   .popular-items__title {
     font-size: 1.5em;
     /*24px*/ }
-  .load-more-button {
-    font-size: 0.875rem;
-    /*14px*/
-    text-transform: uppercase;
-    background-color: transparent;
-    border: 2px solid;
-    border-radius: 25px;
-    padding: 8px 39px;
-    width: 100%;
-    max-width: 200px;
-    color: white; }
   /*Banner Items section -----------------------------*/
   .banner {
     height: 350px; }

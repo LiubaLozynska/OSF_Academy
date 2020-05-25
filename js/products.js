@@ -8,9 +8,10 @@ const products = {
   renderProducts: function() {
     let productsToRender = JSON.parse(JSON.stringify(this.items));
    
-  
-    if (breakpoints.initialBreakPoint === breakpoints.Small) {
-      productsToRender.length = 2;
+    if (breakpoints.initialBreakPoint === breakpoints.VerySmall) {
+      productsToRender.length = 4 ;
+    }if (breakpoints.initialBreakPoint === breakpoints.Small) {
+      productsToRender.length = 4 ;
     } else if (breakpoints.initialBreakPoint === breakpoints.Medium){
       productsToRender.length = 6;
     } else if (breakpoints.initialBreakPoint === breakpoints.Large){
@@ -76,7 +77,7 @@ const products = {
       )
     });
 
-  var owl = $('#featured-products-carousel');
+  let owl = $('#featured-products-carousel'); 
   
   owl.owlCarousel({
       nav:true,
@@ -108,7 +109,7 @@ const products = {
               nav:true,
           }
       }
-  })
+  });
 
   },
   loadMore: function() {
@@ -253,7 +254,6 @@ const products = {
 
     if (productsInWishList) {
       let productsInWishListQuantity = productsInWishList.length;
-      console.log(productsInWishListQuantity)
   
       //Showing ProductInCart quantity next the cart icon
       let wishListIcon = $('.wishlist-icon .count');
@@ -293,13 +293,17 @@ const products = {
 
 const breakpoints = {
 
+  'VerySmall' : 'VerySmall',
   'Small' : 'Small',
   'Medium' : "Medium",
   'Large' : 'Large',
   'initialBreakPoint': 0,
 
    getBreakPoint: function( windowWidth ) {
-    if (windowWidth <= 768) {
+   
+    if (windowWidth <= 576) {
+      return this.VerySmall;
+    } else if (windowWidth <= 768) {
       return this.Small;
     } else if (windowWidth > 768 && windowWidth <= 980) {
       return this.Medium;

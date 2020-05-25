@@ -47,6 +47,13 @@
     font-size: 1.125em; /*18px*/
   }
 
+  
+  .load-more-button {
+    @include button {
+      color: white;
+    }
+  }
+
   /*Banner Items section -----------------------------*/
   
   .banner {
