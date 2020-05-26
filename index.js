@@ -1,6 +1,7 @@
 const http = require("http");
 const fs = require("fs");
-  
+const PORT = process.env.PORT || 3000;
+
 http.createServer(function(request, response){
       
     console.log(`Requested URL: ${request.url}`);
@@ -15,6 +16,8 @@ http.createServer(function(request, response){
             fs.createReadStream(filePath).pipe(response);
         }
       });
-}).listen(3000, function(){
-    console.log("Server started at 3000");
+      
+    
+}).listen(PORT, function(){
+    console.log(`Server started at ${PORT}`);
 });
