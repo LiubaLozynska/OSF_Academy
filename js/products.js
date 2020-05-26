@@ -333,6 +333,9 @@ $.ajax({
     // Rendering the initial scope of products all pages where needed
     products.renderProducts();
 
+    // Rendering featured products where needed
+    products.renderFeaturedProducts();
+
     // Rendering Popular Products on product page
     products.renderPopularProducts();
 
