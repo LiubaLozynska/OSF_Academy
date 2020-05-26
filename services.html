@@ -7,8 +7,8 @@
   <title>OSF Academy Project</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
-  <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
   <link rel="stylesheet" href="css/servicespage.css">
 
   <link rel="shortcut icon" href="img/Logo_desctop.png" type="image/x-icon" />
@@ -406,51 +406,48 @@
       </div>
     </div>
 
-        <!-- Featured Products -->
-        <div class="featured-products container-fluid bg-darkgrey text-center text-white d-none d-md-block">
-          <div class="container">
-            <h2 class="featured-products__title pt-5">Featured Products</h2>
-            <p class="featured-products__decription">Unde omnis iste natus error sit voluptatem</p>
-    
-            <!-- Featured products navigation-->
-            <div class="navigtion w-50 mx-auto my-3">
-              <div class="row">
-                <div class="col-1">
-                  <div class="left-arrow">
-                    <button class="am-prev"><img src="img/left-arrow.png" alt="Left Arrow"></button>
-                  </div>
-                </div>
-                <div class="col-10">
-                  <div class="decoration-line">
-                    <div class="row">
-                      <div class="col-5 line"></div>
-                      <div class="col-2">
-                        <img src="img/icon (1).png" alt="lines icon">
-                      </div>
-                      <div class="col-5 line"></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-1">
-                  <div class="right-arrow">
-                    <button class="am-next"><img src="img/right-arrow.png" alt="Right Arrow"></button>
-                  </div>
-                </div>
-              </div>
-            </div> <!-- End of Featured products navigation -->
-    
-            <!-- Featured Products Slider -->
-    
-            <div class="featured-products__slider py-3">
-              <div class="owl-carousel owl-theme mx-auto" id="featured-products-carousel">
-                <!-- Featured Products will be rendered here -->
-              </div>
-            </div> <!-- End of Featured Products Slider -->
-          </div>
-        </div><!-- End of Featured Products -->
-        
-  </main> <!-- End of main content container-->
+       <!-- Featured Products -->
+    <div class="featured-products container-fluid bg-darkgrey text-center text-white d-none d-md-block pb-5">
+      <div class="container">
+        <h2 class="featured-products__title pt-5">Featured Products</h2>
+        <p class="featured-products__decription">Unde omnis iste natus error sit voluptatem</p>
 
+        <!-- Featured products navigation-->
+        <div class="featured-products__navigtion w-50 mx-auto my-3">
+          <div class="row">
+            <div class="col-2 mx-auto">
+              <div class="left-arrow arrow">
+                <img src="img/left-arrow.png" alt="Left Arrow" id="prev">
+              </div>
+            </div>
+            <div class="col-8 mx-auto">
+              <div class="decoration-line">
+                <div class="row">
+                  <div class="col-5 line-white mx-auto"></div>
+                  <div class="col-2 mx-auto d-flex justify-content-center">
+                    <img src="img/icon (1).png" alt="lines icon">
+                  </div>
+                  <div class="col-5 line-white mx-auto"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-2 mx-auto">
+              <div class="right-arrow arrow">
+                <img src="img/right-arrow.png" alt="Right Arrow" id="next">
+              </div>
+            </div>
+          </div>
+        </div> <!-- End of Featured products navigation -->
+
+        <!-- Featured Products Slider -->
+
+        <div class="featured-products__slider py-3">
+          <div class="owl-carousel owl-theme mx-auto" id="featured-products-carousel">
+            <!-- Featured Products will be rendered here -->
+          </div>
+        </div> <!-- End of Featured Products Slider -->
+      </div>
+    </div><!-- End of Featured Products -->
 
 
   <!-- Footer -->
@@ -570,12 +567,13 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
-  <script src="OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
   <script src="js/cookies.js"></script>
   <script src="js/breakpoints.js"></script>
   <script src="js/mega-menu.js"></script>
   <script src="js/footer.js"></script>
   <script src="js/products.js"></script>
+  <script src="js/featured-products.js"></script>
   <script src="js/cart.js"></script>
   <script src="js/wish-list.js"></script>
   <script src="js/general.js"></script>

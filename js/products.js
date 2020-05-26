@@ -334,7 +334,7 @@ $.ajax({
     products.renderProducts();
 
     // Rendering featured products where needed
-    products.renderFeaturedProducts();
+    products.renderFeaturedProducts();  
 
     // Rendering Popular Products on product page
     products.renderPopularProducts();
