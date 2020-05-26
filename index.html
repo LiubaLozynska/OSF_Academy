@@ -390,8 +390,7 @@
 
         <!-- Load More Products Button -->
         <div class="row d-flex justify-content-center mt-3 mb-sm-5">
-          <button class="load-more-button d-none d-sm-flex justify-content-between align-items-center"
-            id="load-product-tile"> Load More <i class="fas fa-spinner"></i></button>
+          <button class="load-more-button d-none d-sm-flex justify-content-center align-items-center" id="load-product-tile"> Load More <i class="fas fa-spinner"></i></button>
         </div> <!-- Load More Products Button -->
 
       </div> <!-- End of Popular Items  -->
@@ -404,33 +403,33 @@
     </div> <!-- End of Banner  -->
 
     <!-- Featured Products -->
-    <div class="featured-products container-fluid bg-darkgrey text-center text-white d-none d-md-block">
+    <div class="featured-products container-fluid bg-darkgrey text-center text-white d-none d-md-block pb-5">
       <div class="container">
         <h2 class="featured-products__title pt-5">Featured Products</h2>
         <p class="featured-products__decription">Unde omnis iste natus error sit voluptatem</p>
 
         <!-- Featured products navigation-->
-        <div class="navigtion w-50 mx-auto my-3">
+        <div class="featured-products__navigtion w-50 mx-auto my-3">
           <div class="row">
-            <div class="col-1">
-              <div class="left-arrow">
-                <button class="am-prev"><img src="img/left-arrow.png" alt="Left Arrow"></button>
+            <div class="col-2 mx-auto">
+              <div class="left-arrow arrow">
+                <img src="img/left-arrow.png" alt="Left Arrow" id="prev">
               </div>
             </div>
-            <div class="col-10">
+            <div class="col-8 mx-auto">
               <div class="decoration-line">
                 <div class="row">
-                  <div class="col-5 line"></div>
-                  <div class="col-2">
+                  <div class="col-5 line-white mx-auto"></div>
+                  <div class="col-2 mx-auto d-flex justify-content-center">
                     <img src="img/icon (1).png" alt="lines icon">
                   </div>
-                  <div class="col-5 line"></div>
+                  <div class="col-5 line-white mx-auto"></div>
                 </div>
               </div>
             </div>
-            <div class="col-1">
-              <div class="right-arrow">
-                <button class="am-next"><img src="img/right-arrow.png" alt="Right Arrow"></button>
+            <div class="col-2 mx-auto">
+              <div class="right-arrow arrow">
+                <img src="img/right-arrow.png" alt="Right Arrow" id="next">
               </div>
             </div>
           </div>
@@ -619,6 +618,7 @@
   <script src="js/general.js"></script>
   <script src="js/home-page.js"></script>
   <script src="js/modal-login.js"></script>
+  <script src="js/featured-products.js"></script>
   
 
 </body>

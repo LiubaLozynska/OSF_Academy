@@ -45,6 +45,7 @@ const products = {
         `
       )
     });
+
   },
   renderFeaturedProducts: function() {
 
@@ -80,33 +81,25 @@ const products = {
   let owl = $('#featured-products-carousel'); 
   
   owl.owlCarousel({
-      nav:true,
+      nav:false,
       dots:false,
       slideBy:4,
       loop:true,
       margin:10,
       autoplay: 5,
       responsiveClass:true,
-      navClass: [
-        'am-prev',
-        'am-next'
-      ],
       responsive:{
           0:{
               items:1,
-              nav:true
           },
           500:{
               items:2,
-              nav:true
           },
           800:{
             items:3,
-            nav:true
         },
           1200:{
               items:4,
-              nav:true,
           }
       }
   });
@@ -167,7 +160,7 @@ const products = {
   products.renderedProductsCount += productsToRenderQuantity;
   
   },
-  addToCart: function (productID) {
+  addToCart: function (productID, quantity = 1) {
 
 
   //Receiving data about products added to cart
@@ -182,7 +175,7 @@ const products = {
     productsInCart.forEach( element => {
       //updating the quantity if product was added before
       if (element.id == productID) {
-          element.quantity += 1;
+          element.quantity += quantity;
           indicator = 1;
       }
     });
@@ -191,7 +184,7 @@ const products = {
     if (indicator === 0) {
       let newProductToAdd = {}
           newProductToAdd.id = productID;
-          newProductToAdd.quantity = 1;
+          newProductToAdd.quantity = quantity;
           productsInCart.push(newProductToAdd);
     }
 
@@ -206,7 +199,7 @@ const products = {
     productsInCart = [];
 
     newProductToAdd.id = productID;
-    newProductToAdd.quantity = 1;
+    newProductToAdd.quantity = quantity;
     
     productsInCart.push(newProductToAdd);
     let stringifiedProducts = JSON.stringify(productsInCart);
@@ -289,7 +282,41 @@ const products = {
       }
     }
 
-  }
+  },
+  renderPopularProducts: function() {
+    let productsToRender = JSON.parse(JSON.stringify(this.items));
+    productsToRender.length = 4;
+  
+    productsToRender.forEach( product => {
+      $('#popular-products').append(
+        `
+        <div class="item">
+        <div>
+        <div class="card-outer">
+        <div class="card product-tile__item" style="width: 100%;">
+          <img src="${product.images[0].imageURL}" class="card-img-top" alt="Product">
+          <div class="card-body">
+            <h5 class="card-title product-tile__item__title text-center">${product.name}</h5>
+            <p class="card-text product-tile__item__price text-center">${product.price}</p>
+          </div>
+        </div>
+        <div class="card-on-hover card">
+          <div class="card-body">
+             <div class="card-body__inner">
+                <button class="add-to-cart" data-id="${product.id}"><i class="fas fa-plus"></i></i></button>
+                <button class="add-to-wishlist" data-id="${product.id}"><i class="fas fa-heart"></i></button>
+              </div>
+          </div>
+        </div>
+        </div>
+      </div>
+
+        </div>
+        `
+      )
+    });
+
+  },
 };
 
 breakpoints.initialBreakPoint = breakpoints.getBreakPoint(($( window ).width()));
@@ -303,12 +330,40 @@ $.ajax({
     //Setting products data into the products object
     products.items = data;
 
-    // Rendering the initial scope of products on Home Page
+    // Rendering the initial scope of products all pages where needed
     products.renderProducts();
 
-    // Rendering Featured Products on Home Page
-    products.renderFeaturedProducts();
+    // Rendering Popular Products on product page
+    products.renderPopularProducts();
+
+    // Adding owl carousel for popular products on product page
+    $('#popular-products').owlCarousel({
+      nav:false,
+      dots:true,
+      slideBy:4,
+      loop:true,
+      margin:10,
+      autoplay: 5,
+      responsiveClass:true,
+      responsive:{
+          0:{
+              items:1,
+          },
+          500:{
+            items:2,
+          },
+          800:{
+            items:3,
+          },
+          1000:{
+            items:4,
+            dots:false,
+          },
+      }
+    });
   }
 })
+
+
 
 

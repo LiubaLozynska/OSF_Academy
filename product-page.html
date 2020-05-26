@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="css/product-page.css">
 
   <link rel="shortcut icon" href="img/Logo_desctop.png" type="image/x-icon" />
+  <script src="https://kit.fontawesome.com/e0af9a7ab6.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -306,20 +307,13 @@
           <div class="row">
 
             <div class="col-12 col-md-6 product-wrap__right product-img-wrap">
-              <div class="product-img p-md-3 ">
-                <img src="img/pdp-images/PG.10216885.JJ169XX.BZ.jpg" alt="Product Image">
+              <div class="product-img p-md-3" id="main-product-image">
+                
               </div>
               <!-- Preview images mobile-->
               <div class="d-lg-none product-preview mt-3 px-4">
                 <div class="owl-carousel owl-theme" id="product-preview">
-                  <div class="item"><img src="img/pdp-images/PG.10216885.JJ169XX.BZ-small.jpg" alt="product preview">
-                  </div>
-                  <div class="item"><img src="img/pdp-images/PG.10216885.JJ169XX.BZ-small.jpg" alt="product preview">
-                  </div>
-                  <div class="item"><img src="img/pdp-images/PG.10216885.JJ169XX.BZ-small.jpg" alt="product preview">
-                  </div>
-                  <div class="item"><img src="img/pdp-images/PG.10216885.JJ169XX.BZ-small.jpg" alt="product preview">
-                  </div>
+           
                 </div>
               </div> <!-- Preview images mobile-->
             </div>
@@ -330,20 +324,13 @@
               <div class="row">
 
                 <!-- Preview images desktop-->
-                <div class="d-none d-lg-flex col-md-2 flex-column product-preview-desktop pt-md-4 pl-0">
-                  <div class="item"><img src="img/pdp-images/PG.10216885.JJ169XX.BZ-small.jpg" alt="product preview">
-                  </div>
-                  <div class="item"><img src="img/pdp-images/PG.10216885.JJ169XX.BZ-small.jpg" alt="product preview">
-                  </div>
-                  <div class="item"><img src="img/pdp-images/PG.10216885.JJ169XX.BZ-small.jpg" alt="product preview">
-                  </div>
-                  <div class="item"><img src="img/pdp-images/PG.10216885.JJ169XX.BZ-small.jpg" alt="product preview">
-                  </div>
+                <div class="d-none d-lg-flex col-md-2 flex-column product-preview-desktop pt-md-4 pl-0" id="product-preview-lg">
+                 
                 </div><!-- End of Preview images desktop-->
 
                 <div class="col-12 col-md-10 product-detail-wrap pl-4 pt-3 pl-md-5 pt-lg-5">
                   <!-- Price Container ----------------------->
-                  <h3 class="product-price">$299.99</h3>
+                  <h3 class="product-price" id="product-price"></h3>
                   <!-- End of Price Container ----------------------->
 
                   <!-- Choose Color Container ----------------------->
@@ -360,40 +347,29 @@
                   <!-- Quantity and Add to Cart Container ----------------------->
                   <div class="quantity-and-addtocart-wrap pl-3 mt-3">
                     <div class="row">
-                      <div class="col-12 col-lg-3 chose-quantity-wrap py-3">
-                        <div class="chose-quantity d-flex justify-content-around px-3 py-2">
-                          <div class="decrese"><img src="img/minus.png" alt="Decrese"></div>
-                          <div class="quantity">1</div>
-                          <div class="increase"><img src="img/plus.png" alt="increase"></div>
+                      <div class="col-12 col-lg-4 chose-quantity-wrap py-3">
+                        <div class="chose-quantity d-flex px-3 py-2">
+                          <div class="decrese" id="quantity-decrese"><img src="img/minus.png" alt="Decrese"></div>
+                          <form >
+                            <input id="product-quantity" class="quantity mx-1 text-center" type="text" value="1">
+                          </form>
+                          <div class="increase" id="quantity-increase"><img src="img/plus.png" alt="increase"></div>
+                        </div>
+                        <div class="quantity-invalid-feedback">
+                          Please, make sure you are entering a number higher or equal to 1
                         </div>
                       </div>
-                      <div class="col-12 col-lg-9 add-to-cart-wrap py-3 pl-lg-4">
-                        <button class="add-to-cart button-green">add to cart</button>
+                      <div class="col-12 col-lg-8 add-to-cart-wrap py-3 pl-lg-4">
+                        <button class="add-to-cart-product-page button-green">add to cart</button>
                       </div>
                     </div>
                   </div> <!-- End of Quantity and Add to Cart Container ----------------------->
 
                   <!-- Product Description ------------------->
                   <div class="product-description mt-3">
-                    <p class="product-description__text pr-2">
-                      Sed ut perspiciatis unde omnis iste natus error
-                      sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
-                      inventore
-                      Beatae vitae dicta sunt explicabo.
-                      Nemo enim ipsam voluptatem quia voluptas
-                      sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
-                      sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
-                      adipisci velit, \sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam
-                      aliquam
-                      quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
-                      laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui
-                      in
-                      ea voluptate velit
-                      esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla
-                      pariatur?
-                    </p>
+                    <p class="product-description__text pr-2" id="product-description"></p>
                     <div class="product-description__read-more">
-                      <button>Read More</button>
+                      <button id="read-more">Read More</button>
                     </div>
                   </div> <!-- End of Product Description ------------------->
 
@@ -419,125 +395,49 @@
                 <div class="col-md-12 col-lg-8 tabs mx-auto d-flex justify-content-around">
                   <div class="tabs__item active" id="description">Description</div>
                   <div class="tabs__item" id="additionalInformation">Additional Information </div>
-                  <div class="tabs__item" id="reviews">Reviews (3)</div>
+                  <div class="tabs__item" id="reviews">Reviews <span id="reviews-quality"></span> </div>
                 </div>
               </div>
               <div class="collapsible">
-                <div class="collapsible__item show" data-show="description">
-                  Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
-                  dis parturient montes, nascetur ridiculus mus.
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
-                  massa.
-                  Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam
-                  felis,
-                  ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo,
-                  fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis
-                  vitae, justo
-                </div>
-                <div class="collapsible__item" data-show="additionalInformation">
-                  Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper
-                  nisi.
-                  Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-                  Aliquam
-                  lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
-                  laoreet. Quisque rutrum.
-                  Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
-                  Etiam rhoncus. Maecenas tempus,
-                  tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam
-                  quam nunc, blandit vel, luctus
-                  pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut
-                  libero venenatis faucibus. Nullam quis
-                  . Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.
-                  Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
-                </div>
+                <div class="collapsible__item show" data-show="description" id="tabs-description"></div>
+                <div class="collapsible__item" data-show="additionalInformation" id="tabs-additionalInformation"></div>
                 <div class="collapsible__item" data-show="reviews">
-                  Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper
-                  nisi.
-                  Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-                  Aliquam
+                  <div class="reviews-wrap d-flex flex-wrap" id="tabs-reviews">
+                  </div>
                 </div>
-              </div>
-            </div>
-            <!--Enf of Product Tabs: Desdription, Additional Info, Reviews ------->
-          </div>
+            </div> 
+          </div><!--Enf of Product Tabs: Desdription, Additional Info, Reviews ------->
         </div>
         <!--End of Product Wrap -------------------------------------------->
-
-        <!-- Popular Items ------------------------------->
-        <div class="popular-items">
-
-          <!-- Popular Items Title ------------------------------->
-          <div class="popular-items__title text-center d-flex mt-5">
-
-            <div class="line-brown flex-grow-1 mx-auto"></div>
-            <h1 class="mx-auto px-3">
-              <p class="text-center">Popular Items</p>
-            </h1>
-            <div class="line-brown flex-grow-1 mx-auto"></div>
-          </div> <!-- Popular Items Title  ------------------------------->
-
-          <!-- Popular Items Slider -->
-          <div class="popular-items-wrap mb-2">
-            <div class="owl-carousel owl-theme" id="popular-products">
-              <div class="item">
-                <div class="products__item-wrap">
-                  <div class="product d-flex flex-column justify-content-between bg-white my-3">
-                    <div class="product__img">
-                      <img src="img/product.png" alt="product-item">
-                    </div>
-                    <p class="product__description p-3 text-center">Kristina Dam Oak Table With White Marble
-                      Top</p>
-                    <p class="product__price pb-3 text-center">$ 799.55</p>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="products__item-wrap">
-                  <div class="product d-flex flex-column justify-content-between bg-white my-3">
-                    <div class="product__img">
-                      <img src="img/product.png" alt="product-item">
-                    </div>
-                    <p class="product__description p-3 text-center">Kristina Dam Oak Table With White Marble
-                      Top</p>
-                    <p class="product__price pb-3 text-center">$ 799.55</p>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="products__item-wrap">
-                  <div class="product d-flex flex-column justify-content-between bg-white my-3">
-                    <div class="product__img">
-                      <img src="img/product.png" alt="product-item">
-                    </div>
-                    <p class="product__description p-3 text-center">Kristina Dam Oak Table With White Marble
-                      Top</p>
-                    <p class="product__price pb-3 text-center">$ 799.55</p>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="products__item-wrap">
-                  <div class="product d-flex flex-column justify-content-between bg-white my-3">
-                    <div class="product__img">
-                      <img src="img/product.png" alt="product-item">
-                    </div>
-                    <p class="product__description p-3 text-center">Kristina Dam Oak Table With White Marble
-                      Top</p>
-                    <p class="product__price pb-3 text-center">$ 799.55</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> <!-- End of Popular Items Slider -->
-        </div> <!-- Popular Items ------------------------------->
-
-        <!--Scroll to top button  ------------------------------->
-        <div class="scroll-to-top d-flex justify-content-center d-md-none mt-4">
-          <button class="button-green"><a href="#top">scroll to top</a></button>
-        </div> <!--End of scroll to top button  ------------------------------->
-
       </div>
-    </div>
+
+             <!-- Popular Items ------------------------------->
+             <div class="popular-items">
+
+              <!-- Popular Items Title ------------------------------->
+              <div class="popular-items__title text-center d-flex mt-5">
+    
+                <div class="line-brown flex-grow-1 mx-auto"></div>
+                <h2 class="mx-auto px-3 text-center">
+                  Popular Items
+                </h2>
+                <div class="line-brown flex-grow-1 mx-auto"></div>
+              </div> <!-- Popular Items Title  ------------------------------->
+    
+              <!-- Popular Items Slider -->
+              <div class="product-tile py-4">
+                <div class="row mx-auto owl-carousel owl-theme" id="popular-products">
+                  <!-- Product Tile Items Will Be Rendered Here ---------->
+                </div>
+              </div> <!-- End of Popular Items - Product Tile  -->
+            </div> <!-- Popular Items ------------------------------->
+    
+            <!--Scroll to top button  ------------------------------->
+            <div class="scroll-to-top d-flex justify-content-center d-md-none mt-4">
+              <button class="button-green"><a href="#top">scroll to top</a></button>
+            </div> <!--End of scroll to top button  ------------------------------->
+         </div>
+      </div>
 
 
         <!-- Services      -->
@@ -710,7 +610,7 @@
   <script src="js/cart.js"></script>
   <script src="js/wish-list.js"></script>
   <script src="js/general.js"></script>
-  <script src="js/services-page.js"></script>
+  <script src="js/product-page.js"></script>
   <script src="js/modal-login.js"></script>
 </body>
 

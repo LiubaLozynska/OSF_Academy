@@ -6,7 +6,7 @@ let productDataId = $(this).attr("data-id");
 //Adding the product to ProductInCart in Local Storage
 products.addToCart(productDataId);
 
-//Rendering products in wishlist quantity in header and footer
+//Rendering products in cart quantity in header and footer
 products.renderCartQuantity();
 
 });

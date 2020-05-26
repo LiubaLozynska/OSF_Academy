@@ -44,46 +44,6 @@
     }
   }
   
-  
-  /*Popular Items section -----------------------------*/
-  
-  .popular-items {
-    &__title h2{
-    font-size: 1.125em; /*18px*/
-    font-weight: 800;
-    white-space: nowrap;
-    margin-bottom: 0px;
-  }
-  .product-tile {
-    .owl-carousel {
-      .owl-dots {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .owl-dot span {
-          opacity: .7;
-          border: 2px solid transparent;
-          width: 9px !important;
-          height: 9px !important;
-        }
-        .owl-dot.active span {
-          width: 15px !important;
-          height: 15px !important;
-          border: 2px solid white;
-          background-color: transparent;
-        }
-      }
-    }
-  }
-}
-
-  
-  .load-more-button {
-    @include button {
-      color: white;
-    }
-  }
-
   /*Banner Items section -----------------------------*/
   
   .banner {
@@ -101,33 +61,6 @@
     }
   }
   
-    /*Featured Products section -----------------------------*/
-  
-  
-    .featured-products {
-      &__title {
-        font-size: 2.25em; /*36px*/
-        font-weight: 700;
-      }
-      &__description {
-        font-size: 1.125em; /* 18px */
-      }
-    }
-  
-  /*Services section -----------------------------*/
-  
-  .services {
-    background-color: $link-color;
-    &__text h5 {
-      text-transform: uppercase;
-      font-size: 1.125em; /* 18px */
-    }
-    &__text p {
-      font-family: $secondary-font-family;
-      font-size: 0.875em; /*14px*/
-      color: #868380 !important;
-    }
-  }
 
   .utilities {
     .icon {

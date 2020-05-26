@@ -15,6 +15,19 @@
 
 .product-wrap {
   width: 100%;
+  .product-preview,
+  .product-preview-desktop {
+    .item {
+      .thumbnail {
+        opacity: .5;
+        border: 1px solid black;
+      }
+      .thumbnail.active {
+        opacity: 1;
+        border: 1px solid $main-color;
+      }
+    }
+  }
   .product-img-wrap { 
     .product-img img{
       width: 100%;
@@ -54,21 +67,36 @@
         border-radius: 100%;
       } 
     }
+    .quantity-and-addtocart-wrap {
+      position: relative;
+      .quantity-invalid-feedback {
+        position: absolute;
+        display: none;
+        color: red;
+        font-size: 10px;
+        width: 100%;
+        bottom: -25%;
+        left: 0px;
+        width: 200px;
+      }
+    }
     .chose-quantity-wrap {
       padding: 0px;
       .chose-quantity {
         font-size: 0.875rem; /*14px*/
         border: 2px solid #e8e2d6;
         border-radius: 25px;
-        width: 100px;
+        max-width: 100px;
+        .quantity {
+          outline: none;
+          width: 75%;
+          border: none;
+        }
       }
     }
     .product-description {
       &__text {
         font-size: 1rem; /*16px*/
-        text-overflow: ellipsis;
-        max-height: 120px;
-        overflow: hidden;
       }
       &__read-more button{
         background-color: transparent;
@@ -119,6 +147,23 @@
         &.show {
           display: block;
         }
+        &:last-child {
+          column-count: 1;
+        }
+        .reviews-wrap {
+          .review {
+            width: 30%;
+            &__username {
+              font-size: 1.2rem;
+              font-weight: 800;
+              text-transform: capitalize;
+            }
+            &__body {
+              font-size: 1rem;
+              font-style: italic;
+            }
+          }
+        }
       }
     }
   }
@@ -130,8 +175,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    .owl-dot span{
+      background-color: #262a32;
+      opacity: .7;
+    }
     .owl-dot.active span{
-      border: 3px solid #262a32;
+      border: 3px solid #262a32 !important;
       width: 15px;
       height: 15px;
       background-color: transparent;
@@ -143,11 +192,10 @@
 /*Popular Items Styles ------------*/
 
 .popular-items {
-  &__title {
-    h1 p {
+  &__title h2{
       font-size: 1.125rem; /*18px*/
       text-transform: uppercase;
       font-weight: 700;
-    }
+      margin-bottom: 0px;
   }
 }
