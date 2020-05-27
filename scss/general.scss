@@ -144,7 +144,31 @@ button {
 .card-outer {
   position: relative;
   width: 100%;
-  
+ .card-body {
+  .price-container {
+    width: 90%;
+    padding: 0px 10px;
+    border: 2px solid rgba(#000, .2);
+    border-radius: 20px;
+    font-size: 0.875rem; /*14px*/
+    font-weight: 400;
+    .add-to-cart {
+      padding: 8px 0px;
+      padding-left: 4px;
+      outline: none;
+      background-color: transparent;
+      border: none;
+      color: #000000;
+      white-space: nowrap;
+    }
+    &__price{
+      color: $main-color;
+      padding: 8px 0px;
+      padding-right: 4px;
+      border-right: 2px solid rgba(#000, .2);
+    }
+  }
+ }
  .card-on-hover {
    position: absolute;
    background: linear-gradient(0deg, #1bc167 0%, #2dd3a1 100%);
@@ -172,7 +196,6 @@ button {
         border: none;
         background-color: #ffffff;
         font-size: 28px;
-     
       }
       .add-to-wishlist {
         color: #e73c68;
@@ -186,6 +209,28 @@ button {
  &:hover .card-on-hover {
    opacity: 0.9;
  }
+}
+
+.card-outer.no-product {
+  .card {
+    height: 100%;
+   img {
+    height: 100%;
+   }
+  }
+  .card-overlay {
+    position: absolute;
+    top: 0%;
+    height: 100%;
+    width: 100%;
+    opacity: .7;
+    background: linear-gradient(#dc5886,#675b99);
+    font-size: 1rem;
+    font-weight: 400;
+    .far {
+      color: $main-color;
+    }
+  }
 }
 
 // Login Modal Popup Styles

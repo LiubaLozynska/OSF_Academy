@@ -36,9 +36,6 @@ function toggleOwlPopularProducts() {
 }
 
 $(document).ready(() => {
-
-  //adding or disabling owl carousel for popular products based on screen width
-  toggleOwlPopularProducts();
   
   // Rerendering products based on window width
 

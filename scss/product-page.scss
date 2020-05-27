@@ -19,6 +19,7 @@
   .product-preview-desktop {
     .item {
       .thumbnail {
+        cursor: pointer;
         opacity: .5;
         border: 1px solid black;
       }
@@ -29,15 +30,27 @@
     }
   }
   .product-img-wrap { 
-    .product-img img{
+    .product-img {
+      position: relative;
+      img{
       width: 100%;
       height: auto;
+      }
+    }
+    .zoom-in {
+      cursor: pointer;
+      color: $main-color;
+      position: absolute;
+      top: 5%;
+      left: 5%;
+      font-size: 1.5rem;
     }
   }
 
   &__left {
     .product-preview {
       .item {
+        cursor: zoom-in;
         max-width: 100px;
         height: auto;
         margin: 0px auto;

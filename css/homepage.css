@@ -100,6 +100,27 @@ button {
 .card-outer {
   position: relative;
   width: 100%; }
+  .card-outer .card-body .price-container {
+    width: 90%;
+    padding: 0px 10px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    font-size: 0.875rem;
+    /*14px*/
+    font-weight: 400; }
+    .card-outer .card-body .price-container .add-to-cart {
+      padding: 8px 0px;
+      padding-left: 4px;
+      outline: none;
+      background-color: transparent;
+      border: none;
+      color: #000000;
+      white-space: nowrap; }
+    .card-outer .card-body .price-container__price {
+      color: #84bc22;
+      padding: 8px 0px;
+      padding-right: 4px;
+      border-right: 2px solid rgba(0, 0, 0, 0.2); }
   .card-outer .card-on-hover {
     position: absolute;
     background: linear-gradient(0deg, #1bc167 0%, #2dd3a1 100%);
@@ -133,6 +154,23 @@ button {
           color: #23c46e; }
   .card-outer:hover .card-on-hover {
     opacity: 0.9; }
+
+.card-outer.no-product .card {
+  height: 100%; }
+  .card-outer.no-product .card img {
+    height: 100%; }
+
+.card-outer.no-product .card-overlay {
+  position: absolute;
+  top: 0%;
+  height: 100%;
+  width: 100%;
+  opacity: .7;
+  background: linear-gradient(#dc5886, #675b99);
+  font-size: 1rem;
+  font-weight: 400; }
+  .card-outer.no-product .card-overlay .far {
+    color: #84bc22; }
 
 .modal-dialog a {
   color: #84bc22;
@@ -379,6 +417,27 @@ button {
 .card-outer {
   position: relative;
   width: 100%; }
+  .card-outer .card-body .price-container {
+    width: 90%;
+    padding: 0px 10px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    font-size: 0.875rem;
+    /*14px*/
+    font-weight: 400; }
+    .card-outer .card-body .price-container .add-to-cart {
+      padding: 8px 0px;
+      padding-left: 4px;
+      outline: none;
+      background-color: transparent;
+      border: none;
+      color: #000000;
+      white-space: nowrap; }
+    .card-outer .card-body .price-container__price {
+      color: #84bc22;
+      padding: 8px 0px;
+      padding-right: 4px;
+      border-right: 2px solid rgba(0, 0, 0, 0.2); }
   .card-outer .card-on-hover {
     position: absolute;
     background: linear-gradient(0deg, #1bc167 0%, #2dd3a1 100%);
@@ -412,6 +471,23 @@ button {
           color: #23c46e; }
   .card-outer:hover .card-on-hover {
     opacity: 0.9; }
+
+.card-outer.no-product .card {
+  height: 100%; }
+  .card-outer.no-product .card img {
+    height: 100%; }
+
+.card-outer.no-product .card-overlay {
+  position: absolute;
+  top: 0%;
+  height: 100%;
+  width: 100%;
+  opacity: .7;
+  background: linear-gradient(#dc5886, #675b99);
+  font-size: 1rem;
+  font-weight: 400; }
+  .card-outer.no-product .card-overlay .far {
+    color: #84bc22; }
 
 .modal-dialog a {
   color: #84bc22;
@@ -745,6 +821,27 @@ button {
 .card-outer {
   position: relative;
   width: 100%; }
+  .card-outer .card-body .price-container {
+    width: 90%;
+    padding: 0px 10px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    font-size: 0.875rem;
+    /*14px*/
+    font-weight: 400; }
+    .card-outer .card-body .price-container .add-to-cart {
+      padding: 8px 0px;
+      padding-left: 4px;
+      outline: none;
+      background-color: transparent;
+      border: none;
+      color: #000000;
+      white-space: nowrap; }
+    .card-outer .card-body .price-container__price {
+      color: #84bc22;
+      padding: 8px 0px;
+      padding-right: 4px;
+      border-right: 2px solid rgba(0, 0, 0, 0.2); }
   .card-outer .card-on-hover {
     position: absolute;
     background: linear-gradient(0deg, #1bc167 0%, #2dd3a1 100%);
@@ -778,6 +875,23 @@ button {
           color: #23c46e; }
   .card-outer:hover .card-on-hover {
     opacity: 0.9; }
+
+.card-outer.no-product .card {
+  height: 100%; }
+  .card-outer.no-product .card img {
+    height: 100%; }
+
+.card-outer.no-product .card-overlay {
+  position: absolute;
+  top: 0%;
+  height: 100%;
+  width: 100%;
+  opacity: .7;
+  background: linear-gradient(#dc5886, #675b99);
+  font-size: 1rem;
+  font-weight: 400; }
+  .card-outer.no-product .card-overlay .far {
+    color: #84bc22; }
 
 .modal-dialog a {
   color: #84bc22;
@@ -974,65 +1088,6 @@ button {
     top: -35%;
     background-color: #262a32; }
 
-/*Homepage slider and sales section --------------*/
-.carousel-inner {
-  background: black !important;
-  border-radius: 5px;
-  font-family: "PT sans", Arial, "sans serif"; }
-  .carousel-inner .carousel-item h5 {
-    font-size: 1.75em;
-    /*28px*/
-    font-weight: 700; }
-  .carousel-inner .carousel-item p {
-    font-size: 0.875em;
-    /*14px*/
-    opacity: .9; }
-  .carousel-inner .carousel-item button {
-    font-size: 0.875rem;
-    /*14px*/
-    text-transform: uppercase;
-    background-color: transparent;
-    border: 2px solid;
-    border-radius: 20px;
-    padding: 8px 39px;
-    width: 100%;
-    max-width: 200px;
-    color: white;
-    max-width: 170px;
-    opacity: .7; }
-    .carousel-inner .carousel-item button a {
-      color: inherit; }
-
-.carousel-indicators {
-  margin-left: 30%;
-  margin-right: 30%; }
-  .carousel-indicators li {
-    border-radius: 50%;
-    width: 10px;
-    height: 10px;
-    background-color: white; }
-    .carousel-indicators li.active {
-      background-color: transparent;
-      border: 2px solid white; }
-
-/*Banner Items section -----------------------------*/
-.banner {
-  background: url("../img/banner.png") no-repeat center;
-  background-size: cover;
-  height: 185px; }
-  .banner__title {
-    font-size: 1.875em;
-    /* 30px */
-    font-weight: 900; }
-  .banner__decription {
-    font-family: "PT sans", Arial, "sans serif";
-    font-size: 0.875em;
-    /*14px*/
-    width: 90%; }
-
-.utilities .icon .count {
-  border: 1px solid red; }
-
 /* Google Fonts import ---------*/
 /*Variables --------------*/
 /*Mixins --------------*/
@@ -1127,6 +1182,27 @@ button {
 .card-outer {
   position: relative;
   width: 100%; }
+  .card-outer .card-body .price-container {
+    width: 90%;
+    padding: 0px 10px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    font-size: 0.875rem;
+    /*14px*/
+    font-weight: 400; }
+    .card-outer .card-body .price-container .add-to-cart {
+      padding: 8px 0px;
+      padding-left: 4px;
+      outline: none;
+      background-color: transparent;
+      border: none;
+      color: #000000;
+      white-space: nowrap; }
+    .card-outer .card-body .price-container__price {
+      color: #84bc22;
+      padding: 8px 0px;
+      padding-right: 4px;
+      border-right: 2px solid rgba(0, 0, 0, 0.2); }
   .card-outer .card-on-hover {
     position: absolute;
     background: linear-gradient(0deg, #1bc167 0%, #2dd3a1 100%);
@@ -1160,6 +1236,23 @@ button {
           color: #23c46e; }
   .card-outer:hover .card-on-hover {
     opacity: 0.9; }
+
+.card-outer.no-product .card {
+  height: 100%; }
+  .card-outer.no-product .card img {
+    height: 100%; }
+
+.card-outer.no-product .card-overlay {
+  position: absolute;
+  top: 0%;
+  height: 100%;
+  width: 100%;
+  opacity: .7;
+  background: linear-gradient(#dc5886, #675b99);
+  font-size: 1rem;
+  font-weight: 400; }
+  .card-outer.no-product .card-overlay .far {
+    color: #84bc22; }
 
 .modal-dialog a {
   color: #84bc22;
@@ -1342,8 +1435,8 @@ button {
     font-size: 0.875em;
     /*14px*/ }
   .carousel-indicators {
-    margin-left: 42%;
-    margin-right: 42%; }
+    margin-left: 42% !important;
+    margin-right: 42% !important; }
     .carousel-indicators__item {
       width: 7px !important;
       height: 7px !important; }
@@ -1542,3 +1635,62 @@ button {
   .product-page .product-tabs-wrap .tabs__item {
     font-size: 1.5rem !important;
     /*24px*/ } }
+
+/*Homepage slider and sales section --------------*/
+.carousel-inner {
+  background: black !important;
+  border-radius: 5px;
+  font-family: "PT sans", Arial, "sans serif"; }
+  .carousel-inner .carousel-item h5 {
+    font-size: 1.75em;
+    /*28px*/
+    font-weight: 700; }
+  .carousel-inner .carousel-item p {
+    font-size: 0.875em;
+    /*14px*/
+    opacity: .9; }
+  .carousel-inner .carousel-item button {
+    font-size: 0.875rem;
+    /*14px*/
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 2px solid;
+    border-radius: 20px;
+    padding: 8px 39px;
+    width: 100%;
+    max-width: 200px;
+    color: white;
+    max-width: 170px;
+    opacity: .7; }
+    .carousel-inner .carousel-item button a {
+      color: inherit; }
+
+.carousel-indicators {
+  margin-left: 30%;
+  margin-right: 30%; }
+  .carousel-indicators li {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: white; }
+    .carousel-indicators li.active {
+      background-color: transparent;
+      border: 2px solid white; }
+
+/*Banner Items section -----------------------------*/
+.banner {
+  background: url("../img/banner.png") no-repeat center;
+  background-size: cover;
+  height: 185px; }
+  .banner__title {
+    font-size: 1.875em;
+    /* 30px */
+    font-weight: 900; }
+  .banner__decription {
+    font-family: "PT sans", Arial, "sans serif";
+    font-size: 0.875em;
+    /*14px*/
+    width: 90%; }
+
+.utilities .icon .count {
+  border: 1px solid red; }

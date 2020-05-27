@@ -63,6 +63,7 @@
     { "name": "Kristina Dam Oak Table With White Marble Top", 
       "id": "00002",
       "price": 799.55,
+      "showBuyButton": true,
       "attributes" : {
         "category": "Cloth"
       },
@@ -136,6 +137,10 @@
           "imageURL": "img/products/6.png"
         }
       ]
+    },
+
+    {
+      "id": "000014"
     },
 
     { "name": "Hezy Theme", 

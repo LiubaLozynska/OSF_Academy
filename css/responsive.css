@@ -94,6 +94,27 @@ button {
 .card-outer {
   position: relative;
   width: 100%; }
+  .card-outer .card-body .price-container {
+    width: 90%;
+    padding: 0px 10px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    font-size: 0.875rem;
+    /*14px*/
+    font-weight: 400; }
+    .card-outer .card-body .price-container .add-to-cart {
+      padding: 8px 0px;
+      padding-left: 4px;
+      outline: none;
+      background-color: transparent;
+      border: none;
+      color: #000000;
+      white-space: nowrap; }
+    .card-outer .card-body .price-container__price {
+      color: #84bc22;
+      padding: 8px 0px;
+      padding-right: 4px;
+      border-right: 2px solid rgba(0, 0, 0, 0.2); }
   .card-outer .card-on-hover {
     position: absolute;
     background: linear-gradient(0deg, #1bc167 0%, #2dd3a1 100%);
@@ -127,6 +148,23 @@ button {
           color: #23c46e; }
   .card-outer:hover .card-on-hover {
     opacity: 0.9; }
+
+.card-outer.no-product .card {
+  height: 100%; }
+  .card-outer.no-product .card img {
+    height: 100%; }
+
+.card-outer.no-product .card-overlay {
+  position: absolute;
+  top: 0%;
+  height: 100%;
+  width: 100%;
+  opacity: .7;
+  background: linear-gradient(#dc5886, #675b99);
+  font-size: 1rem;
+  font-weight: 400; }
+  .card-outer.no-product .card-overlay .far {
+    color: #84bc22; }
 
 .modal-dialog a {
   color: #84bc22;
@@ -309,8 +347,8 @@ button {
     font-size: 0.875em;
     /*14px*/ }
   .carousel-indicators {
-    margin-left: 42%;
-    margin-right: 42%; }
+    margin-left: 42% !important;
+    margin-right: 42% !important; }
     .carousel-indicators__item {
       width: 7px !important;
       height: 7px !important; }

@@ -44,8 +44,8 @@
       }
       
       .carousel-indicators {
-        margin-left: 42%;
-        margin-right: 42%;
+        margin-left: 42% !important;
+        margin-right: 42% !important;
         &__item {
           width: 7px !important;
           height: 7px !important;

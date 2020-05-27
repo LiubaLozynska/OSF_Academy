@@ -1,3 +1,40 @@
+function toggleOwlPopularProducts() {
+  
+  let currentWindowWidth = $( window ).width();
+  currentBreakPoint = breakpoints.getBreakPoint(currentWindowWidth);
+
+  let owlProductTile = $('#product-tile');
+
+  if ( currentBreakPoint !== breakpoints.VerySmall) {
+    
+    //disabling owl carousel for popular products for medium and big screens
+    $(owlProductTile).removeClass('owl-carousel');
+    $(owlProductTile).removeClass('owl-theme');
+
+    owlProductTile.trigger('destroy.owl.carousel');
+   
+  } else  {
+
+    $(owlProductTile).addClass('owl-carousel');
+    $(owlProductTile).addClass('owl-theme');
+
+      owlProductTile.owlCarousel({
+        nav:false,
+        dots:true,
+        slideBy:4,
+        loop:true,
+        margin:10,
+        autoplay: 5,
+        responsiveClass:true,
+        responsive:{
+            0:{
+                items:1,
+            }
+        }
+    });
+  }
+}
+
 //Creating an object to store info about products
 
 const products = {
@@ -21,58 +58,100 @@ const products = {
     products.renderedProductsCount = productsToRender.length;
   
     productsToRender.forEach( product => {
-      $('#product-tile').append(
-        `
+      if (product.showBuyButton) {
+        $('#product-tile').append(
+          `
           <div class="col-12 col-sm-6 col-md-4 col-lg-3 py-4 d-flex justify-content-center card-container">
-            <div class="card-outer">
-              <div class="card product-tile__item">
-                <img src="${product.images[0].imageURL}" class="card-img-top" alt="Product">
-                <div class="card-body">
-                  <h5 class="card-title product-tile__item__title text-center">${product.name}</h5>
-                  <p class="card-text product-tile__item__price text-center">$${product.price}</p>
-                </div>
-              </div>
-              <div class="card-on-hover card">
-                <div class="card-body">
-                  <div class="card-body__inner">
-                    <button class="add-to-cart" data-id="${product.id}"><i class="fas fa-plus"></i></i></button>
-                    <button class="add-to-wishlist" data-id="${product.id}"><i class="fas fa-heart"></i></button>
-                  </div>
+          <div class="card-outer">
+            <div class="card product-tile__item">
+              <img src="${product.images[0].imageURL}" class="card-img-top" alt="Product">
+              <div class="card-body pb-2">
+                <h5 class="card-title product-tile__item__title text-center mb-1  ">${product.name}</h5>
+                <div class="price-container d-flex justify-content-center mx-auto">
+                  <p class="card-text price-container__price d-flex justify-content-center">$${product.price}</p>
+                  <button class="add-to-cart d-flex justify-content-center">BUY NOW</button>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+          `
+        )
+      } else if (!product.name) {
+        $('#product-tile').append(
         `
-      )
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 py-4 d-flex justify-content-center card-container">
+        <div class="card-outer no-product">
+          <div class="card product-tile__item">
+            <img src="../img/no_product.png" class="card-img-top" alt="Product">
+            </div>
+            <div class="card-overlay card">
+              <div class="card-body d-flex align-items-end p-4">
+                <div class="card-body__inner d-flex flex-column">
+                  <p class="text-white mb-3">My dragons are misbehaving again. Unbelieveable!</p>
+                  <p><i class="far fa-id-badge"></i> <span class="text-white text-uppercase ml-2">5H ago</span> </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        `
+        )
+      } else {
+        $('#product-tile').append(
+          `
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 py-4 d-flex justify-content-center card-container">
+              <div class="card-outer">
+                <div class="card product-tile__item">
+                  <img src="${product.images[0].imageURL}" class="card-img-top" alt="Product">
+                  <div class="card-body">
+                    <h5 class="card-title product-tile__item__title text-center">${product.name}</h5>
+                    <p class="card-text product-tile__item__price text-center">$${product.price}</p>
+                  </div>
+                </div>
+                <div class="card-on-hover card">
+                  <div class="card-body">
+                    <div class="card-body__inner">
+                      <button class="add-to-cart" data-id="${product.id}"><i class="fas fa-plus"></i></i></button>
+                      <button class="add-to-wishlist" data-id="${product.id}"><i class="fas fa-heart"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          `
+        )
+      }
+
     });
 
   },
   renderFeaturedProducts: function() {
 
     this.items.forEach( product => {
+      product.name &&
       $('#featured-products-carousel').append(
         `
         <div class="item">
-        <div>
-        <div class="card-outer">
-        <div class="card product-tile__item" style="width: 100%;">
-          <img src="${product.images[0].imageURL}" class="card-img-top" alt="Product">
-          <div class="card-body">
-            <h5 class="card-title product-tile__item__title text-center">${product.name}</h5>
-            <p class="card-text product-tile__item__category text-center">${product.attributes.category}</p>
-          </div>
-        </div>
-        <div class="card-on-hover card">
-          <div class="card-body">
-             <div class="card-body__inner">
-                <button class="add-to-cart" data-id="${product.id}"><i class="fas fa-plus"></i></i></button>
-                <button class="add-to-wishlist" data-id="${product.id}"><i class="fas fa-heart"></i></button>
+          <div>
+            <div class="card-outer">
+            <div class="card product-tile__item" style="width: 100%;">
+              <img src="${product.images[0].imageURL}" class="card-img-top" alt="Product">
+              <div class="card-body">
+                <h5 class="card-title product-tile__item__title text-center">${product.name}</h5>
+                <p class="card-text product-tile__item__category text-center">${product.attributes.category}</p>
               </div>
+            </div>
+            <div class="card-on-hover card">
+              <div class="card-body">
+                <div class="card-body__inner">
+                    <button class="add-to-cart" data-id="${product.id}"><i class="fas fa-plus"></i></i></button>
+                    <button class="add-to-wishlist" data-id="${product.id}"><i class="fas fa-heart"></i></button>
+                  </div>
+              </div>
+            </div>
+            </div>
           </div>
-        </div>
-        </div>
-      </div>
-
         </div>
         `
       )
@@ -131,6 +210,7 @@ const products = {
 
   //Rendering additional products
   productsToRender.forEach( product => {
+    product.name &&
     $('#product-tile').append(
       `
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 py-4 d-flex justify-content-center card-container">
@@ -330,10 +410,10 @@ $.ajax({
     //Setting products data into the products object
     products.items = data;
 
-    // Rendering the initial scope of products all pages where needed
+    // Rendering the initial scope of products on all pages where needed
     products.renderProducts();
 
-    // Rendering featured products where needed
+    // Rendering featured products on all pages where needed
     products.renderFeaturedProducts();  
 
     // Rendering Popular Products on product page
@@ -364,6 +444,10 @@ $.ajax({
           },
       }
     });
+
+    //adding owl carousel for homepage product tile on very small screens
+    toggleOwlPopularProducts();
+
   }
 })
 

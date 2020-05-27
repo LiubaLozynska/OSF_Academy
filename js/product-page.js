@@ -1,3 +1,4 @@
+
 //Rendering product page tabs
 let tabs = $('.tabs__item');
 let tabsCount = tabs.length;
@@ -33,9 +34,18 @@ for (let i=0; i < tabsCount; i++) {
       return data;
      });
 
+    // Rendering main product image
     $('#main-product-image').html(
-      `<img src="${product[0].images[1].imageURL}" alt="Product Image">`
+      `<i class="fas fa-expand-arrows-alt zoom-in"></i><img src="${product[0].images[1].imageURL}" alt="Product Image" id="main-image">`
     )
+
+    //Main image zoom in listener
+    const mainImageZoom = new Zooming();
+
+    $(document).on('click', '.zoom-in', (event) => {
+      event.stopPropagation;
+      mainImageZoom.open('#main-image');
+    })
 
     function renderThumbmnails(parent) {
       for (let i = 1; i <= 4; i++) {
@@ -55,6 +65,7 @@ for (let i=0; i < tabsCount; i++) {
       }
     }
 
+    //Rendering thumbnails listener
     renderThumbmnails('#product-preview');
     renderThumbmnails('#product-preview-lg');
 
@@ -84,11 +95,13 @@ for (let i=0; i < tabsCount; i++) {
       $(SameImageInAnotherView).addClass('active');
 
       const bigImage = currentImageSrc.replace('-small.jpg', '') + '.jpg';
-
+      
       $('#main-product-image').html(
-        `<img src="${bigImage}" alt="Product Image">`
+        `<i class="fas fa-expand-arrows-alt zoom-in"></i><img src="${bigImage}" alt="Product Image" id="main-image">`
       )
+
     })
+
 
     //Rendering product price
     $('#product-price').html('$' + product[0].price);
