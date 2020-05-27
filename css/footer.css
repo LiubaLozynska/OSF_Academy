@@ -14,7 +14,8 @@ body {
   font-family: "Lato", Arial, "sans serif";
   font-size: 16px;
   margin: 0 auto;
-  color: #45413e; }
+  color: #45413e;
+  max-width: 1280px; }
 
 p {
   font-family: "Lato", Arial, "sans serif";
@@ -221,7 +222,7 @@ button {
 /*Cookies Policy Modal Styles -------*/
 .cookies-policy-modal .modal-dialog {
   position: relative;
-  max-width: 1150px; }
+  max-width: 1280px; }
   .cookies-policy-modal .modal-dialog .modal-content {
     padding: 20px 30px; }
 
@@ -336,9 +337,9 @@ button {
     text-transform: uppercase;
     font-weight: 700; }
   .main-footer .opener:after {
-    content: url("../img/opener-down.png"); }
+    content: '\25BC'; }
   .main-footer .opener.active:after {
-    content: url("../img/opener-up.png"); }
+    content: '\25B2'; }
   .main-footer .opener + .dropdown {
     display: none; }
   .main-footer .opener.active + .dropdown {

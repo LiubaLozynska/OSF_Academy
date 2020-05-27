@@ -50,6 +50,7 @@ body {
   font-size: $custom-font-size;
   margin: 0 auto;
   color: $link-color;
+  max-width: $big-devices-width;
 }
 
 p {
@@ -311,7 +312,7 @@ button {
 .cookies-policy-modal {
   .modal-dialog {
     position: relative;
-    max-width: 1150px;
+    max-width: $big-devices-width;
     .modal-content {
       padding: 20px 30px;
     }

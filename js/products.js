@@ -419,6 +419,9 @@ $.ajax({
     // Rendering Popular Products on product page
     products.renderPopularProducts();
 
+    //Rendering products count on services page
+    $('#products-count').html(products.items.length);
+
     // Adding owl carousel for popular products on product page
     $('#popular-products').owlCarousel({
       nav:false,

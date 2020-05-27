@@ -1,0 +1,11 @@
+{
+  "Product categories" : [
+    "Accessories", "Alcohol", "Art", "Books", "Drink", "Electronics", "Flowers & Plants", "Food",
+    "Gadgets", "Garden", "Grocery", "Home", "Jewelry", "Kids & Baby", "Men's Fashion", "Mobile",
+    "Motorcycles", "Movies", "Music", "Office", "Pets", "Romantic", "Sport", "Toys"
+  ],
+  "Sales" : [
+    "Accessories", "Alcohol", "Art", "Books", "Drink", "Electronics", "Flowers & Plants", "Food"
+  ]
+
+}

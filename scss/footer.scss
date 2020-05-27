@@ -20,10 +20,10 @@
       font-weight: 700;
     }
     .opener:after {
-      content: url('../img/opener-down.png');
+      content: '\25BC';
     }
     .opener.active:after{
-      content: url('../img/opener-up.png');
+      content: '\25B2';
     }
     .opener + .dropdown {
       display: none;
