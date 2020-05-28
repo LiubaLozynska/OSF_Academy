@@ -431,7 +431,7 @@ span.nav-opener {
 .main-header .main-nav {
   position: absolute;
   display: none;
-  top: 70px;
+  top: 80px;
   left: 0px;
   width: 100%;
   background-color: #262a32; }

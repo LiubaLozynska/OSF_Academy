@@ -845,7 +845,7 @@ span.nav-opener {
 .main-header .main-nav {
   position: absolute;
   display: none;
-  top: 70px;
+  top: 80px;
   left: 0px;
   width: 100%;
   background-color: #262a32; }
@@ -1792,6 +1792,20 @@ button {
     color: #868380 !important; }
 
 /*  Media queries  ------------------------*/
+@media only screen and (min-width: 450px) {
+  /*Homepage slider and sales section --------------*/
+  .carousel .carousel-item {
+    height: 450px !important; }
+    .carousel .carousel-item img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      min-height: 450px !important;
+      width: auto;
+      -o-object-fit: cover;
+      object-fit: cover; } }
+
 /* Styles for screens larger than 768px ---------------------*/
 @media only screen and (min-width: 768px) {
   .logo-text {
@@ -1811,8 +1825,17 @@ button {
       font-size: 1.125em;
       /* 18px */ }
   /*Carousel styles------------------------------------------*/
-  .carousel-inner img {
-    max-width: 120%; }
+  .carousel .carousel-item {
+    height: 380px !important; }
+    .carousel .carousel-item img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      min-height: 380px !important;
+      width: auto;
+      -o-object-fit: cover;
+      object-fit: cover; }
   .carousel-inner .carousel-item h5 {
     font-size: 1.2em;
     /*48px*/
@@ -2029,7 +2052,21 @@ button {
       background-color: transparent; }
     .utilites__icon img:hover {
       cursor: pointer;
-      opacity: 0.7; } }
+      opacity: 0.7; }
+  .carousel .carousel-item {
+    height: 480px !important; }
+    .carousel .carousel-item img {
+      min-height: 480px !important; }
+  .carousel-inner .carousel-item h5 {
+    font-size: 2.5rem !important;
+    font-weight: 700; }
+  .carousel-inner .carousel-item p {
+    font-size: 1rem; }
+  /*Sale section, next to the carousel ----------------------*/
+  .sale-percentages {
+    font-size: 5rem; }
+  .sale-name {
+    font-size: 1.2rem; } }
 
 /* Styles for screens larger than 1200px ---------------------*/
 @media only screen and (min-width: 1280px) {
@@ -2041,7 +2078,7 @@ button {
   /*Home Page ---------------------------*/
   /*Carousel styles------------------------------------------*/
   .carousel-inner img {
-    max-width: 100%; }
+    width: 100%; }
   .carousel-inner .carousel-item h5 {
     font-size: 3rem !important;
     /*48px*/
@@ -2910,7 +2947,7 @@ span.nav-opener {
 .main-header .main-nav {
   position: absolute;
   display: none;
-  top: 70px;
+  top: 80px;
   left: 0px;
   width: 100%;
   background-color: #262a32; }
@@ -3857,6 +3894,20 @@ button {
     color: #868380 !important; }
 
 /*  Media queries  ------------------------*/
+@media only screen and (min-width: 450px) {
+  /*Homepage slider and sales section --------------*/
+  .carousel .carousel-item {
+    height: 450px !important; }
+    .carousel .carousel-item img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      min-height: 450px !important;
+      width: auto;
+      -o-object-fit: cover;
+      object-fit: cover; } }
+
 /* Styles for screens larger than 768px ---------------------*/
 @media only screen and (min-width: 768px) {
   .logo-text {
@@ -3876,8 +3927,17 @@ button {
       font-size: 1.125em;
       /* 18px */ }
   /*Carousel styles------------------------------------------*/
-  .carousel-inner img {
-    max-width: 120%; }
+  .carousel .carousel-item {
+    height: 380px !important; }
+    .carousel .carousel-item img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      min-height: 380px !important;
+      width: auto;
+      -o-object-fit: cover;
+      object-fit: cover; }
   .carousel-inner .carousel-item h5 {
     font-size: 1.2em;
     /*48px*/
@@ -4094,7 +4154,21 @@ button {
       background-color: transparent; }
     .utilites__icon img:hover {
       cursor: pointer;
-      opacity: 0.7; } }
+      opacity: 0.7; }
+  .carousel .carousel-item {
+    height: 480px !important; }
+    .carousel .carousel-item img {
+      min-height: 480px !important; }
+  .carousel-inner .carousel-item h5 {
+    font-size: 2.5rem !important;
+    font-weight: 700; }
+  .carousel-inner .carousel-item p {
+    font-size: 1rem; }
+  /*Sale section, next to the carousel ----------------------*/
+  .sale-percentages {
+    font-size: 5rem; }
+  .sale-name {
+    font-size: 1.2rem; } }
 
 /* Styles for screens larger than 1200px ---------------------*/
 @media only screen and (min-width: 1280px) {
@@ -4106,7 +4180,7 @@ button {
   /*Home Page ---------------------------*/
   /*Carousel styles------------------------------------------*/
   .carousel-inner img {
-    max-width: 100%; }
+    width: 100%; }
   .carousel-inner .carousel-item h5 {
     font-size: 3rem !important;
     /*48px*/
@@ -4145,6 +4219,18 @@ button {
     /*24px*/ } }
 
 /*Homepage slider and sales section --------------*/
+.carousel .carousel-item {
+  height: 70vh; }
+  .carousel .carousel-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    min-height: 70vh;
+    width: auto;
+    -o-object-fit: cover;
+    object-fit: cover; }
+
 .carousel-inner {
   background: black !important;
   -webkit-border-radius: 5px;
@@ -4237,8 +4323,8 @@ button {
     cursor: pointer;
     color: #84bc22;
     position: absolute;
-    top: 5%;
-    left: 5%;
+    top: 35px;
+    left: 35px;
     font-size: 1.5rem; }
   .product-wrap__left .product-preview .item {
     cursor: -webkit-zoom-in;

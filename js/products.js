@@ -137,10 +137,10 @@ export const products = {
         500: {
           items: 2,
         },
-        800: {
+        768: {
           items: 3,
         },
-        1200: {
+        980: {
           items: 4,
         }
       }

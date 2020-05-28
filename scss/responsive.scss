@@ -2,6 +2,24 @@
 
 /*  Media queries  ------------------------*/
 
+@media only screen and (min-width: 450px) {
+
+  /*Homepage slider and sales section --------------*/
+.carousel .carousel-item {
+  height: 450px !important;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    min-height: 450px !important;
+    width: auto;
+    object-fit: cover;
+ }
+}
+}
+
+
 /* Styles for screens larger than 768px ---------------------*/
 
 @media only screen and (min-width: 768px) {
@@ -26,11 +44,22 @@
     }
   
       /*Carousel styles------------------------------------------*/
+
+        .carousel .carousel-item {
+          height: 380px !important;
+          img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            min-height: 380px !important;
+            width: auto;
+            object-fit: cover;
+          }
+        }
+        
   
       .carousel-inner{
-        img {
-          max-width: 120%;
-        }
         .carousel-item {
           h5 {    
             font-size: 1.2em; /*48px*/
@@ -291,6 +320,37 @@
         }
       }
     }
+
+    .carousel .carousel-item {
+      height: 480px !important;
+      img {
+        min-height: 480px !important;
+      }
+    }
+
+    .carousel-inner{
+      .carousel-item {
+        h5 {    
+          font-size: 2.5rem !important; 
+          font-weight: 700;
+        }
+        p {
+          font-size: 1rem;
+         
+        }
+      }
+    }
+
+       /*Sale section, next to the carousel ----------------------*/
+  
+       .sale {
+        &-percentages {
+          font-size: 5rem; 
+        }
+        &-name {
+          font-size: 1.2rem;
+        }
+      } 
   }
   
   /* Styles for screens larger than 1200px ---------------------*/
@@ -304,23 +364,23 @@
    
     /*Home Page ---------------------------*/
   
-        /*Carousel styles------------------------------------------*/
-  
-        .carousel-inner{
-          img {
-            max-width: 100%;
-          }
-          .carousel-item {
-            h5 {    
-              font-size: 3rem !important; /*48px*/
-              font-weight: 700;
-            }
-            p {
-              font-size: 0.875rem; /*14px*/;
-              width: 50% !important;
-            }
-          }
+    /*Carousel styles------------------------------------------*/
+
+    .carousel-inner{
+      img {
+        width: 100%;
+      }
+      .carousel-item {
+        h5 {    
+          font-size: 3rem !important; /*48px*/
+          font-weight: 700;
         }
+        p {
+          font-size: 0.875rem; /*14px*/;
+          width: 50% !important;
+        }
+      }
+    }
   
   
     /*Sale section, next to the carousel ----------------------*/

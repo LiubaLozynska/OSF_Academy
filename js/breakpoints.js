@@ -18,12 +18,12 @@ export const breakpoints = {
       return this.Large;
     }
    },
-    toggleOwlPopularProducts: function() {
+   toggleOwlPopularProducts: function() {
 
     let currentWindowWidth = $( window ).width();
     let currentBreakPoint = this.getBreakPoint(currentWindowWidth);
 
-    let owlProductTile = $('#product-tile');
+    let owlProductTile = $('.popular-products-withOWL');
 
     if ( currentBreakPoint !== this.VerySmall) {
       
