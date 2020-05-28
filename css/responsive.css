@@ -5,6 +5,9 @@
 /*Mixins --------------*/
 /* pass in color of the button*/
 /* General Layout Styles --------*/
+html {
+  scroll-behavior: smooth; }
+
 * {
   margin: 0;
   padding: 0;
@@ -407,7 +410,7 @@ button {
   .main-footer .opener + .dropdown {
     display: flex; }
   /*Product Page ---------------------*/
-  .product-page .product-wrap__left .product-preview-desktop .item {
+  .product-page .product-wrap__left .img-thumbnails-desktop .item {
     margin: 5px; }
   /*Not Found Page Styles---------------*/
   .not-found-page .not-found__title h1 {

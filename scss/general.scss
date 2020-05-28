@@ -39,6 +39,10 @@ $product-name-color: #2c3e50;
 
 /* General Layout Styles --------*/
 
+html {
+  scroll-behavior: smooth;
+}
+
 *{
   margin: 0;
   padding: 0;

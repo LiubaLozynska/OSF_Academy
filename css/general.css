@@ -5,6 +5,9 @@
 /*Mixins --------------*/
 /* pass in color of the button*/
 /* General Layout Styles --------*/
+html {
+  scroll-behavior: smooth; }
+
 * {
   margin: 0;
   padding: 0;

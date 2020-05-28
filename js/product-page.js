@@ -65,11 +65,11 @@ for (let i=0; i < tabsCount; i++) {
       }
     }
 
-    //Rendering thumbnails listener
-    renderThumbmnails('#product-preview');
-    renderThumbmnails('#product-preview-lg');
+    //Rendering thumbnails
+    renderThumbmnails('#img-thumbnails');
+    renderThumbmnails('#img-thumbnails-desktop');
 
-    $('#product-preview').owlCarousel({
+    $('#img-thumbnails').owlCarousel({
       loop:true,
       nav:false,
       dots:true,
@@ -84,7 +84,9 @@ for (let i=0; i < tabsCount; i++) {
 
     //By clicking on any thumbnail, the main image is changed
     $( document ).on('click', '.thumbnail', (event) => {
-  
+      event.preventDefault();
+     
+
       const currentImage = $(event.currentTarget);  
       const currentImageSrc = $(currentImage).attr('src');
 
@@ -94,11 +96,11 @@ for (let i=0; i < tabsCount; i++) {
       $(currentImage).addClass('active');
       $(SameImageInAnotherView).addClass('active');
 
-      const bigImage = currentImageSrc.replace('-small.jpg', '') + '.jpg';
-      
-      $('#main-product-image').html(
-        `<i class="fas fa-expand-arrows-alt zoom-in"></i><img src="${bigImage}" alt="Product Image" id="main-image">`
-      )
+      const bigImageSrc = currentImageSrc.replace('-small.jpg', '') + '.jpg';
+
+      $('#main-product-image').find('img').attr('src', bigImageSrc);
+
+
 
     })
 

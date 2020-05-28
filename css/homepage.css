@@ -11,6 +11,9 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+html {
+  scroll-behavior: smooth; }
+
 * {
   margin: 0;
   padding: 0;
@@ -329,6 +332,9 @@ button {
 /*Mixins --------------*/
 /* pass in color of the button*/
 /* General Layout Styles --------*/
+html {
+  scroll-behavior: smooth; }
+
 * {
   margin: 0;
   padding: 0;
@@ -744,6 +750,9 @@ span.nav-opener {
 /*Mixins --------------*/
 /* pass in color of the button*/
 /* General Layout Styles --------*/
+html {
+  scroll-behavior: smooth; }
+
 * {
   margin: 0;
   padding: 0;
@@ -1106,6 +1115,9 @@ button {
 /*Mixins --------------*/
 /* pass in color of the button*/
 /* General Layout Styles --------*/
+html {
+  scroll-behavior: smooth; }
+
 * {
   margin: 0;
   padding: 0;
@@ -1508,7 +1520,7 @@ button {
   .main-footer .opener + .dropdown {
     display: flex; }
   /*Product Page ---------------------*/
-  .product-page .product-wrap__left .product-preview-desktop .item {
+  .product-page .product-wrap__left .img-thumbnails-desktop .item {
     margin: 5px; }
   /*Not Found Page Styles---------------*/
   .not-found-page .not-found__title h1 {
