@@ -19,12 +19,17 @@
   "homepage": "https://github.com/LiubaLozynska/OSF_Academy#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
     "gulp-sass": "^4.1.0",
     "node-sass": "^4.14.1"
   },
   "dependencies": {
-    "jquery-breakpoints": "^1.8.0",
-    "readmore-js": "^2.2.1",
-    "zooming": "^2.1.1"
-  }
+    "zooming": "^2.1.1",
+    "autoprefixer": "^9.7.3"
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "IE 10"
+  ]
 }

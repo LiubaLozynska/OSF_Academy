@@ -25,3 +25,14 @@ gulp.task('watch', function(){
       .pipe(gulp.dest('css'));
   }); 
 })
+
+const autoprefixer = require('gulp-autoprefixer');
+ 
+gulp.task('prefix', () =>
+    gulp.src('css/*.css')
+        .pipe(autoprefixer({
+            browsers: ['last 99 versions'],
+            cascade: false
+    }))
+    .pipe(gulp.dest('styles'))
+);
