@@ -210,30 +210,71 @@ const products = {
 
   //Rendering additional products
   productsToRender.forEach( product => {
-    product.name &&
-    $('#product-tile').append(
-      `
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3 py-4 d-flex justify-content-center card-container">
+    if (product.showBuyButton) {
+      $('#product-tile').append(
+        `
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 py-4 d-flex justify-content-center card-container">
         <div class="card-outer">
           <div class="card product-tile__item">
             <img src="${product.images[0].imageURL}" class="card-img-top" alt="Product">
-            <div class="card-body">
-              <h5 class="card-title product-tile__item__title text-center">${product.name}</h5>
-              <p class="card-text product-tile__item__price text-center">$${product.price}</p>
-            </div>
-          </div>
-          <div class="card-on-hover card">
-            <div class="card-body">
-              <div class="card-body__inner">
-              <button class="add-to-cart" data-id="${product.id}"><i class="fas fa-plus"></i></i></button>
-              <button class="add-to-wishlist" data-id="${product.id}"><i class="fas fa-heart"></i></button>
+            <div class="card-body pb-2">
+              <h5 class="card-title product-tile__item__title text-center mb-1  ">${product.name}</h5>
+              <div class="price-container d-flex justify-content-center mx-auto">
+                <p class="card-text price-container__price d-flex justify-content-center">$${product.price}</p>
+                <button class="add-to-cart d-flex justify-content-center">BUY NOW</button>
               </div>
             </div>
           </div>
         </div>
       </div>
         `
-    )
+      )
+    } else if (!product.name) {
+      $('#product-tile').append(
+      `
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 py-4 d-flex justify-content-center card-container">
+      <div class="card-outer no-product">
+        <div class="card product-tile__item">
+          <img src="../img/no_product.png" class="card-img-top" alt="Product">
+          </div>
+          <div class="card-overlay card">
+            <div class="card-body d-flex align-items-end p-4">
+              <div class="card-body__inner d-flex flex-column">
+                <p class="text-white mb-3">My dragons are misbehaving again. Unbelieveable!</p>
+                <p><i class="far fa-id-badge"></i> <span class="text-white text-uppercase ml-2">5H ago</span> </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      `
+      )
+    } else {
+      $('#product-tile').append(
+        `
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 py-4 d-flex justify-content-center card-container">
+            <div class="card-outer">
+              <div class="card product-tile__item">
+                <img src="${product.images[0].imageURL}" class="card-img-top" alt="Product">
+                <div class="card-body">
+                  <h5 class="card-title product-tile__item__title text-center">${product.name}</h5>
+                  <p class="card-text product-tile__item__price text-center">$${product.price}</p>
+                </div>
+              </div>
+              <div class="card-on-hover card">
+                <div class="card-body">
+                  <div class="card-body__inner">
+                    <button class="add-to-cart" data-id="${product.id}"><i class="fas fa-plus"></i></i></button>
+                    <button class="add-to-wishlist" data-id="${product.id}"><i class="fas fa-heart"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        `
+      )
+    }
+
   });
 
   //Setting new rendered product quantity
