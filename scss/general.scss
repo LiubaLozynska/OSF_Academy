@@ -67,6 +67,10 @@ a:link {
   color: $link-color;
 }
 
+a {
+  color: $link-color;
+}
+
 li {
   list-style-type: none;
 }
@@ -77,6 +81,10 @@ li {
 
 .text-lightgreen {
   color: $main-color !important;
+}
+
+select {
+  background-color: white;
 }
 
 button {

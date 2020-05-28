@@ -30,6 +30,9 @@ a:link {
   text-decoration: none;
   color: #45413e; }
 
+a {
+  color: #45413e; }
+
 li {
   list-style-type: none; }
 
@@ -38,6 +41,9 @@ li {
 
 .text-lightgreen {
   color: #84bc22 !important; }
+
+select {
+  background-color: white; }
 
 button {
   outline: none !important; }
