@@ -27,9 +27,7 @@ $.ajax({
   }
 });
 
-
-
-//Mobile menu Dropdown
+//Mobile menu dropdown logic
 $('#mobile-nav-opener').on('click', (event) => {
 
   $("#dropdown-megamenu").toggleClass("active");

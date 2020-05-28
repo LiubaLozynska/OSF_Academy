@@ -3,7 +3,7 @@ function toggleOwlPopularProducts() {
   let currentWindowWidth = $( window ).width();
   currentBreakPoint = breakpoints.getBreakPoint(currentWindowWidth);
 
-  let owlProductTile = $('#product-tile');
+  let owlProductTile = $('.popular-products-homepage');
 
   if ( currentBreakPoint !== breakpoints.VerySmall) {
     
