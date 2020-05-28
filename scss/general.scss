@@ -219,6 +219,11 @@ button {
 .card-outer.no-product {
   .card {
     height: 100%;
+    &-body__inner {
+      p {
+        max-width: 150px;
+      }
+    }
    img {
     height: 100%;
    }
@@ -228,7 +233,7 @@ button {
     top: 0%;
     height: 100%;
     width: 100%;
-    opacity: .7;
+    opacity: .8;
     background: linear-gradient(#dc5886,#675b99);
     font-size: 1rem;
     font-weight: 400;

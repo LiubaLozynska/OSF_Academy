@@ -12,9 +12,9 @@ const breakpoints = {
    
     if (windowWidth <= 576) {
       return this.VerySmall;
-    } else if (windowWidth <= 768) {
+    } else if (windowWidth < 768) {
       return this.Small;
-    } else if (windowWidth > 768 && windowWidth <= 980) {
+    } else if (windowWidth >= 768 && windowWidth <= 980) {
       return this.Medium;
     } else {
       return this.Large;

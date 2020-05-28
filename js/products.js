@@ -63,16 +63,18 @@ const products = {
           `
           <div class="col-12 col-sm-6 col-md-4 col-lg-3 py-4 d-flex justify-content-center card-container">
           <div class="card-outer">
+           <a href="product-page.html">
             <div class="card product-tile__item">
               <img src="${product.images[0].imageURL}" class="card-img-top" alt="Product">
               <div class="card-body pb-2">
-                <h5 class="card-title product-tile__item__title text-center mb-1  ">${product.name}</h5>
+                <h5 class="card-title product-tile__item__title text-center mb-1  "> ${product.name} </h5>
                 <div class="price-container d-flex justify-content-center mx-auto">
                   <p class="card-text price-container__price d-flex justify-content-center">$${product.price}</p>
                   <button class="add-to-cart d-flex justify-content-center">BUY NOW</button>
                 </div>
               </div>
-            </div>
+             </div>
+            </a>
           </div>
         </div>
           `
@@ -215,16 +217,18 @@ const products = {
         `
         <div class="col-12 col-sm-6 col-md-4 col-lg-3 py-4 d-flex justify-content-center card-container">
         <div class="card-outer">
+         <a href="product-page.html">
           <div class="card product-tile__item">
             <img src="${product.images[0].imageURL}" class="card-img-top" alt="Product">
             <div class="card-body pb-2">
-              <h5 class="card-title product-tile__item__title text-center mb-1  ">${product.name}</h5>
+              <h5 class="card-title product-tile__item__title text-center mb-1  "> ${product.name} </h5>
               <div class="price-container d-flex justify-content-center mx-auto">
                 <p class="card-text price-container__price d-flex justify-content-center">$${product.price}</p>
                 <button class="add-to-cart d-flex justify-content-center">BUY NOW</button>
               </div>
             </div>
-          </div>
+           </div>
+          </a>
         </div>
       </div>
         `
@@ -479,7 +483,7 @@ $.ajax({
           500:{
             items:2,
           },
-          800:{
+          750:{
             items:3,
           },
           1000:{
