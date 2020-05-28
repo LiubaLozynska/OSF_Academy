@@ -104,6 +104,82 @@
     </div> <!-- End of container-->
   </header> <!-- End of header-->
 
+   <!-- Modal Popups-->
+
+  <!-- Login Modal Popup -->
+  <div class="modal fade login-modal-popup" id="exampleModalCenter" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header d-flex justify-content-center">
+          <h5 class="modal-title" id="exampleModalLongTitle">Sign In</h5>
+        </div>
+        <div class="modal-body">
+          <form class="needs-validation" novalidate>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+              <div class="invalid-feedback">
+                Please make sure you inserted correct email
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <a href="not-found.html" class="modal-forgot-password">Forgot password</a>
+              <div class="password-wrap">
+                <input type="password" class="form-control" id="exampleInputPassword1"
+                  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{6,}" required>
+                <div class="show-hide-password">
+                  <i class="far fa-eye show-password" id="show-password"></i>
+                  <i class="far fa-eye-slash hide-password" id="hide-password"></i>
+                </div>
+                <div class="invalid-feedback">
+                  Password should be at leats 6 characters long <br>
+                  and contain 1 numeric, 1 uppercase letter, 1 special character.
+                </div>
+              </div>
+
+            </div>
+            <div class="login-button-container d-flex justify-content-center mt-5">
+              <button type="submit" class="button-green">Login</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer d-flex justify-content-center">
+          <a href="not-found.html">I don't have an account</a>
+        </div>
+      </div>
+    </div>
+  </div> <!-- End of Login Modal Popup -->
+
+  <!-- Cookies Policy Popup -------->
+  <div class="modal fade bd-example-modal-lg cookies-policy-modal" tabindex="-1" role="dialog"
+    aria-labelledby="myLargeModalLabel" aria-hidden="true" id="cookies-modal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="cookies-policy-modal__title">
+          <h3>This website uses cookies</h3>
+          <div class="cookies-policy-modal__title__close-modal" id="cookies-modal-close">
+            <img src="img/close-mobile-menu.png" alt="Close Modal">
+          </div>
+        </div>
+        <div class="cookies-policy-modal__body d-flex flex-column flex-md-row">
+          <p>OSF uses its own and third-party cookies for statistical purposes, to know your preferences, for website
+            performance
+            and interaction with social media offering publicity tailored to your interests. If you continue browsing,
+            we consider that you accept its use.
+            You can expand this information consulting our <a class="cookies-link" href="not-found.html">Cookies Policy
+              Page</a></p>
+          <div class="cookies-policy-modal__body__button d-flex justify-content-end align-items-end flex-grow-1">
+            <button class="button-green" id="cookies-modal-accept">ACCEPT</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- End of Cookies Policy Popup -------->
+  <!-- End of Modal Popups-->
+
   <!-- Main Content Area -------------------->
   <main class="not-found-bg pt-5">
     <div class="container-fluid not-found-page py-5">
@@ -284,12 +360,9 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
-  <script src="js/mega-menu.js"></script>
-  <script src="js/footer.js"></script>
-  <script src="js/cookies.js"></script>
-  <script src="js/cart.js"></script>
-  <script src="js/wish-list.js"></script>
-  <script src="js/modal-login.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script type="module" src="js/not-found.js"></script>
+ 
 
 </body>
 

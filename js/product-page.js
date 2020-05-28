@@ -1,3 +1,25 @@
+import { loadProducts } from './products.js';
+import { OSFcookies } from './cookies.js';
+import { footer } from './footer.js';
+import { megaMenu } from './mega-menu.js';
+import { cart } from './cart.js';
+import { wishList } from './wish-list.js';
+import { modalLogin } from './modal-login.js';
+
+loadProducts();
+megaMenu();
+footer();
+modalLogin();
+
+ //Cookies usage Initialization
+ OSFcookies.showCookiesModal();
+ OSFcookies.initializeCookies();
+
+//Rendering wishlist products count in header
+wishList.renderWishList();
+
+//Rendering cart products count in header
+cart.renderCartQuantity();
 
 //Rendering product page tabs
 let tabs = $('.tabs__item');
@@ -25,9 +47,9 @@ for (let i=0; i < tabsCount; i++) {
         }
       }
     })
-  }
+  };
 
-
+//Receiving all needed info about the product and rendering it on the page
   (async () => {
     //Receiving product data
     let product = await $.getJSON('/products.json', function(data) {
@@ -69,6 +91,7 @@ for (let i=0; i < tabsCount; i++) {
     renderThumbmnails('#img-thumbnails');
     renderThumbmnails('#img-thumbnails-desktop');
 
+    //Adding thumbnails carousel on small screens
     $('#img-thumbnails').owlCarousel({
       loop:true,
       nav:false,
@@ -83,9 +106,7 @@ for (let i=0; i < tabsCount; i++) {
     }) 
 
     //By clicking on any thumbnail, the main image is changed
-    $( document ).on('click', '.thumbnail', (event) => {
-      event.preventDefault();
-     
+    $( document ).on('click', '.thumbnail', (event) => { 
 
       const currentImage = $(event.currentTarget);  
       const currentImageSrc = $(currentImage).attr('src');
@@ -99,8 +120,6 @@ for (let i=0; i < tabsCount; i++) {
       const bigImageSrc = currentImageSrc.replace('-small.jpg', '') + '.jpg';
 
       $('#main-product-image').find('img').attr('src', bigImageSrc);
-
-
 
     })
 
@@ -120,7 +139,7 @@ for (let i=0; i < tabsCount; i++) {
      if ( isNaN(currentQuantity) || currentQuantity <= 0) {
        $('.quantity-invalid-feedback').css('display','block');
        $(quantityField).val(1);
-     } else {
+     } else if ( +currentQuantity > 0) {
       $('.quantity-invalid-feedback').css('display','none');
      }
     })
@@ -147,10 +166,10 @@ for (let i=0; i < tabsCount; i++) {
       let quantity = +$(quantityField).val();
 
       //Adding the product to ProductInCart in Local Storage
-      products.addToCart(productDataId, quantity);
+      cart.addToCart(productDataId, quantity);
 
       //Rendering products in wishlist quantity in header and footer
-      products.renderCartQuantity();
+      cart.renderCartQuantity();
     });
 
 
@@ -190,7 +209,7 @@ for (let i=0; i < tabsCount; i++) {
           $(textNode).html(currentText);
         }
       });
-    })();
+    })();  
 
     //Rendering text in product tabs
     $('#tabs-description').html(product[0].description);
@@ -211,7 +230,8 @@ for (let i=0; i < tabsCount; i++) {
     let reviewsQuantity = `(${product[0].reviews.length})`
     $('#reviews-quality').html(reviewsQuantity);
     
-  })();
+  })(); //End of async logic for product page
+
 
 
 

@@ -1,6 +1,4 @@
-//Creating an object to store info about breakpoints
-
-const breakpoints = {
+export const breakpoints = {
 
   'VerySmall' : 'VerySmall',
   'Small' : 'Small',
@@ -20,23 +18,40 @@ const breakpoints = {
       return this.Large;
     }
    },
-   onWindowResize: function (triggerOwl) {
-     
+    toggleOwlPopularProducts: function() {
+
     let currentWindowWidth = $( window ).width();
-    currentBreakPoint = breakpoints.getBreakPoint(currentWindowWidth);
+    let currentBreakPoint = this.getBreakPoint(currentWindowWidth);
 
-    if ( currentBreakPoint !== breakpoints.initialBreakPoint ) {
+    let owlProductTile = $('#product-tile');
 
-      breakpoints.initialBreakPoint = currentBreakPoint;
-      $('#product-tile').empty(); 
-      products.renderProducts(products);
+    if ( currentBreakPoint !== this.VerySmall) {
+      
+      //disabling owl carousel for popular products for medium and big screens
+      $(owlProductTile).removeClass('owl-carousel');
+      $(owlProductTile).removeClass('owl-theme');
 
+      owlProductTile.trigger('destroy.owl.carousel');
+    
+    } else  {
 
-      //adding or disabling owl carousel for popular products based on screen width on those pages where needed
-      if ( triggerOwl ) {
-        triggerOwl();
-      }
+      $(owlProductTile).addClass('owl-carousel');
+      $(owlProductTile).addClass('owl-theme');
 
+        owlProductTile.owlCarousel({
+          nav:false,
+          dots:true,
+          slideBy:4,
+          loop:true,
+          margin:10,
+          autoplay: 5,
+          responsiveClass:true,
+          responsive:{
+              0:{
+                  items:1,
+              }
+          }
+      });
     }
    }
 } 
