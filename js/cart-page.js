@@ -45,11 +45,11 @@ $(document).ready(() => {
    qtyHandler.onChangeValidate('.product-quantity');
 
    //Castom radio boxes logic
-  let radioInputs = $('.custom-radio-input');
+  let radioInputs = $('.form-check');
 
   radioInputs.on('click', (event) => {
-    const thisInput = event.currentTarget;
-    radioInputs.removeClass('active');
+    const thisInput = $(event.currentTarget).find('.custom-radio-input');
+    radioInputs.find('.custom-radio-input').removeClass('active');
     $(thisInput).addClass('active');
     qtyHandler.updateTotals();
   });
