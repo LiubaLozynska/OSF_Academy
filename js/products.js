@@ -329,8 +329,8 @@ export const products = {
       $('.cart-icon .count').css('display', 'none')
       $('#cart-inner').html(
         `
-        <div class="d-flex flex-column justify-content-center mx-5 px-5">
-          <h2 class="text-left"> Currently you have no products in cart</h2>
+        <div class="d-flex flex-column justify-content-center mx-md-5 px-5">
+          <h3 class="text-left"> Currently you have no products in cart</h3>
           <a class="text-lightgreen d-flex justify-content-start" href="services.html"> Continue Shopping </a>
         </div>
         `
