@@ -360,6 +360,31 @@
           font-size: 1.2rem;
         }
       } 
+
+      /*Cart page*/
+
+      .cart-wrap {
+        .cart-inner {
+         .cart__item {
+           border-bottom: none;
+          .item-img img{
+            max-width: 100px;
+            width: auto;
+          }
+        }
+        .delete-button-wrap {
+          position: static !important;
+          .delete-button {
+            height: 30px;
+            width: 30px;
+            background-color: white;
+            border-radius: 100%;
+            border: 2px solid #e8e2d6;
+            font-size: 10px;
+          }
+        }
+      }
+    }
   }
   
   /* Styles for screens larger than 1200px ---------------------*/

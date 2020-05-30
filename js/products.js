@@ -345,23 +345,21 @@ export const products = {
      $('#cart-inner').append(
        `
         <div class="row cart__item px-3 py-3 mx-auto" data-productId="${productData[0].id}">
-        <div class="col-12 col-lg-6 cart__item__left d-flex flex-column flex-md-row align-items-center">
+        <div class="col-12 col-md-6 cart__item__left d-flex flex-column flex-md-row align-items-center">
           <div class="item-img">
             <img src="${productData[0].images[0].imageURL}" alt="Product image">
           </div>
-          <div class="item-name pl-4">
+          <div class="item-name pt-2 pl-md-4">
             <h3>${productData[0].name}</h3>
             <div class="price-preview">$${productData[0].price}</div>
           </div>
         </div>
-        <div class="col-12 col-lg-6 cart__item__right d-flex align-items-center">
-          <div class="row w-100">
-            <div class="choose-quantity-wrap col-5 d-flex justify-content-center">
-              <div class="choose-quantity d-flex px-3">
+        <div class="col-12 col-md-5 cart__item__right d-flex align-items-center">
+          <div class="row w-md-100">
+            <div class="choose-quantity-wrap col-12 col-lg-6 d-flex justify-content-center">
+              <div class="choose-quantity d-flex">
                 <button class="quantity-decrese d-flex align-items-center"><i class="fas fa-minus"></i></button>
-                <form class="increase d-flex align-items-center" >
                   <input class="quantity product-quantity mx-1 text-center" type="text" value="${productInCart.quantity}">
-                </form>
                 <button class="quantity-increase d-flex align-items-center"><i class="fas fa-plus"></i></button>
               </div>
               <div class="quantity-invalid-feedback">
@@ -369,13 +367,13 @@ export const products = {
               </div>
             </div>
             
-            <div class="price-wrap col-5 d-flex justify-content-center align-items-center">
+            <div class="price-wrap col-12 col-lg-6 mt-2 mt-md-0 d-flex justify-content-center align-items-center">
               <p class="price">$${(productData[0].price*productInCart.quantity).toFixed(2)}</p>
             </div>
-            <div class="delete-button-wrap col-2 d-flex justify-content-end align-items-center">
-              <div><button class="delete-button"><i class="fas fa-times"></i></buttom></div>
-            </div>
           </div>
+        </div>
+        <div class="delete-button-wrap col-12 col-md-1 d-flex justify-content-end align-items-center">
+          <div><button class="delete-button"><i class="fas fa-times"></i></buttom></div>
         </div>
       </div>
         `
