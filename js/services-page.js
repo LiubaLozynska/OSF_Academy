@@ -24,9 +24,9 @@ $(document).ready(() => {
    products.onWindowResize();
   })
 
-    //Rendering wishlist products count in header
-    wishList.renderWishList();
-
-    //Rendering cart products count in header
-    cart.renderCartQuantity();
+  //Rendering wishlist products count in header
+  wishList.renderWishList();
+  
+  //Rendering cart products count in header
+  cart.renderCartQuantity();
 })

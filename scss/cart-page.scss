@@ -1,0 +1,116 @@
+@import 'general';
+@import 'header';
+@import 'footer';
+@import 'responsive';
+@import 'homepage';
+
+
+.cart-wrap {
+  border-radius: 5px;
+  .cart-inner {
+    border-bottom: 2px solid $pages-bg-color;
+  }
+  .cart__item {
+    &__left {
+      .item-name {
+        h3 {
+          font-size: 1rem;
+          font-weight: 400;
+        }
+        .price-preview {
+          color: #bdc3c7;
+          font-weight: 700;
+        }
+      }
+      .item-img img{
+        max-height: 100px;
+        width:auto;
+      }
+    }
+    &__right {
+      .price {
+        font-size: 1.875rem; /*30px*/
+        font-weight: 800;
+      }
+      .delete-button {
+        height: 30px;
+        width: 30px;
+        background-color: white;
+        border-radius: 100%;
+        border: 2px solid #e8e2d6;
+        font-size: 10px;
+      }
+    }
+  }
+  .cart-bottom {
+    font-size: 0.875rem; /*14px*/
+    input {
+      font-size: inherit;
+    }
+    .actions {
+      button {
+        max-width: none;
+        &:last-child {
+          border-color: $main-color;
+        }
+      }
+    } 
+    .order-totals {
+      &__price {
+        font-size: 3rem; /*48px*/
+       font-weight: 800;
+      }
+    }
+    .shipping-and-handling {
+      .form-group {
+        .form-check {
+          display: flex;
+          align-items: center;
+          margin: 10px auto;
+          padding-left: 0px !important;
+          &-label {
+            margin-left: 10px;
+          }
+          .form-check-input {
+             display: none;
+          }
+          .custom-radio-input {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 17px;
+            height: 17px;
+            border-radius: 100%;
+            border: 2px solid #e8e2d6;
+            .dot {
+              visibility: hidden;
+              width: 8px;
+              height: 8px;
+              border-radius: 100%;
+              background-color: $main-color;
+            }
+            &.active {
+              .dot {
+                visibility: visible;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.cart__item__right {
+  position: relative;
+  .quantity-invalid-feedback {
+    position: absolute;
+    display: none;
+    color: red;
+    font-size: 10px;
+    width: 100%;
+    top: 100%;
+    left: 0px;
+    width: 200px;
+  }
+}

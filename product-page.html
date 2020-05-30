@@ -17,9 +17,9 @@
 
 <body>
   <header class="main-header container-fluid py-2 py-lg-0">
-    <div class="container d-flex justify-content-center justify-content-lg-between align-items-baseline ">
-      <nav class="d-flex justify-content-center justify-content-lg-between align-items-center">
-        <a class="logo d-flex" href="index.html">
+    <div class="container d-flex justify-content-center justify-content-lg-between align-items-center ">
+      <nav class="d-flex justify-content-center justify-content-lg-between align-items-baseline">
+        <a class="logo d-flex" href="#">
           <div class="logo-img">
             <img src="img/Logo_desctop.png" alt="OSF Academy Logo">
           </div>
@@ -36,9 +36,9 @@
         <!--En of mobile mega menu opener - hamburger -------->
         <!-- Megamenu dropdown  ------------------>
         <div class="main-nav" id="dropdown-megamenu">
-          <ul class="main-nav__dropdown p-3 p-lg-0">
+          <ul class="main-nav__dropdown d-flex p-3 p-lg-0">
             <li class="level1 expandable py-1">
-              <a href="services.html" class="d-flex justify-content-between">Services <p class="main-nav__opener">&#9660</p></a>
+              <a href="services.html" class="d-flex justify-content-between">Services <p class="main-nav__opener">&#9660;</p></a>
               <ul class="level2 desktop-dropdown">
                 <li class="level2 expandable py-2">
                   <a href="not-found.html" class="d-flex justify-content-between category-name"><!-- Will be rendered from manu-items.json--></a>
@@ -67,24 +67,24 @@
       </nav>
 
       <div class="language-and-currency d-none d-lg-flex align-items-center justify-content-between">
-        <select name="" id="" class="language mx-1">
-          <option>EN</option>
-          <option>UK</option>
-          <option>FR</option>
-          <option>DE</option>
-          <option>PT</option>
-          <option>ES</option>
-          <option>JP</option>
-        </select>
-        <select name="" id="" class="currency mx-1">
-          <option>$US</option>
-          <option>UK</option>
-          <option>FR</option>
-          <option>DE</option>
-          <option>PT</option>
-          <option>ES</option>
-          <option>JP</option>
-        </select>
+        <ul class="language m-0 mx-1">
+          <li class="active">EN</li>
+          <li>UK</li>
+          <li>FR</li>
+          <li>DE</li>
+          <li>PT</li>
+          <li>ES</li>
+          <li>JP</li>
+        </ul>
+        <ul class="currency m-0 mx-1">
+          <li class="active">$US</li>
+          <li>UK</li>
+          <li>FR</li>
+          <li>DE</li>
+          <li>PT</li>
+          <li>ES</li>
+          <li>JP</li>
+        </ul>
       </div>
       <div class="utilites d-none d-lg-flex align-items-center justify-content-between">
         <div class="search-icon utilites__icon">
@@ -100,7 +100,7 @@
           <div class="count"></div>
         </div>
         <div class="cart-icon utilites__icon">
-          <img src="img/Bag_For_Shopping._Attribute_as_SimpleIcon_from_Flaticon.com.png" alt="Shopping Cart Icon">
+          <a href="shopping-cart.html"><img src="img/Bag_For_Shopping._Attribute_as_SimpleIcon_from_Flaticon.com.png" alt="Shopping Cart Icon"></a>
           <div class="count"></div>
         </div>
       </div>
@@ -186,7 +186,7 @@
 
   <!-- Main content container-->
   <main class="main-content-wrap product-page pt-5" id="top">
-    <div class="container-fluid bg-product-page py-5">
+    <div class="container-fluid pages-bg py-5">
       <div class="container">
 
         <!-- Breadcrumb ----------------->
@@ -209,7 +209,7 @@
         </div> <!-- End of Page Title ------------------------------->
 
         <!--Product Wrap -------------------------------------------->
-        <div class="product-wrap bg-white mt-5">
+        <div class="product-wrap bg-white mt-5" data-productId="">
           <div class="row">
 
             <div class="col-12 col-md-6 product-wrap__right product-img-wrap">
@@ -253,22 +253,24 @@
                   <!-- Quantity and Add to Cart Container ----------------------->
                   <div class="quantity-and-addtocart-wrap pl-3 mt-3">
                     <div class="row">
-                      <div class="col-12 col-lg-4 chose-quantity-wrap py-3">
-                        <div class="chose-quantity d-flex px-3 py-2">
-                          <div class="decrese" id="quantity-decrese"><img src="img/minus.png" alt="Decrese"></div>
-                          <form >
-                            <input id="product-quantity" class="quantity mx-1 text-center" type="text" value="1">
+                      <div class="col-12 col-lg-4 choose-quantity-wrap py-3">
+                        <div class="choose-quantity d-flex px-3 py-2">
+                          <div class="quantity-decrese d-flex align-items-center" id="quantity-decrese"><i class="fas fa-minus"></i></div>
+                          <form class="d-flex align-items-center" >
+                            <input class="quantity product-quantity mx-1 text-center" type="text" value="1">
                           </form>
-                          <div class="increase" id="quantity-increase"><img src="img/plus.png" alt="increase"></div>
+                          <div class="quantity-increase d-flex align-items-center" id="quantity-increase"><i class="fas fa-plus"></i></div>
                         </div>
                         <div class="quantity-invalid-feedback">
                           Please, make sure you are entering a number higher or equal to 1
                         </div>
                       </div>
+                    
                       <div class="col-12 col-lg-8 add-to-cart-wrap py-3 pl-xl-4">
                         <button class="add-to-cart-product-page button-green">add to cart</button>
                       </div>
                     </div>
+                    
                   </div> <!-- End of Quantity and Add to Cart Container ----------------------->
 
                   <!-- Product Description ------------------->
@@ -491,7 +493,7 @@
             <div class="count"></div>
           </div>
           <div class="cart-icon utilites__icon px-auto">
-            <img src="img/Bag_For_Shopping.Footer.png" alt="Shopping Cart Icon">
+            <a href="shopping-cart.html"><img src="img/Bag_For_Shopping.Footer.png" alt="Shopping Cart Icon"></a>
             <div class="count"></div>
           </div>
         </div>

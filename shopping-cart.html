@@ -4,12 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OSF Academy || Not Found</title>
+  <title>OSF Academy Project</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel="stylesheet" href="styles/not-found.css">
+  <link rel="stylesheet" href="styles/owl.carousel.min.css">
+  <link rel="stylesheet" href="styles/owl.theme.default.min.css">
+  <link rel="stylesheet" href="styles/cart-page.css">
 
   <link rel="shortcut icon" href="img/Logo_desctop.png" type="image/x-icon" />
+  <script src="https://kit.fontawesome.com/e0af9a7ab6.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -104,7 +107,7 @@
     </div> <!-- End of container-->
   </header> <!-- End of header-->
 
-   <!-- Modal Popups-->
+  <!-- Modal Popups-->
 
   <!-- Login Modal Popup -->
   <div class="modal fade login-modal-popup" id="exampleModalCenter" tabindex="-1" role="dialog"
@@ -180,64 +183,112 @@
   </div><!-- End of Cookies Policy Popup -------->
   <!-- End of Modal Popups-->
 
-  <!-- Main Content Area -------------------->
-  <main class="main-content-wrap not-found-page pt-5">
+
+  <!-- Main content container-->
+  <main class="main-content-wrap services-page pt-5">
     <div class="container-fluid pages-bg py-5">
       <div class="container">
 
-      <!-- Breadcrumb ----------------->
-      <nav aria-label="breadcrumb" id="top">
-        <ol class="breadcrumb d-flex justify-content-center">
-          <li class="breadcrumb-item clickable"><a class="text-lightgreen" href="index.html">Home</a></li>
-          <li class="breadcrumb-item active" aria-current="page">404</li>
-        </ol>
-      </nav> <!-- End of Breadcrumb ----------------->
+        <!-- Breadcrumb ----------------->
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb d-flex justify-content-center">
+            <li class="breadcrumb-item clickable"><a class="text-lightgreen" href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Shopping Cart</li>
+          </ol>
+        </nav> <!-- End of Breadcrumb ----------------->
 
-      <!--Page Title ------------------------------->
-      <div class="page-title text-center d-flex mt-3">
-        <div class="line-brown d-none flex-grow-0 flex-md-grow-1 d-md-block mx-auto"></div>
-        <h1 class="mx-auto mx-md-5">
-          <p class="text-center">404</p>
-        </h1>
-        <div class="line-brown d-none flex-grow-0 flex-md-grow-1 d-md-block mx-auto"></div>
-      </div> <!-- End of Page Title ------------------------------->
+        <!--Page Title ------------------------------->
+        <div class="page-title text-center d-flex mt-3">
+          <div class="line-brown d-none flex-grow-0 flex-md-grow-1 d-md-block mx-auto"></div>
+          <h1 class="mx-auto mx-md-5">
+            <p class="text-center text-uppercase">Shopping Cart</p>
+          </h1>
+          <div class="line-brown d-none flex-grow-0 flex-md-grow-1 d-md-block mx-auto"></div>
+        </div> <!-- End of Page Title ------------------------------->
 
-      <div class="container bg-white not-found py-5 px-1 px-md-4 mt-5">
-        <div class="row">
-          <div class="col-12 col-lg-5 not-found__title d-flex justify-content-center align-items-center">
-            <h1>Oops!</h1>
+        <div class="cart-wrap container bg-white mt-5 p-0">
+          <div class="cart-inner p-1 p-lg-5" id="cart-inner">
           </div>
-          <div class="col-12 col-lg-7 px-5">
-            <h2 class="mt-4">Sorry, this page could not be found!</h2>
 
-            <!-- 404 Description ------------------->
-            <div class="not-found__text mt-3">
-              <p class="pr-2">
-                Lean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, 
-                nascetur ridiculus mus.
-                <br><br>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                Aenean commodo ligula eget dolor. Aenean massa. 
-              </p>
-              <div class="not-found__read-more mt-3">
-                 <a href="index.html">Go back to Homepage</a>
+            <div class="cart-bottom row p-5">
+              <div class="col-12 col-md-6 cart-bottom__left">
+      
+                  <form class="coupon-input mx-5">
+                    <div class="row">
+                      <input class="col-12 col-md-6 input-border-brown mr-2" type="text" placeholder="Enter Coupon Code">
+                      <button class="col-12 col-md-3 button-transparent ml-0" type="submit">APPLY</button>
+                    </div>
+                  </form>
+           
               </div>
-            </div> <!-- End of 404 Description ------------------->
-
-            <h2 class="mt-5">Search our site</h2>
-
-            <form action="" class="search-website d-flex mt-3">
-              <input type="text" placeholder="SEARCH" class="flex-grow-1 input-border-brown">
-              <div class="search-website__icon">
-                <img src="img/Search_Information._Attribute_as_Designmodo_from_Flaticon.com.png" alt="Search">
+              <div class="col-12 col-md-6 cart-bottom__right d-flex flex-column">
+                <div class="actions d-flex justify-content-center row">
+                  <button class="col-3 update-cart button-transparent mr-3">UPDATE CART</button>
+                  <button class="col-6 proceed-to-checkouot button-green">Proceed to checkpout</button>
+                </div>
+                <div class="cart-subtotals d-flex flex-row justify-content-start mt-5 row">
+                  <p class="col-6 label text-uppercase">cart subtotal:</p>
+                  <div class="col-6 total-price font-weight-bold" id="cart-subtotals"><span>$3,489</span></div>
+                </div>
+                <div class="shipping-and-handling mt-4">
+                  <form>
+                  <fieldset class="form-group">
+                    <div class="row">
+                      <label class="col-sm-6 label text-uppercase font-weight-bold">SHIPPIING AND HANDLING:</label>
+                      <div class="col-sm-6">
+                        <div class="form-check">
+                          <div class="custom-radio-input"><p class="dot"></p></div>
+                          <input class="form-check-input" type="radio" name="gridRadios" id="FlatRate" value="10" checked>
+                          <label class="form-check-label" for="FlatRate">
+                            Flat Rate: <strong>$10.00</strong> 
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <div class="custom-radio-input"><p class="dot"></p></div>
+                          <input class="form-check-input" type="radio" name="gridRadios" id="FreeShipping" value="0">
+                          <label class="form-check-label" for="FreeShipping">
+                            Free Shipping
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <div class="custom-radio-input active"><p class="dot"></p></div>
+                          <input class="form-check-input" type="radio" name="gridRadios" id="International" value="60">
+                          <label class="form-check-label" for="International">
+                            International: <strong>$60.00</strong> 
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <div class="custom-radio-input"><p class="dot"></p></div>
+                          <input class="form-check-input" type="radio" name="gridRadios" id="LocalDelivery" value="5">
+                          <label class="form-check-label" for="LocalDelivery">
+                            Local Delivery: <strong>$5.00</strong> 
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <div class="custom-radio-input"><p class="dot"></p></div>
+                          <input class="form-check-input" type="radio" name="gridRadios" id="LocalPickup" value="0">
+                          <label class="form-check-label" for="LocalPickup">
+                            Local Pickup (Free)
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                  </form>
+                </div>
+                <div class="order-totals d-flex flex-row justify-content-start mt-5 row">
+                  <p class="col-6 label text-uppercase font-weight-bold d-flex align-items-center">order totals:</p>
+                  <div class="col-6 order-totals__price"><span>$3,489</span></div>
+                </div>
               </div>
-            </form>
-          </div>
+            </div>
         </div>
+
       </div>
     </div>
-    </div>
-  </main><!-- Main Content Area -------------------->
+  </main>
+
+
 
   <!-- Footer -->
   <footer class="main-footer-wrap">
@@ -349,8 +400,6 @@
 
   </footer> <!-- End of Footer -->
 
-
-
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
@@ -359,8 +408,7 @@
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
   <script src="js/owl.carousel.min.js"></script>
-  <script type="module" src="js/not-found.js"></script>
- 
+  <script type="module" src="js/cart-page.js"></script>
 
 </body>
 

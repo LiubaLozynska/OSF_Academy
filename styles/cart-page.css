@@ -4716,32 +4716,105 @@ input:focus {
 .utilities .icon .count {
   border: 1px solid red; }
 
-/*General styles --------------*/
-.not-found {
+.cart-wrap {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  border-radius: 5px;
-  background: url("../img/Exclamation_Mark_Inside_An_Octahedron._Attribute_as_Elegant_Themes_from_Flaticon.com.png") no-repeat -5% center; }
-  .not-found__title h1 {
-    font-size: 5rem;
-    color: #84bc22;
-    font-weight: 900; }
-  .not-found h2 {
-    font-size: 1.5rem;
-    /*24px*/
-    font-weight: 900; }
-  .not-found__read-more a {
-    color: #84bc22; }
-
-.search-website {
-  position: relative; }
-  .search-website input {
-    outline: none;
+  border-radius: 5px; }
+  .cart-wrap .cart-inner {
+    border-bottom: 2px solid #f2edea; }
+  .cart-wrap .cart__item__left .item-name h3 {
+    font-size: 1rem;
+    font-weight: 400; }
+  .cart-wrap .cart__item__left .item-name .price-preview {
+    color: #bdc3c7;
+    font-weight: 700; }
+  .cart-wrap .cart__item__left .item-img img {
+    max-height: 100px;
+    width: auto; }
+  .cart-wrap .cart__item__right .price {
+    font-size: 1.875rem;
+    /*30px*/
+    font-weight: 800; }
+  .cart-wrap .cart__item__right .delete-button {
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    border: 2px solid #e8e2d6;
+    font-size: 10px; }
+  .cart-wrap .cart-bottom {
     font-size: 0.875rem;
     /*14px*/ }
-  .search-website input:after {
-    content: url("../img/Search_Information._Attribute_as_Designmodo_from_Flaticon.com.png"); }
-  .search-website__icon {
+    .cart-wrap .cart-bottom input {
+      font-size: inherit; }
+    .cart-wrap .cart-bottom .actions button {
+      max-width: none; }
+      .cart-wrap .cart-bottom .actions button:last-child {
+        border-color: #84bc22; }
+    .cart-wrap .cart-bottom .order-totals__price {
+      font-size: 3rem;
+      /*48px*/
+      font-weight: 800; }
+    .cart-wrap .cart-bottom .shipping-and-handling .form-group .form-check {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin: 10px auto;
+      padding-left: 0px !important; }
+      .cart-wrap .cart-bottom .shipping-and-handling .form-group .form-check-label {
+        margin-left: 10px; }
+      .cart-wrap .cart-bottom .shipping-and-handling .form-group .form-check .form-check-input {
+        display: none; }
+      .cart-wrap .cart-bottom .shipping-and-handling .form-group .form-check .custom-radio-input {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -moz-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -moz-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        width: 17px;
+        height: 17px;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        border-radius: 100%;
+        border: 2px solid #e8e2d6; }
+        .cart-wrap .cart-bottom .shipping-and-handling .form-group .form-check .custom-radio-input .dot {
+          visibility: hidden;
+          width: 8px;
+          height: 8px;
+          -webkit-border-radius: 100%;
+          -moz-border-radius: 100%;
+          border-radius: 100%;
+          background-color: #84bc22; }
+        .cart-wrap .cart-bottom .shipping-and-handling .form-group .form-check .custom-radio-input.active .dot {
+          visibility: visible; }
+
+.cart__item__right {
+  position: relative; }
+  .cart__item__right .quantity-invalid-feedback {
     position: absolute;
-    top: 10%;
-    right: 2%; }
+    display: none;
+    color: red;
+    font-size: 10px;
+    width: 100%;
+    top: 100%;
+    left: 0px;
+    width: 200px; }

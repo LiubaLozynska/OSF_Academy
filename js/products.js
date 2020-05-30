@@ -32,7 +32,7 @@ export const products = {
                 <h5 class="card-title product-tile__item__title text-center mb-1  "><a href="product-page.html">${product.name}</a></h5>
                 <div class="price-container d-flex justify-content-center mx-auto">
                   <p class="card-text price-container__price d-flex justify-content-center">$${product.price}</p>
-                  <button class="add-to-cart d-flex justify-content-center">BUY NOW</button>
+                  <button class="add-to-cart d-flex justify-content-center" data-id="${product.id}">BUY NOW</button>
                 </div>
               </div>
              </div>
@@ -308,6 +308,79 @@ export const products = {
       }
 
     }
+  },
+  getProductById: function (products, Id) {
+    return products.filter((item) => {  
+      if (item.id === Id) {
+        return 1;
+      }
+      else {
+        return 0;
+      }
+    })
+   },
+  renderShoppingCart: function (products, productsToRender) {
+
+    $('#cart-inner').html(``);
+
+    productsToRender = productsToRender ? productsToRender : [];
+
+    if (productsToRender.length == 0) {
+      $('.cart-icon .count').css('display', 'none')
+      $('#cart-inner').html(
+        `
+        <div class="d-flex flex-column justify-content-center mx-5 px-5">
+          <h2 class="text-left"> Currently you have no products in cart</h2>
+          <a class="text-lightgreen d-flex justify-content-start" href="services.html"> Continue Shopping </a>
+        </div>
+        `
+      );
+    }
+    
+    productsToRender.forEach((productInCart => {
+
+    let productData = this.getProductById(products, productInCart.id);
+
+     //Render cart items on shopping-cart page
+     $('#cart-inner').append(
+       `
+        <div class="row cart__item px-3 py-3 mx-auto" data-productId="${productData[0].id}">
+        <div class="col-12 col-lg-6 cart__item__left d-flex flex-column flex-md-row align-items-center">
+          <div class="item-img">
+            <img src="${productData[0].images[0].imageURL}" alt="Product image">
+          </div>
+          <div class="item-name pl-4">
+            <h3>${productData[0].name}</h3>
+            <div class="price-preview">$${productData[0].price}</div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6 cart__item__right d-flex align-items-center">
+          <div class="row w-100">
+            <div class="choose-quantity-wrap col-5 d-flex justify-content-center">
+              <div class="choose-quantity d-flex px-3">
+                <button class="quantity-decrese d-flex align-items-center"><i class="fas fa-minus"></i></button>
+                <form class="increase d-flex align-items-center" >
+                  <input class="quantity product-quantity mx-1 text-center" type="text" value="${productInCart.quantity}">
+                </form>
+                <button class="quantity-increase d-flex align-items-center"><i class="fas fa-plus"></i></button>
+              </div>
+              <div class="quantity-invalid-feedback">
+                Please, make sure you are entering a number higher or equal to 1
+              </div>
+            </div>
+            
+            <div class="price-wrap col-5 d-flex justify-content-center align-items-center">
+              <p class="price">$${(productData[0].price*productInCart.quantity).toFixed(2)}</p>
+            </div>
+            <div class="delete-button-wrap col-2 d-flex justify-content-end align-items-center">
+              <div><button class="delete-button"><i class="fas fa-times"></i></buttom></div>
+            </div>
+          </div>
+        </div>
+      </div>
+        `
+     );
+    }));
   }
 }
 

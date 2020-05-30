@@ -39,6 +39,9 @@ li {
 .bg-darkgrey {
   background-color: #262a32; }
 
+.pages-bg {
+  background-color: #f2edea; }
+
 .text-lightgreen {
   color: #84bc22 !important; }
 
@@ -67,10 +70,37 @@ button {
   .button-green a {
     color: inherit; }
 
-.line-brown {
-  background: url("../img/white-line.png") repeat-x center; }
+.button-transparent {
+  font-size: 0.875rem;
+  /*14px*/
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 2px solid;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  padding: 8px 39px;
+  width: 100%;
+  max-width: 200px;
+  color: #84bc22;
+  white-space: nowrap; }
+  .button-transparent a {
+    color: inherit; }
+
+.input-border-brown {
+  border: 2px solid #e8e2d6;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  padding: 5px 15px; }
+
+input:focus {
+  outline: none; }
 
 .line-white {
+  background: url("../img/white-line.png") repeat-x center; }
+
+.line-brown {
   background: url("../img/line-brown.png") repeat-x center; }
 
 /* Breadcrumb styles --------------*/
@@ -82,11 +112,10 @@ button {
     opacity: 0.5; }
 
 /* Page title  --------------*/
-.services-page .page-title h1 p,
-.product-page .page-title h1 p {
+.page-title h1 p {
   font-size: 1.9375rem;
   /* 31px*/
-  font-weight: 700 !important;
+  font-weight: 700;
   text-transform: capitalize; }
 
 /* Page Tile  --------------*/
@@ -399,3 +428,23 @@ button {
     font-size: 0.875em;
     /*14px*/
     color: #868380 !important; }
+
+/*Chose product quantity field*/
+.choose-quantity-wrap {
+  padding: 0px; }
+  .choose-quantity-wrap .choose-quantity {
+    font-size: 0.875rem;
+    /*14px*/
+    border: 2px solid #e8e2d6;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    font-size: 12px;
+    max-width: 100px; }
+    .choose-quantity-wrap .choose-quantity button {
+      border: none;
+      background-color: transparent; }
+    .choose-quantity-wrap .choose-quantity .quantity {
+      outline: none;
+      width: 75%;
+      border: none; }

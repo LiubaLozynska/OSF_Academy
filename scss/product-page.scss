@@ -5,12 +5,6 @@
 @import 'homepage';
 
 
-/*General styles --------------*/
-
-.bg-product-page {
-  background-color: $productpage-bg-color;
-}
-
 /* Product Section Styles ------------*/
 
 .product-wrap {
@@ -80,6 +74,7 @@
         border-radius: 100%;
       } 
     }
+
     .quantity-and-addtocart-wrap {
       position: relative;
       .quantity-invalid-feedback {
@@ -93,20 +88,7 @@
         width: 200px;
       }
     }
-    .chose-quantity-wrap {
-      padding: 0px;
-      .chose-quantity {
-        font-size: 0.875rem; /*14px*/
-        border: 2px solid #e8e2d6;
-        border-radius: 25px;
-        max-width: 100px;
-        .quantity {
-          outline: none;
-          width: 75%;
-          border: none;
-        }
-      }
-    }
+    
     .product-description {
       &__text {
         font-size: 1rem; /*16px*/

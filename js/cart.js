@@ -1,8 +1,7 @@
 
 export const cart = {
 
-  addToCart: function (productID, quantity = 1) {
-
+  addToCart: function (productID, quantity) {
 
     //Receiving data about products added to cart
     let productsInCart = JSON.parse(localStorage.getItem("productsInCart"));
@@ -15,8 +14,12 @@ export const cart = {
       //checking if this product has already been added before
       productsInCart.forEach(element => {
         //updating the quantity if product was added before
-        if (element.id == productID) {
-          element.quantity += quantity;
+        if (element.id === productID) {
+          if (quantity) {
+            element.quantity = +quantity;
+          } else {
+            element.quantity += 1;
+          }
           indicator = 1;
         }
       });
@@ -25,7 +28,11 @@ export const cart = {
       if (indicator === 0) {
         let newProductToAdd = {}
         newProductToAdd.id = productID;
-        newProductToAdd.quantity = quantity;
+        if (quantity) {
+          newProductToAdd.quantity = quantity;
+        } else {
+          newProductToAdd.quantity =1;
+        }
         productsInCart.push(newProductToAdd);
       }
 
@@ -40,7 +47,11 @@ export const cart = {
       productsInCart = [];
 
       newProductToAdd.id = productID;
-      newProductToAdd.quantity = quantity;
+      if (quantity) {
+        newProductToAdd.quantity = quantity;
+      } else {
+        newProductToAdd.quantity =1;
+      }
 
       productsInCart.push(newProductToAdd);
       let stringifiedProducts = JSON.stringify(productsInCart);
@@ -50,22 +61,23 @@ export const cart = {
   renderCartQuantity: function () {
 
     let productsInCart = JSON.parse(localStorage.getItem("productsInCart"));
+    let cartIcon = $('.cart-icon .count');
 
     if (productsInCart) {
+      if (productsInCart.length == 0) {
+        return;
+      }
       //Showing ProductInCart quantity next the cart icon
-      let cartIcon = $('.cart-icon .count');
-
       let productsInCartQuantity = 0;
 
       productsInCart.forEach(product => {
         productsInCartQuantity += +product.quantity;
       })
 
-
-      for (let icon of cartIcon) {
-        $(icon).css('display', 'block');
-        $(icon).html(productsInCartQuantity);
-      }
+        $(cartIcon).css('display', 'block');
+        $(cartIcon).html(productsInCartQuantity);
+    } else {
+        $(cartIcon).css('display', 'none');
     }
 
   }

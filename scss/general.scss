@@ -16,9 +16,7 @@ $main-color: #84bc22;
 $secondary-color: #011847;
 $additional-color: #262a32;
 $link-color: #45413e;
-$services-bg-color:#f2edea;
-$productpage-bg-color: #f1edea;
-$not-found-bg-color: #f0ecea; 
+$pages-bg-color:#f2edea;
 $product-name-color: #2c3e50;
 
 /*Mixins --------------*/
@@ -79,6 +77,10 @@ li {
   background-color: $additional-color;
 }
 
+.pages-bg {
+  background-color: $pages-bg-color;
+}
+
 .text-lightgreen {
   color: $main-color !important;
 }
@@ -101,11 +103,28 @@ button {
     color: inherit;
   }
 }
+.button-transparent {
+  @include button {
+    color: $main-color;
+    white-space: nowrap;
+  }
+  a {
+    color: inherit;
+  }
+}
+.input-border-brown {
+  border: 2px solid #e8e2d6;
+  border-radius: 25px;
+  padding: 5px 15px; 
+}
+input:focus {
+  outline: none;
+}
 
-.line-brown {
+.line-white {
   background: url('../img/white-line.png') repeat-x center;
 }
-.line-white {
+.line-brown {
   background: url('../img/line-brown.png') repeat-x center;
 }
 
@@ -121,15 +140,12 @@ button {
   }
 }
 
-/* Page title  --------------*/
-.services-page,
-.product-page {           
+/* Page title  --------------*/       
   .page-title h1 p{
     font-size: 1.9375rem; /* 31px*/
-    font-weight: 700 !important;
+    font-weight: 700;
     text-transform: capitalize;
   }
-}
 
 /* Page Tile  --------------*/
 
@@ -306,7 +322,6 @@ button {
     border-top: none;
   }
 }
-
 .modal-content {
   padding: 40px 30px;
 }
@@ -322,7 +337,6 @@ button {
     right: 35px;
   }
 }
-
 
 /*Cookies Policy Modal Styles -------*/
 
@@ -362,10 +376,7 @@ button {
       max-width: 150px;
     }
   }
-  
 }
-
-
   /*Popular Items section - Product Tile -----------------------------*/
   
   .popular-items {
@@ -397,53 +408,72 @@ button {
     }
   }
 }
-
   
-  .load-more-button {
-    position: relative;
-    @include button {
-      color: white;
-      width: 55%;
-      max-width: 250px;
+.load-more-button {
+  position: relative;
+  @include button {
+    color: white;
+    width: 55%;
+    max-width: 250px;
+  }
+  .fa-spinner {
+    position: absolute;
+    right: 5%;
+  }
+}
+
+  /*Featured Products section -----------------------------*/
+  .featured-products {
+    &__title {
+      font-size: 2.25em; /*36px*/
+      font-weight: 700;
     }
-    .fa-spinner {
-      position: absolute;
-      right: 5%;
+    &__description {
+      font-size: 1.125em; /* 18px */
+    }
+    &__navigtion {
+      .arrow {
+        cursor: pointer;
+        &:hover {
+          opacity: .7;
+        }
+      }
     }
   }
 
-      /*Featured Products section -----------------------------*/
+  /*Services section -----------------------------*/
   
-  
-      .featured-products {
-        &__title {
-          font-size: 2.25em; /*36px*/
-          font-weight: 700;
-        }
-        &__description {
-          font-size: 1.125em; /* 18px */
-        }
-        &__navigtion {
-          .arrow {
-            cursor: pointer;
-            &:hover {
-              opacity: .7;
-            }
-          }
-        }
+  .services {
+    background-color: $link-color;
+    &__text h5 {
+      text-transform: uppercase;
+      font-size: 1.125em; /* 18px */
+    }
+    &__text p {
+      font-family: $secondary-font-family;
+      font-size: 0.875em; /*14px*/
+      color: #868380 !important;
+    }
+  }
+
+
+/*Chose product quantity field*/
+  .choose-quantity-wrap {
+    padding: 0px;
+    .choose-quantity {
+      font-size: 0.875rem; /*14px*/
+      border: 2px solid #e8e2d6;
+      border-radius: 25px;
+      font-size: 12px;
+      max-width: 100px;
+      button {
+        border: none;
+        background-color: transparent;
       }
-    
-    /*Services section -----------------------------*/
-    
-    .services {
-      background-color: $link-color;
-      &__text h5 {
-        text-transform: uppercase;
-        font-size: 1.125em; /* 18px */
-      }
-      &__text p {
-        font-family: $secondary-font-family;
-        font-size: 0.875em; /*14px*/
-        color: #868380 !important;
+      .quantity {
+        outline: none;
+        width: 75%;
+        border: none;
       }
     }
+  }

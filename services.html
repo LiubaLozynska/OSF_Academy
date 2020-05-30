@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OSF Academy Project</title>
+  <title>OSF Academy || Services Page</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/owl.carousel.min.css">
@@ -17,9 +17,9 @@
 
 <body>
   <header class="main-header container-fluid py-2 py-lg-0">
-    <div class="container d-flex justify-content-center justify-content-lg-between align-items-baseline ">
-      <nav class="d-flex justify-content-center justify-content-lg-between align-items-center">
-        <a class="logo d-flex" href="index.html">
+    <div class="container d-flex justify-content-center justify-content-lg-between align-items-center ">
+      <nav class="d-flex justify-content-center justify-content-lg-between align-items-baseline">
+        <a class="logo d-flex" href="#">
           <div class="logo-img">
             <img src="img/Logo_desctop.png" alt="OSF Academy Logo">
           </div>
@@ -36,9 +36,9 @@
         <!--En of mobile mega menu opener - hamburger -------->
         <!-- Megamenu dropdown  ------------------>
         <div class="main-nav" id="dropdown-megamenu">
-          <ul class="main-nav__dropdown p-3 p-lg-0">
+          <ul class="main-nav__dropdown d-flex p-3 p-lg-0">
             <li class="level1 expandable py-1">
-              <a href="services.html" class="d-flex justify-content-between">Services <p class="main-nav__opener">&#9660</p></a>
+              <a href="services.html" class="d-flex justify-content-between">Services <p class="main-nav__opener">&#9660;</p></a>
               <ul class="level2 desktop-dropdown">
                 <li class="level2 expandable py-2">
                   <a href="not-found.html" class="d-flex justify-content-between category-name"><!-- Will be rendered from manu-items.json--></a>
@@ -67,24 +67,24 @@
       </nav>
 
       <div class="language-and-currency d-none d-lg-flex align-items-center justify-content-between">
-        <select name="" id="" class="language mx-1">
-          <option>EN</option>
-          <option>UK</option>
-          <option>FR</option>
-          <option>DE</option>
-          <option>PT</option>
-          <option>ES</option>
-          <option>JP</option>
-        </select>
-        <select name="" id="" class="currency mx-1">
-          <option>$US</option>
-          <option>UK</option>
-          <option>FR</option>
-          <option>DE</option>
-          <option>PT</option>
-          <option>ES</option>
-          <option>JP</option>
-        </select>
+        <ul class="language m-0 mx-1">
+          <li class="active">EN</li>
+          <li>UK</li>
+          <li>FR</li>
+          <li>DE</li>
+          <li>PT</li>
+          <li>ES</li>
+          <li>JP</li>
+        </ul>
+        <ul class="currency m-0 mx-1">
+          <li class="active">$US</li>
+          <li>UK</li>
+          <li>FR</li>
+          <li>DE</li>
+          <li>PT</li>
+          <li>ES</li>
+          <li>JP</li>
+        </ul>
       </div>
       <div class="utilites d-none d-lg-flex align-items-center justify-content-between">
         <div class="search-icon utilites__icon">
@@ -100,7 +100,7 @@
           <div class="count"></div>
         </div>
         <div class="cart-icon utilites__icon">
-          <img src="img/Bag_For_Shopping._Attribute_as_SimpleIcon_from_Flaticon.com.png" alt="Shopping Cart Icon">
+          <a href="shopping-cart.html"><img src="img/Bag_For_Shopping._Attribute_as_SimpleIcon_from_Flaticon.com.png" alt="Shopping Cart Icon"></a>
           <div class="count"></div>
         </div>
       </div>
@@ -186,7 +186,7 @@
 
   <!-- Main content container-->
   <main class="main-content-wrap services-page pt-5">
-    <div class="container-fluid bg-services py-5">
+    <div class="container-fluid pages-bg py-5">
       <div class="container">
         <!-- Breadcrumb ----------------->
         <nav aria-label="breadcrumb">
@@ -198,11 +198,11 @@
 
         <!--Page Title ------------------------------->
         <div class="page-title text-center d-flex mt-3">
-          <div class="line-white d-none flex-grow-0 flex-md-grow-1 d-md-block mx-auto"></div>
+          <div class="line-brown d-none flex-grow-0 flex-md-grow-1 d-md-block mx-auto"></div>
           <h1 class="mx-auto mx-md-5">
             <p class="text-center">Services</p>
           </h1>
-          <div class="line-white d-none flex-grow-0 flex-md-grow-1 d-md-block mx-auto"></div>
+          <div class="line-brown d-none flex-grow-0 flex-md-grow-1 d-md-block mx-auto"></div>
         </div> <!-- End of Page Title ------------------------------->
 
         <!-- Services filers ------------------------->
@@ -353,7 +353,7 @@
         </div> <!-- End of Featured Products Slider -->
       </div>
     </div><!-- End of Featured Products -->
-
+</main>
 
   <!-- Footer -->
   <footer class="main-footer-wrap">
@@ -456,7 +456,7 @@
             <div class="count"></div>
           </div>
           <div class="cart-icon utilites__icon px-auto">
-            <img src="img/Bag_For_Shopping.Footer.png" alt="Shopping Cart Icon">
+            <a href="shopping-cart.html"><img src="img/Bag_For_Shopping.Footer.png" alt="Shopping Cart Icon"></a>
             <div class="count"></div>
           </div>
         </div>

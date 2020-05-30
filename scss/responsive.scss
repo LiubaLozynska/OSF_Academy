@@ -295,14 +295,23 @@
     .language-and-currency{
       text-transform: uppercase;
       font-size: 0.875em; /*14px*/;
-      select{
-        cursor: pointer;
-        border: none;
-        outline: none;
-        opacity: .7;
-      }
-      select:hover{
-        opacity: 0.3;
+      ul {
+        li {
+          display: none;
+        }
+        li.active {
+          display: block;
+          &:after {
+            content: '\25BC';
+            font-size: 0.6rem;
+            margin-left: 15px;
+            opacity: .6;
+          }
+          &:hover {
+            opacity: .3;
+            cursor: pointer;
+          }
+        }
       }
     }
   
@@ -360,6 +369,15 @@
     .main-header {
       max-width: $big-devices-width;
       left: calc((100% - (1280px))/2);
+    }
+
+    .page-title h1 {
+      font-size: 3rem; /*48px*/
+      font-weight: 900;
+      p {
+        font-size: 3rem; /*48px*/
+        font-weight: 900;
+      }
     }
    
     /*Home Page ---------------------------*/
@@ -435,5 +453,4 @@
         }
       }
     }
- 
   }
