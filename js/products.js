@@ -46,7 +46,7 @@ export const products = {
         <div class="col-12 col-sm-6 col-md-4 col-lg-3 py-4 d-flex justify-content-center card-container">
         <div class="card-outer no-product">
           <div class="card product-tile__item">
-            <img src="../img/no_product.png" class="card-img-top" alt="Product">
+            <img src="../img/no-product.png" class="card-img-top" alt="Product">
             </div>
             <div class="card-overlay card">
               <div class="card-body d-flex align-items-end p-4">
